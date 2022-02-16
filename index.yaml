@@ -1,0 +1,67 @@
+apiVersion: v1
+entries:
+  controlplane:
+  - apiVersion: v1
+    created: "2022-02-16T16:48:48.178107806Z"
+    description: A Helm chart to deploy the Gardener controlplane (API server, controller-manager,
+      scheduler, admission-controller)
+    digest: 1eaa38d283012d11e0b3f59c151b8fe8a1831e4e1e03884934e0a9514401a598
+    name: controlplane
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/controlplane-1.38.2/controlplane-1.38.2.tgz
+    version: 1.38.2
+  etcd:
+  - apiVersion: v1
+    created: "2022-02-16T16:48:48.293216328Z"
+    description: Helm chart for etcd
+    digest: 09dce9b040a0bc84dfb44d674194f1311007d58762fe38b1f14d8c256ad9e118
+    name: etcd
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/etcd-3.19.0/etcd-3.19.0.tgz
+    version: 3.19.0
+  extensions:
+  - apiVersion: v2
+    created: "2022-02-16T16:48:48.555964805Z"
+    description: A Helm chart for managing gardener extensions
+    digest: dc35df0e3e450fe7a7e3de46362dd6b38648ef341fc2d74a7dc1082e992f82f7
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.0/extensions-1.0.0.tgz
+    version: 1.0.0
+  garden:
+  - apiVersion: v1
+    created: "2022-02-16T16:48:48.668612123Z"
+    description: Helm chart for garden
+    digest: 6acb86d480bef1b0f963bdbc6eba1d5efbc28f83b8392ea523097f0146c5f04e
+    name: garden
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/garden-3.19.0/garden-3.19.0.tgz
+    version: 3.19.0
+  gardener-dashboard:
+  - apiVersion: v1
+    created: "2022-02-16T16:48:49.018741792Z"
+    description: A Helm chart for Gardener dashboard
+    digest: 6376a6e946423b4415ae7095f6ac6a4c479e561ee3fa7b283ee068fb7d14f2dc
+    name: gardener-dashboard
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardener-dashboard-1.52.3/gardener-dashboard-1.52.3.tgz
+    version: 1.52.3
+  gardenlet:
+  - apiVersion: v1
+    created: "2022-02-16T16:48:49.152198333Z"
+    description: A Helm chart to deploy the Gardenlet (primary "seed" agent)
+    digest: 0d5ce9777f1634d20ae211003eeaf2b14caff37874a3a644f7dde094328da18e
+    name: gardenlet
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardenlet-1.38.2/gardenlet-1.38.2.tgz
+    version: 1.38.2
+  identity:
+  - apiVersion: v1
+    created: "2022-02-16T16:48:49.27271536Z"
+    description: A Helm chart for kubernetes identity server
+    digest: 3fa88f9d4a9c8a4ec575eb912ffeffb2de3c967953bd5388d7f0a9d8d93c8036
+    name: identity
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/identity-1.52.3/identity-1.52.3.tgz
+    version: 1.52.3
+generated: "2022-02-16T16:48:49.27283186Z"
