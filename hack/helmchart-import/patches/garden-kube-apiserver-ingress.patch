@@ -1,0 +1,14 @@
+diff --git a/charts/garden-kube-apiserver/templates/service-kube-apiserver-ingress.yaml b/charts/garden-kube-apiserver/templates/service-kube-apiserver-ingress.yaml
+index 38b7c8f..5da7231 100644
+--- a/charts/garden-kube-apiserver/templates/service-kube-apiserver-ingress.yaml
++++ b/charts/garden-kube-apiserver/templates/service-kube-apiserver-ingress.yaml
+@@ -18,6 +18,9 @@ metadata:
+   annotations:
+     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+     kubernetes.io/ingress.class: "nginx"
++{{- with .Values.ingress.annotations }}
++{{ toYaml . | indent 4 }}
++{{- end }}
+   name: apiserver-ingress
+   namespace: {{ .Release.Namespace }}
+ spec:
