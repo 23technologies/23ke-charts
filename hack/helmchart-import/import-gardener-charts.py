@@ -6,7 +6,6 @@ import re
 
 # here go our importet helmcharts
 target_dir = "charts/"
-shutil.rmtree(target_dir, ignore_errors=True)
 
 # configure the charts you want to import here
 # you need to define the package consiting of github-org/repo,
@@ -64,6 +63,7 @@ def import_charts(config, target_dir):
     # clone the repo to the temp dir and copy the specified directories to the target directory
     git.Repo.clone_from(git_url, repo_dir, multi_options=multi_options)
     for dir in config["dirs"]:
+        shutil.rmtree(target_dir + dir["dst"], ignore_errors=True)
         shutil.copytree(repo_dir + dir["src"], target_dir + dir["dst"])
         charts = glob.glob(target_dir + dir["dst"] + "/**/Chart.yaml", recursive=True)
         for chart in charts:
