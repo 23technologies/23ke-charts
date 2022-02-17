@@ -1,0 +1,42 @@
+{
+   "prHourlyLimit": 0,
+   "regexManagers":[
+      {
+         "fileMatch":[
+            "^hack/helmchart-import/import-gardener-charts.py$"
+         ],
+         "datasourceTemplate":"github-releases",
+         "versioningTemplate": "semver-coerced",
+         "matchStrings":[
+	    "\"package\".* \"(?<depName>.*?)\".*\s*\"version\".*\"(?<currentValue>.*?)\""
+         ]
+      },
+      {
+         "fileMatch":[
+            "^charts/extensions/values.yaml$"
+         ],
+         "datasourceTemplate":"github-releases",
+         "versioningTemplate": "semver-coerced",
+         "matchStrings":[
+            "depName=(?<depName>.*?)\\s+tag:\\ (?<currentValue>.*)\\s"
+         ]
+      }
+   ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [".*gardener-extension.*"],
+      "groupName": "gardener-extensions"
+    },
+    {
+      "matchPackageNames": ["gardener/gardener", "gardener/dashboard", "gardener/garden-setup"],
+      "groupName": "gardener-core"
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": false
+  },
+  "includeForks": true,
+  "enabledManagers": ["regex"],
+  "prCreation": "not-pending"
+}
+
