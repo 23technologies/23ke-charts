@@ -29,7 +29,7 @@ gardener-gardener-extension-networking-calico:
   values:
     image:
       # renovate: depName=gardener/gardener-extension-networking-calico
-      tag: v1.19.0
+      tag: v1.23.0
   resources:
     - kind: Network
       type: calico
@@ -59,7 +59,7 @@ gardener-gardener-extension-os-ubuntu:
   values:
     image:
       # renovate: depName=gardener/gardener-extension-os-ubuntu
-      tag: v1.13.0
+      tag: v1.14.0
   resources:
     - kind: OperatingSystemConfig
       type: ubuntu
@@ -91,7 +91,7 @@ gardener-gardener-extension-provider-aws:
   values:
     image:
       # renovate: depName=gardener/gardener-extension-provider-aws
-      tag: v1.33.0
+      tag: v1.33.1
   resources:
     - kind: BackupBucket
       type: aws
@@ -113,7 +113,7 @@ gardener-gardener-extension-provider-azure:
   values:
     image:
       # renovate: depName=gardener/gardener-extension-provider-azure
-      tag: v1.24.1
+      tag: v1.25.0
   resources:
     - kind: BackupBucket
       type: azure
@@ -155,7 +155,7 @@ gardener-gardener-extension-provider-gcp:
   values:
     image:
       # renovate: depName=23technologies/gardener-extension-provider-hcloud
-      tag: v0.4.8
+      tag: v0.4.13
   resources:
   - kind: ControlPlane
     type: hcloud
@@ -169,7 +169,7 @@ gardener-gardener-extension-provider-openstack:
   values:
     image:
       # renovate: depName=gardener/gardener-extension-provider-openstack
-      tag: v1.23.1
+      tag: v1.23.2
   resources:
     - kind: BackupBucket
       type: openstack
@@ -189,7 +189,7 @@ gardener-gardener-extension-shoot-cert-service:
   values:
     image:
       # renovate: depName=gardener/gardener-extension-shoot-cert-service
-      tag: v1.18.0
+      tag: v1.20.0
   resources:
     - kind: Extension
       type: shoot-cert-service
@@ -199,7 +199,7 @@ gardener-gardener-extension-shoot-dns-service:
   values:
     image:
       # renovate: depName=gardener/gardener-extension-shoot-dns-service
-      tag: v1.14.0
+      tag: v1.17.0
   resources:
     - kind: Extension
       type: shoot-dns-service
