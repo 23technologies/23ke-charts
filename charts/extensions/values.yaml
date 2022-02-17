@@ -3,7 +3,7 @@ gardener-external-dns-management:
   values:
     image:
       # renovate: depName=gardener/external-dns-management
-      tag: v0.11.4
+      tag: v0.12.0
   resources:
     - kind: DNSProvider
       type: aws-route53
