@@ -24,7 +24,7 @@
    ],
   "packageRules": [
     {
-      "matchPackagePatterns": [".*gardener-extension.*"],
+	"matchPackagePatterns": [".*gardener-extension.*", "gardener/external-dns-management"],
       "groupName": "gardener-extensions"
     },
     {
