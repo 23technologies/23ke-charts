@@ -13,7 +13,7 @@ target_dir = "charts/"
 config = [
     {
         "package": "gardener/gardener",
-        "version": "v1.38.2",
+        "version": "v1.40.1",
         "dirs": [
             {"src": "charts/gardener/controlplane", "dst": "gardener-controlplane"},
             {"src": "charts/gardener/gardenlet", "dst": "gardenlet"},
@@ -21,7 +21,7 @@ config = [
     },
     {
         "package": "gardener/garden-setup",
-        "version": "3.19.0",
+        "version": "3.20.0",
         "dirs": [
             {"src": "components/etcd/cluster/chart", "dst": "garden-etcd"},
             {"src": "components/kube-apiserver/chart", "dst": "kube-apiserver"},
@@ -29,7 +29,7 @@ config = [
     },
     {
         "package": "gardener/dashboard",
-        "version": "1.52.3",
+        "version": "1.54.0",
         "dirs": [
             {"src": "charts/gardener-dashboard", "dst": "gardener-dashboard"},
             {"src": "charts/identity", "dst": "identity"},
