@@ -8,7 +8,7 @@
          "datasourceTemplate":"github-releases",
          "versioningTemplate": "semver-coerced",
          "matchStrings":[
-	    "\"package\".* \"(?<depName>.*?)\".*\s*\"version\".*\"(?<currentValue>.*?)\""
+	    "\"package\".* \"(?<depName>.*?)\".*\\s*\"version\".*\"(?<currentValue>.*?)\""
          ]
       },
       {
