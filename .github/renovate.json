@@ -37,6 +37,6 @@
   },
   "includeForks": true,
   "enabledManagers": ["regex"],
-  "prCreation": "not-pending"
+  "prCreation": "immediate"
 }
 
