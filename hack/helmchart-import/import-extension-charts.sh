@@ -26,6 +26,8 @@ fi
 FILE=charts/extensions/values.yaml
 TARGET_DIR=charts/extensions/templates
 
+mkdir -p $TARGET_DIR
+
 # get all renovate comments including the correct tag of the repository and fit every entry pair into one line
 EXT_TAG_TUPLE_LIST=$(grep -A1 --no-group-separator -e '# renovate' $FILE | sed 's/^\s*//' | sed '{N; s/\ntag/ tag/}')
 
