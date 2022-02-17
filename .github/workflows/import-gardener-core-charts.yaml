@@ -1,7 +1,9 @@
 name: Import the newest gardener helmcharts
 
 on:
-  pull_request
+  pull_request:
+    branches:
+      - 'renovate/gardener-core'
 
 jobs:
   import:
@@ -20,13 +22,10 @@ jobs:
           python hack/helmchart-import/import-gardener-charts.py
           git apply hack/helmchart-import/gardener-charts.patch
 
-      - name: Import gardener-extension helmcharts
-        run: hack/helmchart-import/import-extension-charts.sh
-
       - name: Commit changes
         uses: EndBug/add-and-commit@v8
         with:
           author_name: 23t-machine-user
           author_email: 23t-machine-user@example.com
-          message: 'Update the gardener-core helmcharts'
+          message: 'Update the gardener helmcharts'
           add: -u

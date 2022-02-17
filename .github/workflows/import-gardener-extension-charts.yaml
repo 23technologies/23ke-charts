@@ -1,0 +1,25 @@
+name: Import the newest gardener-extension helmcharts
+
+on:
+  pull_request:
+    branches:
+      - 'renovate/gardener-extensions'
+
+jobs:
+  import:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Import gardener-extension helmcharts
+        run: hack/helmchart-import/import-extension-charts.sh
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v8
+        with:
+          author_name: 23t-machine-user
+          author_email: 23t-machine-user@example.com
+          message: 'Update the gardener helmcharts'
+          add: -u
