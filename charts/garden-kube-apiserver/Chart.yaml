@@ -13,13 +13,6 @@
 # limitations under the License.
 
 apiVersion: v1
-kind: Secret
-metadata:
-  name: gardener-internal-kubeconfig
-  namespace: flux-system # FIXME
-type: Opaque
-data:
-  ca.crt: {{ .Values.tls.kubeAPIServer.ca.crt | b64enc }}
-  tls.crt: {{ .Values.tls.admin.crt | b64enc }}
-  tls.key: {{ .Values.tls.admin.key | b64enc }}
-  value: {{ include "garden.kubeconfig-internal-gardener" . | b64enc }}
+description: Helm chart for garden
+name: garden-kube-apiserver
+version: 3.19.0
