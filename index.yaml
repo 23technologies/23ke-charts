@@ -37,6 +37,34 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/garden-3.19.0/garden-3.19.0.tgz
     version: 3.19.0
+  garden-etcd:
+  - apiVersion: v1
+    created: "2022-02-17T15:16:04.676477962Z"
+    description: Helm chart for etcd
+    digest: bb0b01108459b3c52a5ff536317c86f1a9545f60ecbe7def44ea6ebdb665f4f0
+    name: garden-etcd
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/garden-etcd-3.19.0/garden-etcd-3.19.0.tgz
+    version: 3.19.0
+  garden-kube-apiserver:
+  - apiVersion: v1
+    created: "2022-02-17T15:16:04.934916596Z"
+    description: Helm chart for garden
+    digest: 64999eada9c4564a8ab38d1fce174a99c902ba131ace2a143c7f4f6d8243bc84
+    name: garden-kube-apiserver
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/garden-kube-apiserver-3.19.0/garden-kube-apiserver-3.19.0.tgz
+    version: 3.19.0
+  gardener-controlplane:
+  - apiVersion: v1
+    created: "2022-02-17T15:16:05.201069877Z"
+    description: A Helm chart to deploy the Gardener controlplane (API server, controller-manager,
+      scheduler, admission-controller)
+    digest: dedaa924a250951de06b0f6bb65c8a2f410200de8edb51f97b6d3a5f281e6e6f
+    name: gardener-controlplane
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardener-controlplane-1.38.2/gardener-controlplane-1.38.2.tgz
+    version: 1.38.2
   gardener-dashboard:
   - apiVersion: v1
     created: "2022-02-16T16:48:49.018741792Z"
@@ -64,4 +92,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/identity-1.52.3/identity-1.52.3.tgz
     version: 1.52.3
-generated: "2022-02-16T16:48:49.27283186Z"
+generated: "2022-02-17T15:16:05.201097746Z"
