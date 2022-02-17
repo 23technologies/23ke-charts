@@ -1,0 +1,29 @@
+name: Import the newest gardener helmcharts
+
+on:
+  pull_request
+
+jobs:
+  import:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+
+      - name: Import gardener-core helmcharts and patch them
+        run: |
+          pip install -r hack/helmchart-import/requirements.txt
+          python hack/helmchart-import/import-gardener-charts.py
+          git apply hack/helmchart-import/gardener-charts.patch
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v8
+        with:
+          author_name: 23t-machine-user
+          author_email: 23t-machine-user@example.com
+          message: 'Update the gardener-core helmcharts'
+          add: -u
