@@ -20,6 +20,9 @@ jobs:
           python hack/helmchart-import/import-gardener-charts.py
           git apply hack/helmchart-import/gardener-charts.patch
 
+      - name: Import gardener-extension helmcharts
+        run: hack/helmchart-import/import-extension-charts.sh
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v8
         with:
