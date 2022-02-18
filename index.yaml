@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  extensions:
+  - apiVersion: v2
+    created: "2022-02-18T09:16:17.69264755Z"
+    description: A Helm chart for managing gardener extensions
+    digest: 45e623b3e58ae02ee052b92ff5a00170b0baaa2e358594a9b767d47f5471e729
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.0/extensions-1.0.0.tgz
+    version: 1.0.0
+generated: "2022-02-18T09:16:17.692681524Z"
