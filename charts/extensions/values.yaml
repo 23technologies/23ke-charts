@@ -58,7 +58,7 @@ shoot-cert-service:
   values: {}
   resources: []
 
-extension-shoot-dns-service:
+shoot-dns-service:
   enabled: false
   values: {}
   resources: []

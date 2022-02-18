@@ -1,4 +1,4 @@
-{{- if (index .Values "extension-shoot-dns-service").enabled }}
+{{- if (index .Values "shoot-dns-service").enabled }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
 kind: ControllerDeployment
@@ -10,8 +10,8 @@ providerConfig:
   values:
     image:
       tag: v1.14.0
-{{- if (index .Values "extension-shoot-dns-service").values }}
-{{- toYaml (index .Values "extension-shoot-dns-service").values | nindent 4 }}
+{{- if (index .Values "shoot-dns-service").values }}
+{{- toYaml (index .Values "shoot-dns-service").values | nindent 4 }}
 {{- end }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
@@ -25,7 +25,7 @@ spec:
   resources:
   - kind: Extension
     type: shoot-dns-service
-{{- if (index .Values "extension-shoot-dns-service").resources}}
-{{- toYaml (index .Values "extension-shoot-dns-service").resources | nindent 2 }}
+{{- if (index .Values "shoot-dns-service").resources}}
+{{- toYaml (index .Values "shoot-dns-service").resources | nindent 2 }}
 {{- end }}
 {{- end }}
