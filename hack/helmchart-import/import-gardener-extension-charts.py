@@ -84,25 +84,25 @@ config = [
 ]
 
 
-def import_charts(config, target_dir):
+def import_charts(cfg, target_dir):
 
     # Potentially, the controller-registration.yaml can be found at several places in github repos.
     # Therefore, we define a list with urls to try
     urls = [
         "https://raw.githubusercontent.com/"
-        + config["package"]
+        + cfg["package"]
         + "/"
-        + config["version"]
+        + cfg["version"]
         + "/examples/controller-registration.yaml",
         "https://raw.githubusercontent.com/"
-        + config["package"]
+        + cfg["package"]
         + "/"
-        + config["version"]
+        + cfg["version"]
         + "/example/controller-registration.yaml",
         "https://github.com/"
-        + config["package"]
+        + cfg["package"]
         + "/releases/download/"
-        + config["version"]
+        + cfg["version"]
         + "/controller-registration.yaml",
     ]
     
@@ -118,12 +118,10 @@ def import_charts(config, target_dir):
     # assume that we have to documents in our yaml, which is commonly the case for controller-registration.yamls
     content = list(yaml.load_all(x))
     
-    content[0]["providerConfig"]["values"] = None
-    content[1]["spec"]["resources"] = None
 
     # setup the path for our target chart
     Path(target_dir + "templates/").mkdir(parents=True, exist_ok=True)
-    outf = Path(target_dir + "templates/" + config["name"] + ".yaml")
+    outf = Path(target_dir + "templates/" + cfg["name"] + ".yaml")
     try:
         outf.unlink()
     except:
@@ -132,18 +130,38 @@ def import_charts(config, target_dir):
     # write the target chart including templating
     yaml.explicit_start = True
     with outf.open("a") as ofp:
-        ofp.write("{{- if (index .Values " + '"' + config["name"] + '"' + ").enable }}\n")
+        ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").enabled }}\n")
         yaml.dump(content[0], ofp)
-        ofp.write("{{- toYaml (index .Values " + '"' + config["name"] + '"' + ").values | nindent 4 }}\n")
+        ofp.write("{{- toYaml (index .Values " + '"' + cfg["name"] + '"' + ").values | nindent 4 }}\n")
         yaml.dump(content[1], ofp)
-        ofp.write("{{- toYaml (index .Values " + '"' + config["name"] + '"' + ").resources | nindent 4 }}\n")
+        ofp.write("{{- toYaml (index .Values " + '"' + cfg["name"] + '"' + ").resources | nindent 4 }}\n")
         ofp.write("{{- end }}")
+
+def write_values_yaml(config, target_dir):
+
+    outf = Path(target_dir + "values.yaml")
+    try:
+        outf.unlink()
+    except:
+        pass
+
+    for cfg in config:
+        # write a basic values.yaml
+        content = {cfg["name"]: {"enabled": False, "values": {}, "resources": []}}
+        yaml.explicit_start = False
+        with outf.open("a") as ofp:
+            yaml.dump(content, ofp)
+            ofp.write("\n")
+
                   
 # call the import function for all elements in the config list
 for cfg in config:
     import_charts(cfg, target_dir)
 
-# increment the version number of the chart
+# and write a starting point values.yaml
+write_values_yaml(config,target_dir)
+
+# lastly, increment the version number of the chart
 chartf = Path(target_dir + "Chart.yaml")
 chart = yaml.load(chartf)
 current_version = semantic_version.Version(chart["version"])
