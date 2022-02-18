@@ -18,17 +18,17 @@ target_dir = "charts/extensions/"
 config = [
     {
         "package": "gardener/external-dns-management",
-        "version": "v0.11.4",
+        "version": "v0.12.0",
         "name": "external-dns-management",
     },
     {
         "package": "gardener/gardener-extension-networking-calico",
-        "version": "v1.19.0",
+        "version": "v1.23.0",
         "name": "networking-calico",
     },
     {
         "package": "gardener/gardener-extension-networking-cilium",
-        "version": "v1.8.0",
+        "version": "v1.9.0",
         "name": "networking-cilium",
     },
     {
@@ -38,7 +38,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-os-ubuntu",
-        "version": "v1.13.0",
+        "version": "v1.14.0",
         "name": "os-ubuntu",
     },
     {
@@ -48,12 +48,12 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-aws",
-        "version": "v1.33.0",
+        "version": "v1.33.1",
         "name": "provider-aws",
     },
     {
         "package": "gardener/gardener-extension-provider-azure",
-        "version": "v1.24.1",
+        "version": "v1.25.0",
         "name": "provider-azure",
     },
     {
@@ -63,22 +63,22 @@ config = [
     },
     {
         "package": "23technologies/gardener-extension-provider-hcloud",
-        "version": "v0.4.8",
+        "version": "v0.4.13",
         "name": "provider-hcloud",
     },
     {
         "package": "gardener/gardener-extension-provider-openstack",
-        "version": "v1.23.1",
+        "version": "v1.23.3",
         "name": "provider-openstack",
     },
     {
         "package": "gardener/gardener-extension-shoot-cert-service",
-        "version": "v1.18.0",
+        "version": "v1.20.0",
         "name": "shoot-cert-service",
     },
     {
         "package": "gardener/gardener-extension-shoot-dns-service",
-        "version": "v1.14.0",
+        "version": "v1.17.0",
         "name": "extension-shoot-dns-service",
     },
 ]
