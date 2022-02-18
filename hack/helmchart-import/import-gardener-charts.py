@@ -20,6 +20,8 @@ config = [
                 "chart_name": "gardener-controlplane",
             },
             {"src": "charts/gardener/gardenlet", "chart_name": "gardenlet"},
+            {"src": "charts/gardener/controlplane/charts/runtime", "chart_name": "gardener-controlplane-runtime"},
+            {"src": "charts/gardener/controlplane/charts/application", "chart_name": "gardener-controlplane-application"},
         ],
     },
     {
