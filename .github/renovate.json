@@ -13,12 +13,12 @@
       },
       {
          "fileMatch":[
-            "^charts/extensions/values.yaml$"
+             "^hack/helmchart-import/import-gardener-extension-charts.py$"
          ],
          "datasourceTemplate":"github-releases",
          "versioningTemplate": "semver-coerced",
          "matchStrings":[
-            "depName=(?<depName>.*?)\\s+tag:\\ (?<currentValue>.*)\\s"
+	    "\"package\".* \"(?<depName>.*?)\".*\\s*\"version\".*\"(?<currentValue>.*?)\""
          ]
       }
    ],
