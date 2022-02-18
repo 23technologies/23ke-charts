@@ -12,6 +12,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+
+      - name: Import gardener-core helmcharts and patch them
+        run: |
+          pip install -r hack/helmchart-import/requirements.txt
+          python hack/helmchart-import/import-gardener-extension-charts.py
 
       - name: Import gardener-extension helmcharts
         run: hack/helmchart-import/import-extension-charts.sh

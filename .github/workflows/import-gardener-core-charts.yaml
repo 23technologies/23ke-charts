@@ -20,7 +20,7 @@ jobs:
         run: |
           pip install -r hack/helmchart-import/requirements.txt
           python hack/helmchart-import/import-gardener-charts.py
-          git apply hack/helmchart-import/gardener-charts.patch
+          git apply hack/helmchart-import/patches/*.patch
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v8
