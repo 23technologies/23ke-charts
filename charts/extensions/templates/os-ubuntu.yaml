@@ -10,7 +10,9 @@ providerConfig:
   values:
     image:
       tag: v1.13.0
+{{- if (index .Values "os-ubuntu").values }}
 {{- toYaml (index .Values "os-ubuntu").values | nindent 4 }}
+{{- end }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
 kind: ControllerRegistration
@@ -25,5 +27,7 @@ spec:
     type: ubuntu
   - kind: OperatingSystemConfig
     type: ubuntu-pro
-{{- toYaml (index .Values "os-ubuntu").resources | nindent 4 }}
+{{- if (index .Values "os-ubuntu").resources}}
+{{- toYaml (index .Values "os-ubuntu").resources | nindent 2 }}
+{{- end }}
 {{- end }}

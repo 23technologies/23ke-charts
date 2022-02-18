@@ -10,7 +10,9 @@ providerConfig:
   values:
     image:
       tag: v0.4.8
+{{- if (index .Values "provider-hcloud").values }}
 {{- toYaml (index .Values "provider-hcloud").values | nindent 4 }}
+{{- end }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
 kind: ControllerRegistration
@@ -27,5 +29,7 @@ spec:
     type: hcloud
   - kind: Worker
     type: hcloud
-{{- toYaml (index .Values "provider-hcloud").resources | nindent 4 }}
+{{- if (index .Values "provider-hcloud").resources}}
+{{- toYaml (index .Values "provider-hcloud").resources | nindent 2 }}
+{{- end }}
 {{- end }}

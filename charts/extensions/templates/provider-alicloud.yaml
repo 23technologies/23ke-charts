@@ -10,7 +10,9 @@ providerConfig:
   values:
     image:
       tag: v1.32.0
+{{- if (index .Values "provider-alicloud").values }}
 {{- toYaml (index .Values "provider-alicloud").values | nindent 4 }}
+{{- end }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
 kind: ControllerRegistration
@@ -33,5 +35,7 @@ spec:
     type: alicloud
   - kind: Worker
     type: alicloud
-{{- toYaml (index .Values "provider-alicloud").resources | nindent 4 }}
+{{- if (index .Values "provider-alicloud").resources}}
+{{- toYaml (index .Values "provider-alicloud").resources | nindent 2 }}
+{{- end }}
 {{- end }}

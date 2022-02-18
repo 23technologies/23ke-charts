@@ -132,10 +132,15 @@ def import_charts(cfg, target_dir):
     with outf.open("a") as ofp:
         ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").enabled }}\n")
         yaml.dump(content[0], ofp)
+        ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").values }}\n")
         ofp.write("{{- toYaml (index .Values " + '"' + cfg["name"] + '"' + ").values | nindent 4 }}\n")
+        ofp.write("{{- end }}\n")
+
         yaml.dump(content[1], ofp)
-        ofp.write("{{- toYaml (index .Values " + '"' + cfg["name"] + '"' + ").resources | nindent 4 }}\n")
-        ofp.write("{{- end }}")
+        ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").resources}}\n")
+        ofp.write("{{- toYaml (index .Values " + '"' + cfg["name"] + '"' + ").resources | nindent 2 }}\n")
+        ofp.write("{{- end }}\n")
+        ofp.write("{{- end }}\n")
 
 def write_values_yaml(config, target_dir):
 

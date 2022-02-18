@@ -10,7 +10,9 @@ providerConfig:
   values:
     image:
       tag: v1.8.0
+{{- if (index .Values "networking-cilium").values }}
 {{- toYaml (index .Values "networking-cilium").values | nindent 4 }}
+{{- end }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
 kind: ControllerRegistration
@@ -23,5 +25,7 @@ spec:
   resources:
   - kind: Network
     type: cilium
-{{- toYaml (index .Values "networking-cilium").resources | nindent 4 }}
+{{- if (index .Values "networking-cilium").resources}}
+{{- toYaml (index .Values "networking-cilium").resources | nindent 2 }}
+{{- end }}
 {{- end }}

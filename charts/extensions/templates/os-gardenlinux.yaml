@@ -10,7 +10,9 @@ providerConfig:
   values:
     image:
       tag: v0.11.0
+{{- if (index .Values "os-gardenlinux").values }}
 {{- toYaml (index .Values "os-gardenlinux").values | nindent 4 }}
+{{- end }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
 kind: ControllerRegistration
@@ -23,5 +25,7 @@ spec:
   resources:
   - kind: OperatingSystemConfig
     type: gardenlinux
-{{- toYaml (index .Values "os-gardenlinux").resources | nindent 4 }}
+{{- if (index .Values "os-gardenlinux").resources}}
+{{- toYaml (index .Values "os-gardenlinux").resources | nindent 2 }}
+{{- end }}
 {{- end }}

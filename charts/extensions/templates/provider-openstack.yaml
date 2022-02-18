@@ -10,7 +10,9 @@ providerConfig:
   values:
     image:
       tag: v1.23.1
+{{- if (index .Values "provider-openstack").values }}
 {{- toYaml (index .Values "provider-openstack").values | nindent 4 }}
+{{- end }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
 kind: ControllerRegistration
@@ -33,5 +35,7 @@ spec:
     type: openstack
   - kind: Worker
     type: openstack
-{{- toYaml (index .Values "provider-openstack").resources | nindent 4 }}
+{{- if (index .Values "provider-openstack").resources}}
+{{- toYaml (index .Values "provider-openstack").resources | nindent 2 }}
+{{- end }}
 {{- end }}

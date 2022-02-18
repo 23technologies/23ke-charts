@@ -10,7 +10,9 @@ providerConfig:
   values:
     image:
       tag: v1.20.0
+{{- if (index .Values "provider-gcp").values }}
 {{- toYaml (index .Values "provider-gcp").values | nindent 4 }}
+{{- end }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
 kind: ControllerRegistration
@@ -35,5 +37,7 @@ spec:
     type: gcp
   - kind: Worker
     type: gcp
-{{- toYaml (index .Values "provider-gcp").resources | nindent 4 }}
+{{- if (index .Values "provider-gcp").resources}}
+{{- toYaml (index .Values "provider-gcp").resources | nindent 2 }}
+{{- end }}
 {{- end }}

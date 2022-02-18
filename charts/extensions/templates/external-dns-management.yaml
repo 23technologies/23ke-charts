@@ -10,7 +10,9 @@ providerConfig:
   values:
     image:
       tag: v0.11.4
+{{- if (index .Values "external-dns-management").values }}
 {{- toYaml (index .Values "external-dns-management").values | nindent 4 }}
+{{- end }}
 ---
 apiVersion: core.gardener.cloud/v1beta1
 kind: ControllerRegistration
@@ -39,5 +41,7 @@ spec:
     type: netlify-dns
   - kind: DNSProvider
     type: infoblox-dns
-{{- toYaml (index .Values "external-dns-management").resources | nindent 4 }}
+{{- if (index .Values "external-dns-management").resources}}
+{{- toYaml (index .Values "external-dns-management").resources | nindent 2 }}
+{{- end }}
 {{- end }}
