@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  cloudprofiles:
+  - apiVersion: v2
+    created: "2022-02-22T10:35:53.820461777Z"
+    description: A Helm chart for Kubernetes
+    digest: 473ae17157c51f3cc33b19d3124394a8978336dfe7f96d5e1ee69ca751ecacc9
+    name: cloudprofiles
+    type: application
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/cloudprofiles-0.1.0/cloudprofiles-0.1.0.tgz
+    version: 0.1.0
   extensions:
   - apiVersion: v2
     created: "2022-02-18T15:06:29.33851829Z"
@@ -90,4 +100,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/identity-1.52.3/identity-1.52.3.tgz
     version: 1.52.3
-generated: "2022-02-18T15:06:29.338569915Z"
+generated: "2022-02-22T10:35:54.037171513Z"
