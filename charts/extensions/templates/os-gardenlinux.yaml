@@ -25,7 +25,4 @@ spec:
   resources:
   - kind: OperatingSystemConfig
     type: gardenlinux
-{{- if (index .Values "os-gardenlinux").resources}}
-{{- toYaml (index .Values "os-gardenlinux").resources | nindent 2 }}
-{{- end }}
 {{- end }}

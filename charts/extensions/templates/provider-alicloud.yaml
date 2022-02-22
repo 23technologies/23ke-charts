@@ -35,7 +35,4 @@ spec:
     type: alicloud
   - kind: Worker
     type: alicloud
-{{- if (index .Values "provider-alicloud").resources}}
-{{- toYaml (index .Values "provider-alicloud").resources | nindent 2 }}
-{{- end }}
 {{- end }}

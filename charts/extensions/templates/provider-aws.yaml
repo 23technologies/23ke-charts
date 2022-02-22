@@ -37,7 +37,4 @@ spec:
     type: aws
   - kind: Worker
     type: aws
-{{- if (index .Values "provider-aws").resources}}
-{{- toYaml (index .Values "provider-aws").resources | nindent 2 }}
-{{- end }}
 {{- end }}

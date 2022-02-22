@@ -4,13 +4,22 @@ import re
 import urllib
 from urllib import request
 from pathlib import Path
+import semantic_version
 
 import ruamel.yaml
+
 yaml = ruamel.yaml.YAML()
 
 
 # here go our importet helmcharts
 target_dir = "charts/extensions/"
+
+# make sure to rewrite the default values.yaml each time
+outf = Path(target_dir + "values.yaml")
+try:
+    outf.unlink()
+except:
+    pass
 
 # configure the charts you want to import here
 # you need to define the package consiting of github-org/repo,
@@ -105,7 +114,7 @@ def import_charts(cfg, target_dir):
         + cfg["version"]
         + "/controller-registration.yaml",
     ]
-    
+
     # now let's fetch the yaml
     for url in urls:
         try:
@@ -117,7 +126,6 @@ def import_charts(cfg, target_dir):
 
     # assume that we have to documents in our yaml, which is commonly the case for controller-registration.yamls
     content = list(yaml.load_all(x))
-    
 
     # setup the path for our target chart
     Path(target_dir + "templates/").mkdir(parents=True, exist_ok=True)
@@ -127,44 +135,60 @@ def import_charts(cfg, target_dir):
     except:
         pass
 
+    # define a dictionary for writing the default values.yaml file
+    default_values = {cfg["name"]: {"enabled": False, "values": {}}}
+
     # write the target chart including templating
     yaml.explicit_start = True
     with outf.open("a") as ofp:
         ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").enabled }}\n")
         yaml.dump(content[0], ofp)
         ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").values }}\n")
-        ofp.write("{{- toYaml (index .Values " + '"' + cfg["name"] + '"' + ").values | nindent 4 }}\n")
+        ofp.write(
+            "{{- toYaml (index .Values "
+            + '"'
+            + cfg["name"]
+            + '"'
+            + ").values | nindent 4 }}\n"
+        )
         ofp.write("{{- end }}\n")
 
+        # if we have a kind: Extension in our resources, we want to be able to set this
+        # resource to globallyEnabled: true by helm templating
+        # Therefore, Add a helm template for this option
+        for resource in content[1]["spec"]["resources"]:
+            for k, v in dict(resource).items():
+                if (k, v) == ("kind", "Extension"):
+                    resource["globallyEnabled"] = "HereOurHelmTemplateGoes"
+                    default_values[cfg["name"]]["globallyEnabled"] = False
         yaml.dump(content[1], ofp)
-        ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").resources}}\n")
-        ofp.write("{{- toYaml (index .Values " + '"' + cfg["name"] + '"' + ").resources | nindent 2 }}\n")
-        ofp.write("{{- end }}\n")
         ofp.write("{{- end }}\n")
 
-def write_values_yaml(config, target_dir):
+    # As we cannot write the helmtemplate with ruamel.yaml, we need to replace our previously
+    # inserted string "HereOurHelmTemplateGoes" with the actual template
+    with outf.open("r") as ofp:
+        content = ofp.read()
+        content = re.sub(
+            "HereOurHelmTemplateGoes",
+            "{{ (index .Values " + '"' + cfg["name"] + '"' + ").globallyEnabled }}",
+            content,
+            flags=re.M,
+        )
 
+    with outf.open("w") as ofp:
+        ofp.write(content)
+
+    # write the default values file
     outf = Path(target_dir + "values.yaml")
-    try:
-        outf.unlink()
-    except:
-        pass
+    yaml.explicit_start = False
+    with outf.open("a") as ofp:
+        yaml.dump(default_values, ofp)
+        ofp.write("\n")
 
-    for cfg in config:
-        # write a basic values.yaml
-        content = {cfg["name"]: {"enabled": False, "values": {}, "resources": []}}
-        yaml.explicit_start = False
-        with outf.open("a") as ofp:
-            yaml.dump(content, ofp)
-            ofp.write("\n")
 
-                  
 # call the import function for all elements in the config list
 for cfg in config:
     import_charts(cfg, target_dir)
-
-# and write a starting point values.yaml
-write_values_yaml(config,target_dir)
 
 # lastly, increment the version number of the chart
 chartf = Path(target_dir + "Chart.yaml")

@@ -35,7 +35,4 @@ spec:
     type: azure
   - kind: Worker
     type: azure
-{{- if (index .Values "provider-azure").resources}}
-{{- toYaml (index .Values "provider-azure").resources | nindent 2 }}
-{{- end }}
 {{- end }}

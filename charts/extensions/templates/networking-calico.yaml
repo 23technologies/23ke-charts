@@ -25,7 +25,4 @@ spec:
   resources:
   - kind: Network
     type: calico
-{{- if (index .Values "networking-calico").resources}}
-{{- toYaml (index .Values "networking-calico").resources | nindent 2 }}
-{{- end }}
 {{- end }}

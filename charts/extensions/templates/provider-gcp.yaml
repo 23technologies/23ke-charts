@@ -37,7 +37,4 @@ spec:
     type: gcp
   - kind: Worker
     type: gcp
-{{- if (index .Values "provider-gcp").resources}}
-{{- toYaml (index .Values "provider-gcp").resources | nindent 2 }}
-{{- end }}
 {{- end }}

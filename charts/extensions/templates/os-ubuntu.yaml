@@ -27,7 +27,4 @@ spec:
     type: ubuntu
   - kind: OperatingSystemConfig
     type: ubuntu-pro
-{{- if (index .Values "os-ubuntu").resources}}
-{{- toYaml (index .Values "os-ubuntu").resources | nindent 2 }}
-{{- end }}
 {{- end }}

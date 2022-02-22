@@ -35,7 +35,4 @@ spec:
     type: openstack
   - kind: Worker
     type: openstack
-{{- if (index .Values "provider-openstack").resources}}
-{{- toYaml (index .Values "provider-openstack").resources | nindent 2 }}
-{{- end }}
 {{- end }}

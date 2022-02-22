@@ -1,65 +1,54 @@
 external-dns-management:
   enabled: false
   values: {}
-  resources: []
 
 networking-calico:
   enabled: false
   values: {}
-  resources: []
 
 networking-cilium:
   enabled: false
   values: {}
-  resources: []
 
 os-gardenlinux:
   enabled: false
   values: {}
-  resources: []
 
 os-ubuntu:
   enabled: false
   values: {}
-  resources: []
 
 provider-alicloud:
   enabled: false
   values: {}
-  resources: []
 
 provider-aws:
   enabled: false
   values: {}
-  resources: []
 
 provider-azure:
   enabled: false
   values: {}
-  resources: []
 
 provider-gcp:
   enabled: false
   values: {}
-  resources: []
 
 provider-hcloud:
   enabled: false
   values: {}
-  resources: []
 
 provider-openstack:
   enabled: false
   values: {}
-  resources: []
 
 shoot-cert-service:
   enabled: false
   values: {}
-  resources: []
+  globallyEnabled: false
 
 shoot-dns-service:
   enabled: false
   values: {}
-  resources: []
+  globallyEnabled: false
 

@@ -41,7 +41,4 @@ spec:
     type: netlify-dns
   - kind: DNSProvider
     type: infoblox-dns
-{{- if (index .Values "external-dns-management").resources}}
-{{- toYaml (index .Values "external-dns-management").resources | nindent 2 }}
-{{- end }}
 {{- end }}

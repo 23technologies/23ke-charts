@@ -29,7 +29,4 @@ spec:
     type: hcloud
   - kind: Worker
     type: hcloud
-{{- if (index .Values "provider-hcloud").resources}}
-{{- toYaml (index .Values "provider-hcloud").resources | nindent 2 }}
-{{- end }}
 {{- end }}

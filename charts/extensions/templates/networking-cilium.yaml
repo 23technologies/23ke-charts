@@ -25,7 +25,4 @@ spec:
   resources:
   - kind: Network
     type: cilium
-{{- if (index .Values "networking-cilium").resources}}
-{{- toYaml (index .Values "networking-cilium").resources | nindent 2 }}
-{{- end }}
 {{- end }}
