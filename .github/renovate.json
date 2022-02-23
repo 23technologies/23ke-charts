@@ -39,6 +39,9 @@
   },
   "includeForks": true,
   "enabledManagers": ["regex"],
-  "prCreation": "immediate"
+  "prCreation": "immediate",
+  "patch": {
+    "enabled": true
+  }
 }
 
