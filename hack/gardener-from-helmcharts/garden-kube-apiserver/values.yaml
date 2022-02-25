@@ -1,0 +1,25 @@
+tls:
+  admin:
+    crt: ${KUBE_ADMIN_TLS_TLS_CRT}
+    key: ${KUBE_ADMIN_TLS_TLS_KEY}
+  client:
+    crt: ${ETCD_CLIENT_TLS_TLS_CRT}
+    key: ${ETCD_CLIENT_TLS_TLS_KEY}
+  kubeAPIServer:
+    ca:
+      crt: ${GARDENER_CA_KEYPAIR_TLS_CRT}
+      key: ${GARDENER_CA_KEYPAIR_TLS_KEY}
+    server:
+      crt: ${KUBE_APISERVER_TLS_TLS_CRT}
+      key: ${KUBE_APISERVER_TLS_TLS_KEY}
+  kubeAggregator:
+    ca:
+      crt: ${GARDENER_CA_KEYPAIR_TLS_CRT}
+      key: ${GARDENER_CA_KEYPAIR_TLS_KEY}
+    client:
+      crt: ${KUBE_AGGREGATOR_TLS_TLS_CRT}
+      key: ${KUBE_AGGREGATOR_TLS_TLS_KEY}
+  kubeControllerManager:
+    crt: ${KUBE_CONTROLLERMANAGER_TLS_TLS_CRT}
+    key: ${KUBE_CONTROLLERMANAGER_TLS_TLS_KEY}
+  serviceAccountKey: ${KUBE_SERVICEACCOUNT_TLS_TLS_KEY}

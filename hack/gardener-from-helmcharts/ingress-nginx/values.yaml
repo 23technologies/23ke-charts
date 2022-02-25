@@ -1,0 +1,15 @@
+metrics:
+  enabled: true
+  service:
+    annotations:
+      prometheus.io/scrape: "true"
+      prometheus.io/port: "10254"
+serviceMonitor:
+  enabled: false
+controller:
+  extraArgs:
+    enable-ssl-passthrough: ""
+  podLabels:
+    app: nginx-ingress
+    component: controller
+

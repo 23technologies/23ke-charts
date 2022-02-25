@@ -1,0 +1,10 @@
+tls:
+  ca:
+    crt: ${GARDENER_CA_KEYPAIR_TLS_CRT}
+    key: ${GARDENER_CA_KEYPAIR_TLS_KEY}
+  client:
+    crt: ${ETCD_CLIENT_TLS_TLS_CRT}
+    key: ${ETCD_CLIENT_TLS_TLS_KEY}
+  server:
+    crt: ${ETCD_TLS_TLS_CRT}
+    key: ${ETCD_TLS_TLS_KEY}

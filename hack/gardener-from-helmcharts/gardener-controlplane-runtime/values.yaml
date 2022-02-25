@@ -1,0 +1,25 @@
+global:
+  admission:
+    config:
+      server:
+        https:
+          tls:
+            caBundle: ${GARDENER_ADMISSION_CONTROLLER_TLS_CA_CRT}
+            crt: ${GARDENER_ADMISSION_CONTROLLER_TLS_TLS_CRT}
+            key: ${GARDENER_ADMISSION_CONTROLLER_TLS_TLS_KEY}
+    kubeconfig: ${GARDENER_INTERNAL_KUBECONFIG}
+  apiserver:
+    caBundle: ${GARDENER_APISERVER_TLS_CA_CRT}
+    etcd:
+      caBundle: ${ETCD_CLIENT_TLS_CA_CRT}
+      tls:
+        crt: ${ETCD_CLIENT_TLS_TLS_CRT}
+        key: ${ETCD_CLIENT_TLS_TLS_KEY}
+    kubeconfig: ${GARDENER_INTERNAL_KUBECONFIG}
+    tls:
+      crt: ${GARDENER_APISERVER_TLS_TLS_CRT}
+      key: ${GARDENER_APISERVER_TLS_TLS_KEY}
+  controller:
+    kubeconfig: ${GARDENER_INTERNAL_KUBECONFIG}
+  scheduler:
+    kubeconfig: ${GARDENER_INTERNAL_KUBECONFIG}
