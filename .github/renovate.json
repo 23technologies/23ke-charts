@@ -1,5 +1,6 @@
 {
    "prHourlyLimit": 0,
+   "platformAutomerge": true,
    "regexManagers":[
       {
          "fileMatch":[
