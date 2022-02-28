@@ -1,7 +1,3 @@
-{{- define "proxycomponentconfigversion" -}}
-kubeproxy.config.k8s.io/v1alpha1
-{{- end -}}
-
 {{- define "apiserverversion" -}}
 apiserver.k8s.io/v1alpha1
 {{- end -}}
@@ -43,15 +39,15 @@ batch/v1beta1
 {{- end -}}
 
 {{- define "hpaversion" -}}
+{{- if semverCompare ">= 1.23-0" .Capabilities.KubeVersion.GitVersion -}}
+autoscaling/v2
+{{- else -}}
 autoscaling/v2beta1
+{{- end -}}
 {{- end -}}
 
 {{- define "webhookadmissionregistration" -}}
-{{- if semverCompare "<= 1.15.x" .Capabilities.KubeVersion.GitVersion -}}
-admissionregistration.k8s.io/v1beta1
-{{- else -}}
 admissionregistration.k8s.io/v1
-{{- end -}}
 {{- end -}}
 
 {{- define "poddisruptionbudgetversion" -}}
