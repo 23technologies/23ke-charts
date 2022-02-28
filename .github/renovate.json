@@ -26,12 +26,14 @@
     {
 	"matchPackagePatterns": [".*gardener-extension.*", "gardener/external-dns-management"],
 	"matchUpdateTypes": ["patch", "minor", "major"],
-	"groupName": "gardener-extensions"
+	"groupName": "gardener-extensions",
+    "automerge": true
     },
     {
 	"matchPackageNames": ["gardener/gardener", "gardener/dashboard", "gardener/garden-setup"],
 	"matchUpdateTypes": ["patch", "minor", "major"],
-	"groupName": "gardener-core"
+	"groupName": "gardener-core",
+    "automerge": true
     }
   ],
   "lockFileMaintenance": {
