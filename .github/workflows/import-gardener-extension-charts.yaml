@@ -28,10 +28,3 @@ jobs:
           author_email: 23t-machine-user@example.com
           message: 'Update the gardener helmcharts'
           add: -u
-
-      - name: Merge Pull Request
-        uses: juliangruber/merge-pull-request-action@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          number: 1
-          method: squash
