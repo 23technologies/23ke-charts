@@ -77,7 +77,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-openstack",
-        "version": "v1.23.1",
+        "version": "v1.23.4",
         "name": "provider-openstack",
     },
     {
