@@ -33,9 +33,7 @@ spec:
         checksum/configmap-gardenlet-imagevector-overwrite-components: {{ include (print $.Template.BasePath "/configmap-imagevector-overwrite-components.yaml") . | sha256sum }}
         {{- end }}
         {{- if .Values.global.gardenlet.config.gardenClientConnection.bootstrapKubeconfig }}
-        {{- if not .Values.global.gardenlet.config.gardenClientConnection.bootstrapKubeconfig.secretRef }}
         checksum/secret-gardenlet-kubeconfig-garden-bootstrap: {{ include (print $.Template.BasePath "/secret-kubeconfig-garden-bootstrap.yaml") . | sha256sum }}
-        {{- end }}
         {{- end }}
         {{- if .Values.global.gardenlet.config.gardenClientConnection.kubeconfig }}
         checksum/secret-gardenlet-kubeconfig-garden: {{ include (print $.Template.BasePath "/secret-kubeconfig-garden.yaml") . | sha256sum }}
@@ -123,6 +121,11 @@ spec:
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
         volumeMounts:
+        {{- if semverCompare ">= 1.20-0" .Capabilities.KubeVersion.GitVersion }}
+        - name: kube-api-access-gardener
+          mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+          readOnly: true
+        {{- end }}
         {{- if .Values.global.gardenlet.config.gardenClientConnection.kubeconfig }}
         - name: gardenlet-kubeconfig-garden
           mountPath: /etc/gardenlet/kubeconfig-garden
@@ -154,6 +157,26 @@ spec:
 {{ toYaml .Values.global.gardenlet.additionalVolumeMounts | indent 8 }}
 {{- end }}
       volumes:
+      {{- if semverCompare ">= 1.20-0" .Capabilities.KubeVersion.GitVersion }}
+      - name: kube-api-access-gardener
+        projected:
+          defaultMode: 420
+          sources:
+          - serviceAccountToken:
+              path: token
+              expirationSeconds: 43200
+          - configMap:
+              name: kube-root-ca.crt
+              items:
+              - key: ca.crt
+                path: ca.crt
+          - downwardAPI:
+              items:
+              - path: namespace
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+      {{- end }}
       {{- if .Values.global.gardenlet.config.gardenClientConnection.kubeconfig }}
       - name: gardenlet-kubeconfig-garden
         secret:
