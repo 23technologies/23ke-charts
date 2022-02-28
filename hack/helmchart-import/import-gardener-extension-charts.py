@@ -82,7 +82,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-shoot-cert-service",
-        "version": "v1.18.0",
+        "version": "v1.20.0",
         "name": "shoot-cert-service",
     },
     {
