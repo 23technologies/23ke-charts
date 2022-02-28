@@ -13,8 +13,7 @@ SVCRANGE=$(echo '{"apiVersion":"v1","kind":"Service","metadata":{"name":"tst"},"
 # now set the clusterIP for the gardener API service by selecting a random ip-adress from the
 # service CIDR
 # see also: https://stackoverflow.com/a/31412705
-# Note that you
-export GARDENER_API_SERVICE_CLUSTER_IP=$(nmap -sL -n $SVCRANGE | awk '/Nmap scan report/{print $NF}' | sed -n 100p)
+export GARDENER_API_SERVICE_CLUSTER_IP=$(nmap -sL -n $SVCRANGE | awk '/Nmap scan report/{print $NF}' | sed -n 258p)
 
 function helm_upgrade () {
     name=$1
@@ -43,10 +42,12 @@ kubectl create ns garden
 helm_upgrade cert-manager jetstack cert-manager --wait
 
 # deploy clusterissuers
-kubectl apply -f letsencrypt.yaml
+kubectl apply -f letsencrypt.yaml --wait
 
 # if you don't have an ingress already...
-# helm_upgrade ingress-nginx ingress-nginx ingress-nginx
+helm_upgrade ingress-nginx ingress-nginx ingress-nginx --wait
+
+# create the cas and certificates
 kubectl apply -f <(cat cert-manager-ca.yaml | envsubst) -n garden --wait
 
 
