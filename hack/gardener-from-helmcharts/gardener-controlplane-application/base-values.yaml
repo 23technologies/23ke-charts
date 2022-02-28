@@ -3,6 +3,7 @@ global:
     virtualGarden:
       enabled: true
       clusterIP: ${GARDENER_API_SERVICE_CLUSTER_IP}
+      createNamespace: false
   internalDomain:
     domain: internal.${AZURE_DOMAIN}
     provider: azure-dns
