@@ -29,8 +29,9 @@ jobs:
           message: 'Update the gardener helmcharts'
           add: -u
 
-      - name: Merge me!
-        uses: ridedott/merge-me-action@v2
-        with:
-          GITHUB_LOGIN: 23t-machine-user
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge Pull Request
+         uses: juliangruber/merge-pull-request-action@v1
+         with:
+           github-token: ${{ secrets.GITHUB_TOKEN }}
+           number: 1
+           method: squash
