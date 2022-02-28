@@ -1,6 +1,5 @@
 {
    "prHourlyLimit": 0,
-   "platformAutomerge": true,
    "regexManagers":[
       {
          "fileMatch":[
@@ -27,11 +26,13 @@
     {
 	"matchPackagePatterns": [".*gardener-extension.*", "gardener/external-dns-management"],
 	"matchUpdateTypes": ["patch", "minor", "major"],
+    "platformAutomerge": true,
 	"groupName": "gardener-extensions"
     },
     {
 	"matchPackageNames": ["gardener/gardener", "gardener/dashboard", "gardener/garden-setup"],
 	"matchUpdateTypes": ["patch", "minor", "major"],
+    "platformAutomerge": true,
 	"groupName": "gardener-core"
     }
   ],
