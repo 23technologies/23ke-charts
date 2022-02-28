@@ -28,3 +28,9 @@ jobs:
           author_email: 23t-machine-user@example.com
           message: 'Update the gardener helmcharts'
           add: -u
+
+      - name: Merge me!
+        uses: ridedott/merge-me-action@v2
+        with:
+          GITHUB_LOGIN: 23t-machine-user
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
