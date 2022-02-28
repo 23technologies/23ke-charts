@@ -6,7 +6,6 @@ global:
           tls:
             caBundle: ${GARDENER_ADMISSION_CONTROLLER_TLS_CA_CRT}
             crt: ${GARDENER_ADMISSION_CONTROLLER_TLS_TLS_CRT}
-            key: ${GARDENER_ADMISSION_CONTROLLER_TLS_TLS_KEY}
     kubeconfig: ${GARDENER_INTERNAL_KUBECONFIG}
   apiserver:
     caBundle: ${GARDENER_APISERVER_TLS_CA_CRT}
