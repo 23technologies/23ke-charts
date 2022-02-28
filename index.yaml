@@ -100,4 +100,13 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/identity-1.52.3/identity-1.52.3.tgz
     version: 1.52.3
-generated: "2022-02-22T10:35:54.037171513Z"
+  pre-gardenlet:
+  - apiVersion: v2
+    created: "2022-02-28T11:05:29.599415309Z"
+    description: A Helm chart for prepairing the gardenlet installation
+    digest: c7c1f4a9f006cf0ea64f408823fc1195779aea319ddf475c1081eaf1fff66c4e
+    name: pre-gardenlet
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
+    version: 1.38.2
+generated: "2022-02-28T11:05:29.599453318Z"
