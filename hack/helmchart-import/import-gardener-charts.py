@@ -37,7 +37,7 @@ config = [
     },
     {
         "package": "gardener/dashboard",
-        "version": "1.52.3",
+        "version": "1.54.0",
         "dirs": [
             {"src": "charts/gardener-dashboard", "chart_name": "gardener-dashboard"},
             {"src": "charts/identity", "chart_name": "identity"},
