@@ -21,9 +21,6 @@ jobs:
           pip install -r hack/helmchart-import/requirements.txt
           python hack/helmchart-import/import-gardener-extension-charts.py
 
-      - name: Import gardener-extension helmcharts
-        run: hack/helmchart-import/import-extension-charts.sh
-
       - name: Commit changes
         uses: EndBug/add-and-commit@v8
         with:
