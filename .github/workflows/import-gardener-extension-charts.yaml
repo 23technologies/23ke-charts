@@ -28,3 +28,10 @@ jobs:
           author_email: 23t-machine-user@example.com
           message: 'Update the gardener helmcharts'
           add: -u
+
+      - name: Merge now
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          target_branch: main
+          github_token: ${{ github.token }}
