@@ -1,0 +1,4 @@
+secrets/
+config.env
+apiserver-in-shoot-kubeconfig.yaml
+*~

@@ -1,0 +1,40 @@
+global:
+  deployment:
+    virtualGarden:
+      enabled: true
+      clusterIP: ${GARDENER_API_SERVICE_CLUSTER_IP}
+  internalDomain:
+    domain: internal.${AZURE_DOMAIN}
+    provider: azure-dns
+    credentials:
+      tenantID: ${AZURE_TENANT_ID}
+      subscriptionID: ${AZURE_SUBSCRIPTION_ID}
+      clientID: ${AZURE_SECRET_ID}
+      clientSecret: ${AZURE_SECRET_VALUE}
+  defaultDomains:
+  - domain: ${AZURE_DOMAIN}
+    provider: azure-dns
+    credentials:
+      tenantID: ${AZURE_TENANT_ID}
+      subscriptionID: ${AZURE_SUBSCRIPTION_ID}
+      clientID: ${AZURE_SECRET_ID}
+      clientSecret: ${AZURE_SECRET_VALUE}
+  apiserver:
+    replicaCount: 1
+    clusterIdentity: garden-cluster-identity
+    image:
+      tag: ${GARDENER_VERSION}
+    etcd:
+      servers: https://etcd:2379
+  admission:
+    replicaCount: 1
+    image:
+      tag: ${GARDENER_VERSION}
+  controller:
+    replicaCount: 1
+    image:
+      tag: ${GARDENER_VERSION}
+  scheduler:
+    replicaCount: 1
+    image:
+      tag: ${GARDENER_VERSION}

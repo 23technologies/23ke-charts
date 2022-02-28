@@ -1,0 +1,14 @@
+connectors: ~
+issuerUrl: https://identity.${ENV}.${BASE_DOMAIN}/oidc
+dashboardOrigins:
+  - 'https://dashboard.${ENV}.${BASE_DOMAIN}'
+  - 'http://localhost:8000'
+dashboardClientSecret: ${DASHBOARD_CLIENTSECRET}
+tls: ~
+ingress:
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/use-port-in-redirects: "true"
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-staging
+    # cert-manager.io/cluster-issuer: default-issuer
