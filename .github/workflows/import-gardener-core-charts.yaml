@@ -5,7 +5,7 @@ on:
     branches:
       - 'renovate/gardener-core'
     paths:
-      - '/hack/helmchart-import/import-gardener-charts.py'
+      - 'hack/helmchart-import/import-gardener-charts.py'
 
 jobs:
   import:
