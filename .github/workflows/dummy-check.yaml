@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'renovate/gardener-core'
+      - 'renovate/gardener-extensions'
 
 jobs:
   successful-check:
