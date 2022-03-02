@@ -2,7 +2,7 @@
    "postUpgradeTasks": {
       "commands": [".github/renovate-post-upgrade.sh"],
       "executionMode": "branch",
-      "fileFilters": ["hack/helmchart-import/**"]
+      "fileFilters": ["charts/**"]
    },
    "prHourlyLimit": 0,
    "regexManagers":[
