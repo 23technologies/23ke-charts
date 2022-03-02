@@ -1,0 +1,12 @@
+name: This check returns true
+
+on:
+  push:
+    branches:
+      - 'renovate/gardener-core'
+
+jobs:
+  successful-check:
+    runs-on: self-hosted
+    steps:
+      - run: echo success

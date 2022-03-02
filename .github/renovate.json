@@ -1,5 +1,6 @@
 {
    "prHourlyLimit": 0,
+   "automerge": "true",
    "regexManagers":[
       {
          "fileMatch":[
@@ -26,15 +27,11 @@
     {
 	"matchPackagePatterns": [".*gardener-extension.*", "gardener/external-dns-management"],
 	"matchUpdateTypes": ["patch", "minor", "major"],
-    "automerge": true,
-    "platformAutomerge": true,
 	"groupName": "gardener-extensions"
     },
     {
 	"matchPackageNames": ["gardener/gardener", "gardener/dashboard", "gardener/garden-setup"],
 	"matchUpdateTypes": ["patch", "minor", "major"],
-    "automerge": true,
-    "platformAutomerge": true,
 	"groupName": "gardener-core"
     }
   ],
@@ -43,9 +40,6 @@
   },
   "includeForks": true,
   "enabledManagers": ["regex"],
-  "prCreation": "immediate",
-  "patch": {
-    "enabled": true
-  }
+  "prCreation": "immediate"
 }
 
