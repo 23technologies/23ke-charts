@@ -1,4 +1,9 @@
 {
+   "postUpgradeTasks": {
+      "commands": [".github/renovate-post-upgrade.sh"],
+      "executionMode": "branch",
+      "fileFilters": ["hack/helmchart-import/**"]
+   },
    "prHourlyLimit": 0,
    "automerge": "true",
    "platformAutomerge": "true",
