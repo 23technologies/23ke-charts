@@ -57,7 +57,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-aws",
-        "version": "v1.33.1",
+        "version": "v1.34.0",
         "name": "provider-aws",
     },
     {
@@ -67,7 +67,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-gcp",
-        "version": "v1.20.1",
+        "version": "v1.21.0",
         "name": "provider-gcp",
     },
     {
@@ -77,7 +77,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-openstack",
-        "version": "v1.23.4",
+        "version": "v1.24.0",
         "name": "provider-openstack",
     },
     {
