@@ -7,7 +7,7 @@ CHANGED_FILE=$(git status -s)
 if echo "$CHANGED_FILE" | grep "import-gardener-charts.py"
 then
     # looks like gardener-core has been updated, import charts:
-    echo 'cd /tmp/renovate/repos/github/23technologies/23ke-renovate' > /tmp/tmpscript
+    echo 'cd /tmp/renovate/repos/github/23technologies/23ke-charts' > /tmp/tmpscript
     echo 'git status -s' >> /tmp/tmpscript
     echo 'pip install -r hack/helmchart-import/requirements.txt' >> /tmp/tmpscript
     echo 'python hack/helmchart-import/import-gardener-charts.py' >> /tmp/tmpscript
