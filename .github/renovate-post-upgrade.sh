@@ -10,7 +10,7 @@ then
     echo 'cd /tmp/renovate/repos/github/23technologies/23ke-charts' > /tmp/tmpscript
     echo 'git status -s' >> /tmp/tmpscript
     echo 'pip install -r hack/helmchart-import/requirements.txt' >> /tmp/tmpscript
-    echo 'python hack/helmchart-import/import-gardener-charts.py' >> /tmp/tmpscript
+    echo 'python3 hack/helmchart-import/import-gardener-charts.py' >> /tmp/tmpscript
     echo 'git apply hack/helmchart-import/patches/*.patch' >> /tmp/tmpscript
     echo "chmod -R 777 /tmp/renovate/repos/github/23technologies/23ke-renovate" >> /tmp/tmpscript
     echo "sleep 10000" >> /tmp/tmpscript
