@@ -13,6 +13,7 @@ then
     echo 'python hack/helmchart-import/import-gardener-charts.py' >> /tmp/tmpscript
     echo 'git apply hack/helmchart-import/patches/*.patch' >> /tmp/tmpscript
     echo "chmod -R 777 /tmp/renovate/repos/github/23technologies/23ke-renovate" >> /tmp/tmpscript
+    echo "sleep 10000" >> /tmp/tmpscript
     mv /tmp/tmpscript /tmp/scripts/renovate-post-upgrade-script
 fi
 #if echo "$CHANGED_FILE" | grep "values.yaml"
