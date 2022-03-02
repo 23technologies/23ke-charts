@@ -5,8 +5,6 @@
       "fileFilters": ["hack/helmchart-import/**"]
    },
    "prHourlyLimit": 0,
-   "automerge": "true",
-   "platformAutomerge": "true",
    "regexManagers":[
       {
          "fileMatch":[
