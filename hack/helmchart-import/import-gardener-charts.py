@@ -13,7 +13,7 @@ target_dir = "charts/"
 config = [
     {
         "package": "gardener/gardener",
-        "version": "v1.41.1",
+        "version": "v1.38.2",
         "dirs": [
             {
                 "src": "charts/gardener/controlplane",
