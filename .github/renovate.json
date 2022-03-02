@@ -1,4 +1,6 @@
 {
+   "automerge": "true",
+   "platformAutomerge": "true",
    "postUpgradeTasks": {
       "commands": [".github/renovate-post-upgrade.sh"],
       "executionMode": "branch",
