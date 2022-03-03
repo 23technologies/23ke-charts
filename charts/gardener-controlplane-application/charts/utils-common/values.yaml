@@ -133,10 +133,6 @@ global:
           enabled: false
           audience: mutating-webhook
           expirationSeconds: 3600
-    serviceAccountTokenVolumeProjection:
-      enabled: false
-      expirationSeconds: 43200
-      audience: ""
     vpa: false
     hvpa:
       enabled: false
@@ -329,10 +325,6 @@ global:
         enableContentionProfiling: false
     seedRestriction:
       enabled: false
-    serviceAccountTokenVolumeProjection:
-      enabled: false
-      expirationSeconds: 43200
-      audience: ""
 
   # Gardener controller manager configuration values
   controller:
@@ -356,10 +348,6 @@ global:
     additionalVolumeMounts: []
     env: []
     vpa: false
-    serviceAccountTokenVolumeProjection:
-      enabled: false
-      expirationSeconds: 43200
-      audience: ""
     config:
       gardenClientConnection:
       # acceptContentTypes: application/json
@@ -406,7 +394,7 @@ global:
           syncPeriod: 24h
         shootReference:
           concurrentSyncs: 5
-          protectAuditPolicyConfigMaps: true
+          protectAuditPolicyConfigMaps: false
         shootRetry:
           concurrentSyncs: 5
           retryPeriod: 10m
@@ -465,10 +453,6 @@ global:
   # podAnnotations: # YAML formatted annotations used for pod template
   # podLabels: # YAML formatted labels used for pod template
     vpa: false
-    serviceAccountTokenVolumeProjection:
-      enabled: false
-      expirationSeconds: 43200
-      audience: ""
     config:
       clientConnection:
       # acceptContentTypes: application/json
@@ -529,18 +513,6 @@ global:
       enabled: false
       clusterIP: 1.2.3.4
       createNamespace: true
-      apiserver:
-        user:
-          name: ""
-      admission:
-        user:
-          name: ""
-      controller:
-        user:
-          name: ""
-      scheduler:
-        user:
-          name: ""
 
   # RBAC related configuration
   rbac:
