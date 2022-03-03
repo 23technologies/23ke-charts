@@ -174,6 +174,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/gardenlet-1.41.1/gardenlet-1.41.1.tgz
     version: 1.41.1
   - apiVersion: v1
+    created: "2022-03-03T13:14:28.138033646Z"
+    description: A Helm chart to deploy the Gardenlet (primary "seed" agent)
+    digest: 3f952f32f81b29185650e4ab863b83d9d70f6bf0448511822d38176dac6b8fe9
+    name: gardenlet
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardenlet-1.40.3/gardenlet-1.40.3.tgz
+    version: 1.40.3
+  - apiVersion: v1
     created: "2022-03-03T12:46:36.882875968Z"
     description: A Helm chart to deploy the Gardenlet (primary "seed" agent)
     digest: b752331f14a15a50ce47404dd0138127efd6c93b70f56b0972c22970c907f379
@@ -223,4 +231,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-03-03T12:46:36.88300198Z"
+generated: "2022-03-03T13:14:28.138219227Z"
