@@ -187,7 +187,7 @@ def import_charts(cfg, target_dir):
 
 
 # call the import function for all elements in the config list
-extensions_versions = "| Extension      | Version |\n | ----------- | ----------- |\n"
+extensions_versions = "| Extension      | Version |\n| ----------- | ----------- |\n"
 for cfg in config:
     import_charts(cfg, target_dir)
     extensions_versions = extensions_versions + "|" + cfg["package"] + "|" + cfg["version"] + "|\n"
@@ -198,5 +198,10 @@ chart = yaml.load(chartf)
 current_version = semantic_version.Version(chart["version"])
 current_version.patch += 1
 chart["version"] = str(current_version)
-chart["description"] = "This helmchart bundles the following extensions:\n" + extensions_versions
 yaml.dump(chart, chartf)
+
+versionsf = Path(target_dir + "VERSIONS.md")
+text_file = open(versionsf, "w")
+text_file.write(extensions_versions)
+text_file.close()
+
