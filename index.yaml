@@ -12,6 +12,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-03-07T11:16:47.037542367Z"
+    description: A Helm chart for managing gardener extensions
+    digest: d6ae72fa2ba3e3224c358e2c87c23c7b5f2791d0e05ba57f3c5963fa89c2132e
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.5/extensions-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v2
     created: "2022-03-04T09:56:30.874673594Z"
     description: A Helm chart for managing gardener extensions
     digest: c9daf9460898de5614912b417f6762982e2c9f5c8b2a21946f37d5ece5150762
@@ -280,4 +288,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-03-04T15:01:44.788744914Z"
+generated: "2022-03-07T11:16:47.249068477Z"
