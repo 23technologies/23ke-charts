@@ -12,6 +12,20 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-03-07T14:12:24.687722613Z"
+    description: 'This helmchart bundles the following extensionsgardener/external-dns-management:v0.12.0
+      gardener/gardener-extension-networking-calico:v1.23.0 gardener/gardener-extension-networking-cilium:v1.10.0
+      gardener/gardener-extension-os-gardenlinux:v0.11.0 gardener/gardener-extension-os-ubuntu:v1.14.0
+      gardener/gardener-extension-provider-alicloud:v1.33.0 gardener/gardener-extension-provider-aws:v1.34.1
+      gardener/gardener-extension-provider-azure:v1.26.0 gardener/gardener-extension-provider-gcp:v1.21.0
+      23technologies/gardener-extension-provider-hcloud:v0.4.14 gardener/gardener-extension-provider-openstack:v1.24.0
+      gardener/gardener-extension-shoot-cert-service:v1.20.0 gardener/gardener-extension-shoot-dns-service:v1.18.1 '
+    digest: 2d102c26ca8e361db038789aaddaf180b11ae3af003e9ffcbcacf15bf5e2e487
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.7/extensions-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
     created: "2022-03-07T12:36:42.998504462Z"
     description: A Helm chart for managing gardener extensions
     digest: ca8e473f06cae0cb62de7c3e1521930760cf1cea9cfe7681919e26c35bb22b06
@@ -296,4 +310,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-03-07T12:36:43.214784832Z"
+generated: "2022-03-07T14:12:24.687882887Z"
