@@ -20,6 +20,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.11/extensions-1.0.11.tgz
     version: 1.0.11
   - apiVersion: v2
+    created: "2022-03-07T14:43:55.514237592Z"
+    description: This helmchart bundles gardener extensions
+    digest: e8917933f2748aa0fe094d208b0cc5d5a6ea4ce1000e5c9ede34d9f5c681b1b3
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.10/extensions-1.0.10.tgz
+    version: 1.0.10
+  - apiVersion: v2
     created: "2022-03-07T14:23:48.914924155Z"
     description: 'This helmchart bundles the following extensions: | Extension      |
       Version |  | ----------- | ----------- | |gardener/external-dns-management|v0.12.0|
@@ -333,4 +341,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-03-07T14:41:01.826040728Z"
+generated: "2022-03-07T14:43:55.733808233Z"
