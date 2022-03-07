@@ -12,6 +12,21 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-03-07T14:23:48.914924155Z"
+    description: 'This helmchart bundles the following extensions: | Extension      |
+      Version |  | ----------- | ----------- | |gardener/external-dns-management|v0.12.0|
+      |gardener/gardener-extension-networking-calico|v1.23.0| |gardener/gardener-extension-networking-cilium|v1.10.0|
+      |gardener/gardener-extension-os-gardenlinux|v0.11.0| |gardener/gardener-extension-os-ubuntu|v1.14.0|
+      |gardener/gardener-extension-provider-alicloud|v1.33.0| |gardener/gardener-extension-provider-aws|v1.34.1|
+      |gardener/gardener-extension-provider-azure|v1.26.0| |gardener/gardener-extension-provider-gcp|v1.21.0|
+      |23technologies/gardener-extension-provider-hcloud|v0.4.14| |gardener/gardener-extension-provider-openstack|v1.24.0|
+      |gardener/gardener-extension-shoot-cert-service|v1.20.0| |gardener/gardener-extension-shoot-dns-service|v1.18.1| '
+    digest: 47136f61d21ba9968736548de664580289745b0aaf14799138cdc2f9722afbca
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.9/extensions-1.0.9.tgz
+    version: 1.0.9
+  - apiVersion: v2
     created: "2022-03-07T14:12:24.687722613Z"
     description: 'This helmchart bundles the following extensionsgardener/external-dns-management:v0.12.0
       gardener/gardener-extension-networking-calico:v1.23.0 gardener/gardener-extension-networking-cilium:v1.10.0
@@ -310,4 +325,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-03-07T14:12:24.687882887Z"
+generated: "2022-03-07T14:23:48.915220706Z"
