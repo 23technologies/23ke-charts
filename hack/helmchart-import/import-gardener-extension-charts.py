@@ -187,13 +187,16 @@ def import_charts(cfg, target_dir):
 
 
 # call the import function for all elements in the config list
+extensions_versions = ""
 for cfg in config:
     import_charts(cfg, target_dir)
+    extensions_versions = extensions_versions + cfg["package"] + ":" + cfg["version"] + " "
 
-# lastly, increment the version number of the chart
+# lastly, increment the version number of the chart and list bundled versions
 chartf = Path(target_dir + "Chart.yaml")
 chart = yaml.load(chartf)
 current_version = semantic_version.Version(chart["version"])
 current_version.patch += 1
 chart["version"] = str(current_version)
+chart["description"] = "This helmchart bundles the following extensions: " + extensions_versions
 yaml.dump(chart, chartf)
