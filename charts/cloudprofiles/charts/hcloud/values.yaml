@@ -119,6 +119,7 @@ regions:
 providerConfig:
   apiVersion: hcloud.provider.extensions.gardener.cloud/v1alpha1
   kind: CloudProfileConfig
+  defaultStorageFsType: ext4
   machineImages:
   - name: ubuntu
     versions:
