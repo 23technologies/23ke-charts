@@ -92,6 +92,13 @@ config = [
     },
 ]
 
+def save_old_versions():
+    versions = []
+    for pkg in config:
+        text_file = open("charts/extensions/templates/" + pkg["name"] + ".yaml", "r")
+        text = text_file.read()
+        x = re.search(r"\ \ \ \ \ \ tag:\ (.*)", text)
+        pkg["old_version"] = x.group(1)
 
 def import_charts(cfg, target_dir):
 
@@ -186,11 +193,16 @@ def import_charts(cfg, target_dir):
         ofp.write("\n")
 
 
+save_old_versions()
 # call the import function for all elements in the config list
-extensions_versions = "| Extension      | Version |\n| ----------- | ----------- |\n"
+extensions_versions = "| Extension      |  Version | \n| ----------- | ----------- |\n"
 for cfg in config:
     import_charts(cfg, target_dir)
-    extensions_versions = extensions_versions + "|" + cfg["package"] + "|" + cfg["version"] + "|\n"
+    if cfg["old_version"] != cfg["version"]:
+        version = "```" + cfg["old_version"] + " -> " + cfg["version"] + "```"
+    else:
+        version = "```" + cfg["version"] + "```"
+    extensions_versions = extensions_versions + "|" + cfg["name"] + "|" + version + "|\n"
 
 # lastly, increment the version number of the chart and list bundled versions
 chartf = Path(target_dir + "Chart.yaml")
