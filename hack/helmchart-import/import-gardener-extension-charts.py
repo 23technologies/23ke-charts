@@ -62,7 +62,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-azure",
-        "version": "v1.26.0",
+        "version": "v1.26.1",
         "name": "provider-azure",
     },
     {
