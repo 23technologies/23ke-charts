@@ -52,7 +52,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-alicloud",
-        "version": "v1.33.1",
+        "version": "v1.33.2",
         "name": "provider-alicloud",
     },
     {
