@@ -37,7 +37,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-networking-cilium",
-        "version": "v1.10.0",
+        "version": "v1.11.0",
         "name": "networking-cilium",
     },
     {
