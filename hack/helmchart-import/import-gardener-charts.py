@@ -3,6 +3,7 @@ import tempfile
 import git
 import glob
 import re
+import os
 
 # here go our importet helmcharts
 target_dir = "charts/"
@@ -18,7 +19,7 @@ config = [
             {
                 "src": "charts/gardener/controlplane",
                 "chart_name": "gardener-controlplane",
-                "update_tag": False
+                "update_tag": True
             },
             {
                 "src": "charts/gardener/gardenlet",
@@ -130,7 +131,8 @@ def import_charts(config, target_dir):
         # we do not want to have a latest tag in the values.yaml
         if dir["update_tag"]:
             chart = chart.replace("Chart.yaml", "values.yaml")
-            update_image_tag(chart, config["version"])
+            if os.path.exists(chart):
+                update_image_tag(chart, config["version"])
         charts = glob.glob(target_dir + dir["chart_name"] + "/Chart.yaml")
         for chart in charts:
             update_chart_name(chart, dir["chart_name"])
