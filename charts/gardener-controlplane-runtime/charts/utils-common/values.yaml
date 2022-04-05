@@ -1,5 +1,3 @@
-# NOTE: When making changes to default values & validation, please adjust the API comments and validation
-# in package landscaper/pkg/controlplane/apis/imports
 global:
   # Gardener API server configuration values
   apiserver:
@@ -9,7 +7,7 @@ global:
     serviceAccountName: gardener-apiserver
     image:
       repository: eu.gcr.io/gardener-project/gardener/apiserver
-      tag: v1.42.5
+      tag: v1.44.0
       pullPolicy: IfNotPresent
     livenessProbe:
       initialDelaySeconds: 15
@@ -28,7 +26,6 @@ global:
         cpu: 100m
         memory: 100Mi
       limits:
-        cpu: 300m
         memory: 256Mi
   # podAnnotations: # YAML formated annotations used for pod template
   # podLabels: # YAML formated labels used for pod template
@@ -268,14 +265,13 @@ global:
     serviceAccountName: gardener-admission-controller
     image:
       repository: eu.gcr.io/gardener-project/gardener/admission-controller
-      tag: v1.42.5
+      tag: v1.44.0
       pullPolicy: IfNotPresent
     resources:
       requests:
         cpu: 100m
         memory: 200Mi
       limits:
-        cpu: 300m
         memory: 512Mi
   # service:
   #   clusterIP: 1.2.3.4
@@ -341,14 +337,13 @@ global:
     serviceAccountName: gardener-controller-manager
     image:
       repository: eu.gcr.io/gardener-project/gardener/controller-manager
-      tag: v1.42.5
+      tag: v1.44.0
       pullPolicy: IfNotPresent
     resources:
       requests:
         cpu: 100m
         memory: 100Mi
       limits:
-        cpu: 750m
         memory: 512Mi
   # podAnnotations: # YAML formated annotations used for pod template
   # podLabels: # YAML formated labels used for pod template
@@ -452,14 +447,13 @@ global:
     serviceAccountName: gardener-scheduler
     image:
       repository: eu.gcr.io/gardener-project/gardener/scheduler
-      tag: v1.42.5
+      tag: v1.44.0
       pullPolicy: IfNotPresent
     resources:
       requests:
         cpu: 50m
         memory: 50Mi
       limits:
-        cpu: 300m
         memory: 256Mi
   # podAnnotations: # YAML formatted annotations used for pod template
   # podLabels: # YAML formatted labels used for pod template
