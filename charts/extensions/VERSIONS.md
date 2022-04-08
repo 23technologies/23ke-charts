@@ -7,9 +7,9 @@
 |os-ubuntu|```v1.14.0```|
 |provider-alicloud|```v1.34.0```|
 |provider-aws|```v1.34.3```|
-|provider-azure|```v1.26.2 -> v1.26.3```|
+|provider-azure|```v1.26.3```|
 |provider-gcp|```v1.21.3```|
 |provider-hcloud|```v0.4.16```|
 |provider-openstack|```v1.24.2```|
 |shoot-cert-service|```v1.20.0```|
-|shoot-dns-service|```v1.18.3```|
+|shoot-dns-service|```v1.18.3 -> v1.18.4```|
