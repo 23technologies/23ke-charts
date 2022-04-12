@@ -8,7 +8,7 @@ global:
     invalidateServiceAccountToken: true
     image:
       repository: eu.gcr.io/gardener-project/gardener/gardenlet
-      tag: v1.44.2
+      tag: v1.44.3
       pullPolicy: IfNotPresent
     resources:
       requests:
