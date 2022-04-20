@@ -40,7 +40,7 @@ config = [
     },
     {
         "package": "gardener/garden-setup",
-        "version": "3.22.1",
+        "version": "3.23.0",
         "dirs": [
             {
                 "src": "components/etcd/cluster/chart",
