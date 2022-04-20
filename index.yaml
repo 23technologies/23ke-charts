@@ -211,6 +211,14 @@ entries:
     version: 1.0.0
   garden-etcd:
   - apiVersion: v1
+    created: "2022-04-20T08:46:53.258321505Z"
+    description: Helm chart for etcd
+    digest: 66d1dd9350a94e3ca7bdf4dd1865e16f139f92f9b334da38f93da9028694fc6d
+    name: garden-etcd
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/garden-etcd-3.22.1/garden-etcd-3.22.1.tgz
+    version: 3.22.1
+  - apiVersion: v1
     created: "2022-04-20T07:36:43.249997122Z"
     description: Helm chart for etcd
     digest: fa78c3f7578a1821ef6fa32e4696852f7caec2f78cbc59a57ef54b2a05f14276
@@ -243,6 +251,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/garden-etcd-3.19.0/garden-etcd-3.19.0.tgz
     version: 3.19.0
   garden-kube-apiserver:
+  - apiVersion: v1
+    created: "2022-04-20T08:46:53.48614526Z"
+    description: Helm chart for garden
+    digest: ba32a2c6d28d2c1dcf3ecc47ffa990f47e0b40b2bcdf62c4a3726e39ed545c02
+    name: garden-kube-apiserver
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/garden-kube-apiserver-3.22.1/garden-kube-apiserver-3.22.1.tgz
+    version: 3.22.1
   - apiVersion: v1
     created: "2022-04-20T07:36:43.493831076Z"
     description: Helm chart for garden
@@ -765,4 +781,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-04-20T07:36:43.494761728Z"
+generated: "2022-04-20T08:46:53.487910764Z"
