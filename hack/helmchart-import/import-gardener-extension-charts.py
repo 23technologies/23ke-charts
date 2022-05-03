@@ -72,7 +72,7 @@ config = [
     },
     {
         "package": "23technologies/gardener-extension-provider-hcloud",
-        "version": "v0.4.19",
+        "version": "v0.4.20",
         "name": "provider-hcloud",
     },
     {
@@ -87,7 +87,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-shoot-dns-service",
-        "version": "v1.18.4",
+        "version": "v1.19.0",
         "name": "shoot-dns-service",
     },
 ]
