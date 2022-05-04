@@ -3,8 +3,7 @@ name: This check returns true
 on:
   push:
     branches:
-      - 'renovate/gardener-core'
-      - 'renovate/gardener-extensions'
+      - 'renovate/*'
 
 jobs:
   successful-check:
