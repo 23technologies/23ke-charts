@@ -45,7 +45,7 @@
     },
     {
     "matchBaseBranches": ["latest-1"],
-	"matchPackageNames": ["gardener/gardener"]
+	"matchPackageNames": ["gardener/gardener"],
     "allowedVersions": "/^v1\\.44\\..*$/"
     },
     {
