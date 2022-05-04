@@ -1,4 +1,4 @@
 apiVersion: v1
 description: A Helm chart to deploy the Gardener runtime related resources
 name: gardener-controlplane-runtime
-version: 1.43.4
+version: 1.43.5
