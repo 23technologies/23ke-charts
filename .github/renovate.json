@@ -1,6 +1,7 @@
 {
    "automerge": "true",
    "platformAutomerge": "true",
+   "baseBranches": ["main", "latest-1", "latest-2"],
    "postUpgradeTasks": {
       "commands": [".github/renovate-post-upgrade.sh"],
       "executionMode": "branch",
@@ -31,14 +32,26 @@
    ],
   "packageRules": [
     {
+    "matchBaseBranches": ["main"], 
 	"matchPackagePatterns": [".*gardener-extension.*", "gardener/external-dns-management"],
 	"matchUpdateTypes": ["patch", "minor", "major"],
 	"groupName": "gardener-extensions"
     },
     {
+    "matchBaseBranches": ["main"],
 	"matchPackageNames": ["gardener/gardener", "gardener/dashboard", "gardener/garden-setup"],
 	"matchUpdateTypes": ["patch", "minor", "major"],
 	"groupName": "gardener-core"
+    },
+    {
+    "matchBaseBranches": ["latest-1"],
+	"matchPackageNames": ["gardener/gardener"],
+    "allowedVersions": "/^1\\.44\\..*$/"
+    },
+    {
+    "matchBaseBranches": ["latest-2"],
+	"matchPackageNames": ["gardener/gardener"],
+    "allowedVersions": "/^1\\.43\\..*$/"
     }
   ],
   "lockFileMaintenance": {
