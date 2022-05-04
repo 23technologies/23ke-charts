@@ -1,7 +1,7 @@
 {
    "automerge": "true",
    "platformAutomerge": "true",
-   "baseBranches": ["main", "latest-1", "latest-2"],
+   "baseBranches": ["main", "latest-1", "latest-2", "latest-3"],
    "postUpgradeTasks": {
       "commands": [".github/renovate-post-upgrade.sh"],
       "executionMode": "branch",
