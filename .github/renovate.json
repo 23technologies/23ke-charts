@@ -52,6 +52,11 @@
     "matchBaseBranches": ["latest-2"],
 	"matchPackageNames": ["gardener/gardener"],
     "allowedVersions": "/^v1\\.43\\..*$/"
+    },
+    {
+    "matchBaseBranches": ["latest-3"],
+	"matchPackageNames": ["gardener/gardener"],
+    "allowedVersions": "/^v1\\.42\\..*$/"
     }
   ],
   "lockFileMaintenance": {
