@@ -67,7 +67,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-gcp",
-        "version": "v1.21.3",
+        "version": "v1.22.0",
         "name": "provider-gcp",
     },
     {
@@ -82,7 +82,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-shoot-cert-service",
-        "version": "v1.20.0",
+        "version": "v1.21.0",
         "name": "shoot-cert-service",
     },
     {
