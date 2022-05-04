@@ -67,7 +67,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-gcp",
-        "version": "v1.21.3",
+        "version": "v1.22.0",
         "name": "provider-gcp",
     },
     {
