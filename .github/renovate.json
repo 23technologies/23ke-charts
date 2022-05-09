@@ -39,13 +39,13 @@
     },
     {
     "matchBaseBranches": ["main"],
-	"matchPackageNames": ["gardener/gardener",
+	"matchPackageNames": ["gardener/gardener"],
 	"matchUpdateTypes": ["patch"],
 	"groupName": "gardener"
     },
     {
     "matchBaseBranches": ["main"],
-	"matchPackageNames": ["gardener/gardener",
+	"matchPackageNames": ["gardener/gardener"],
 	"matchUpdateTypes": ["minor", "major"],
     "addLabels": ["minor-update"],
 	"groupName": "gardener"
