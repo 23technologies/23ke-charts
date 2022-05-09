@@ -39,9 +39,16 @@
     },
     {
     "matchBaseBranches": ["main"],
-	"matchPackageNames": ["gardener/gardener", "gardener/dashboard", "gardener/garden-setup"],
-	"matchUpdateTypes": ["patch", "minor", "major"],
-	"groupName": "gardener-core"
+	"matchPackageNames": ["gardener/gardener",
+	"matchUpdateTypes": ["patch"],
+	"groupName": "gardener"
+    },
+    {
+    "matchBaseBranches": ["main"],
+	"matchPackageNames": ["gardener/gardener",
+	"matchUpdateTypes": ["minor", "major"],
+    "addLabels": ["minor-update"],
+	"groupName": "gardener"
     },
     {
     "matchBaseBranches": ["latest-1"],
