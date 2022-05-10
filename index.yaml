@@ -21,6 +21,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-05-10T16:06:39.029785587Z"
+    description: This helmchart bundles gardener extensions
+    digest: 143921f9ed5556f019451cef479371ea15ec3d5b91799ad249e4eeba351b325e
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.31/extensions-1.0.31.tgz
+    version: 1.0.31
+  - apiVersion: v2
     created: "2022-05-10T15:06:44.529571154Z"
     description: This helmchart bundles gardener extensions
     digest: b9f68ccdc7c963eeee39cfe1c46311f9915cf254c3081a9d65715abb57a3c885
@@ -1092,4 +1100,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-05-10T15:06:44.841586669Z"
+generated: "2022-05-10T16:06:39.24705733Z"
