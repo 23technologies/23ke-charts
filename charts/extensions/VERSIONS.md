@@ -1,6 +1,6 @@
 | Extension      |  Version | 
 | ----------- | ----------- |
-|external-dns-management|```v0.12.1```|
+|external-dns-management|```v0.12.1 -> v0.12.2```|
 |networking-calico|```v1.23.0```|
 |networking-cilium|```v1.11.0```|
 |os-gardenlinux|```v0.12.0```|
@@ -10,6 +10,6 @@
 |provider-azure|```v1.27.0```|
 |provider-gcp|```v1.22.0```|
 |provider-hcloud|```v0.4.20```|
-|provider-openstack|```v1.24.2 -> v1.25.0```|
+|provider-openstack|```v1.25.0```|
 |shoot-cert-service|```v1.21.0```|
 |shoot-dns-service|```v1.19.0```|

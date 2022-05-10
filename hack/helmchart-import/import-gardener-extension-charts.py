@@ -27,7 +27,7 @@ except:
 config = [
     {
         "package": "gardener/external-dns-management",
-        "version": "v0.12.1",
+        "version": "v0.12.2",
         "name": "external-dns-management",
     },
     {
