@@ -1,11 +1,11 @@
 | Extension      |  Version | 
 | ----------- | ----------- |
 |external-dns-management|```v0.12.2```|
-|networking-calico|```v1.23.0```|
+|networking-calico|```v1.23.0 -> v1.24.0```|
 |networking-cilium|```v1.11.0```|
 |os-gardenlinux|```v0.12.0```|
 |os-ubuntu|```v1.15.0```|
-|provider-alicloud|```v1.35.0 -> v1.35.1```|
+|provider-alicloud|```v1.35.1```|
 |provider-aws|```v1.35.0```|
 |provider-azure|```v1.27.0```|
 |provider-gcp|```v1.22.0```|
