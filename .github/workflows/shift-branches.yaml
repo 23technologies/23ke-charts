@@ -3,7 +3,7 @@ name: Shift branches
 on:
   pull_request:
     branches:
-      - renovate/main-gardener
+      - 'renovate/main-gardener'
 
 jobs:
   shiftbranches:
