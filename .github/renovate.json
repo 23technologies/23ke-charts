@@ -1,76 +1,122 @@
 {
-   "automerge": "true",
-   "platformAutomerge": "true",
-   "baseBranches": ["main", "latest-1", "latest-2", "latest-3"],
-   "postUpgradeTasks": {
-      "commands": [".github/renovate-post-upgrade.sh"],
-      "executionMode": "branch",
-      "fileFilters": ["charts/**"]
-   },
-   "prHourlyLimit": 0,
-   "regexManagers":[
-      {
-         "fileMatch":[
-            "^hack/helmchart-import/import-gardener-charts.py$"
-         ],
-         "datasourceTemplate":"github-releases",
-         "versioningTemplate": "semver-coerced",
-         "matchStrings":[
-	    "\"package\".* \"(?<depName>.*?)\".*\\s*\"version\".*\"(?<currentValue>.*?)\""
-         ]
-      },
-      {
-         "fileMatch":[
-             "^hack/helmchart-import/import-gardener-extension-charts.py$"
-         ],
-         "datasourceTemplate":"github-releases",
-         "versioningTemplate": "semver-coerced",
-         "matchStrings":[
-	    "\"package\".* \"(?<depName>.*?)\".*\\s*\"version\".*\"(?<currentValue>.*?)\""
-         ]
-      }
-   ],
+  "automerge": "true",
+  "platformAutomerge": "true",
+  "baseBranches": [
+    "main",
+    "latest-1",
+    "latest-2",
+    "latest-3"
+  ],
+  "postUpgradeTasks": {
+    "commands": [
+      ".github/renovate-post-upgrade.sh"
+    ],
+    "executionMode": "branch",
+    "fileFilters": [
+      "charts/**"
+    ]
+  },
+  "prHourlyLimit": 0,
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^hack/helmchart-import/import-gardener-charts.py$"
+      ],
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver-coerced",
+      "matchStrings": [
+        "\"package\".* \"(?<depName>.*?)\".*\\s*\"version\".*\"(?<currentValue>.*?)\""
+      ]
+    },
+    {
+      "fileMatch": [
+        "^hack/helmchart-import/import-gardener-extension-charts.py$"
+      ],
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver-coerced",
+      "matchStrings": [
+        "\"package\".* \"(?<depName>.*?)\".*\\s*\"version\".*\"(?<currentValue>.*?)\""
+      ]
+    }
+  ],
   "packageRules": [
     {
-    "matchBaseBranches": ["main"], 
-	"matchPackagePatterns": [".*gardener-extension.*", "gardener/external-dns-management"],
-	"matchUpdateTypes": ["patch", "minor", "major"],
-	"groupName": "gardener-extensions"
+      "matchBaseBranches": [
+        "main"
+      ],
+      "matchPackagePatterns": [
+        ".*gardener-extension.*",
+        "gardener/external-dns-management"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
+      ],
+      "groupName": "gardener-extensions"
     },
     {
-    "matchBaseBranches": ["main"],
-	"matchPackageNames": ["gardener/gardener"],
-	"matchUpdateTypes": ["patch"],
-	"groupName": "gardener"
+      "matchBaseBranches": [
+        "main"
+      ],
+      "matchPackageNames": [
+        "gardener/gardener"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "groupName": "gardener"
     },
     {
-    "matchBaseBranches": ["main"],
-	"matchPackageNames": ["gardener/gardener"],
-	"matchUpdateTypes": ["minor", "major"],
-    "addLabels": ["minor-update"],
-	"groupName": "gardener"
+      "matchBaseBranches": [
+        "main"
+      ],
+      "matchPackageNames": [
+        "gardener/gardener"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "major"
+      ],
+      "addLabels": [
+        "minor-update"
+      ],
+      "groupName": "gardener"
     },
     {
-    "matchBaseBranches": ["latest-1"],
-	"matchPackageNames": ["gardener/gardener"],
-    "allowedVersions": "/^v1\\.44\\..*$/"
+      "matchBaseBranches": [
+        "latest-1"
+      ],
+      "matchPackageNames": [
+        "gardener/gardener"
+      ],
+      "allowedVersions": "/^v1\\.44\\..*$/"
     },
     {
-    "matchBaseBranches": ["latest-2"],
-	"matchPackageNames": ["gardener/gardener"],
-    "allowedVersions": "/^v1\\.43\\..*$/"
+      "matchBaseBranches": [
+        "latest-2"
+      ],
+      "matchPackageNames": [
+        "gardener/gardener"
+      ],
+      "allowedVersions": "/^v1\\.43\\..*$/"
     },
     {
-    "matchBaseBranches": ["latest-3"],
-	"matchPackageNames": ["gardener/gardener"],
-    "allowedVersions": "/^v1\\.42\\..*$/"
+      "matchBaseBranches": [
+        "latest-3"
+      ],
+      "matchPackageNames": [
+        "gardener/gardener"
+      ],
+      "allowedVersions": "/^v1\\.42\\..*$/"
     }
   ],
   "lockFileMaintenance": {
     "enabled": false
   },
   "includeForks": true,
-  "enabledManagers": ["regex"],
+  "enabledManagers": [
+    "regex"
+  ],
   "prCreation": "immediate"
 }
-
