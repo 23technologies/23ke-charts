@@ -4,8 +4,9 @@ import git
 import glob
 import re
 import os
+import sys
 
-# here go our importet helmcharts
+# this is the target directory for our imported helmcharts
 target_dir = "charts/"
 
 # configure the charts you want to import here
@@ -141,5 +142,8 @@ def import_charts(config, target_dir):
 
 
 # call the import function for all elements in the config list
-for cfg in config:
-    import_charts(cfg, target_dir)
+if sys.argv[1] == "show_gardener_version":
+    print(config[0]["version"])
+else:
+    for cfg in config:
+        import_charts(cfg, target_dir)
