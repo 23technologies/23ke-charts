@@ -1,5 +1,17 @@
 #/usr/bin/env bash
 
+
+# check whether a minor upgrade took place:
+git checkout renovate/main-gardener
+NEW_MINOR=$(python hack/helmchart-import/import-gardener-charts.py show_gardener_version | cut -d '.' -f 2)
+git checkout main
+OLD_MINOR=$(python hack/helmchart-import/import-gardener-charts.py show_gardener_version | cut -d '.' -f 2)
+if [[ $OLD_MINOR == $NEW_MINOR ]] then
+    echo "Only patch-upgrade skipping this script..."
+    exit 0
+fi
+
+
 ## Adjust renovate config:
 # attention: this script assumes that no major release is created.
 git checkout renovate/main-gardener
