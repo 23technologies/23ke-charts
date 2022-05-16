@@ -78,7 +78,7 @@
         "minor",
         "major"
       ],
-      "addLabels": [
+      "labels": [
         "minor-update"
       ],
       "groupName": "gardener"
