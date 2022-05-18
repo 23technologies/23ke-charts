@@ -964,6 +964,14 @@ entries:
     version: 1.38.2
   gardener-dashboard:
   - apiVersion: v1
+    created: "2022-05-18T15:52:15.149599425Z"
+    description: A Helm chart for Gardener dashboard
+    digest: 4105c76bb0367ae66ffb36d73e670c5321f9e6a15de4065d1a0a8b186b34c110
+    name: gardener-dashboard
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardener-dashboard-1.57.0/gardener-dashboard-1.57.0.tgz
+    version: 1.57.0
+  - apiVersion: v1
     created: "2022-05-16T12:32:44.641312248Z"
     description: A Helm chart for Gardener dashboard
     digest: 863460413c2b62a6e8e76aa7391ec70df33c364867ca8cc6cefded0a357b24eb
@@ -1214,6 +1222,14 @@ entries:
     version: 1.38.2
   identity:
   - apiVersion: v1
+    created: "2022-05-18T15:52:15.57747591Z"
+    description: A Helm chart for kubernetes identity server
+    digest: 998c61ac726f3d0d05ad4f3597e5698ac1d29a580bae17209c9b81a62689cda5
+    name: identity
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/identity-1.57.0/identity-1.57.0.tgz
+    version: 1.57.0
+  - apiVersion: v1
     created: "2022-05-16T12:32:44.882264538Z"
     description: A Helm chart for kubernetes identity server
     digest: c9a8953de6426a2596cf21beead467747e6e7d32f4cb2e027b5ab79d49a6939f
@@ -1262,4 +1278,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-05-18T12:11:05.326979996Z"
+generated: "2022-05-18T15:52:15.580253374Z"
