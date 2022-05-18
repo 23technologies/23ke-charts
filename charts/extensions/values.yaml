@@ -1,3 +1,7 @@
+runtime-gvisor:
+  enabled: false
+  values: {}
+
 external-dns-management:
   enabled: false
   values: {}
