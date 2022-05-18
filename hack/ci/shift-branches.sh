@@ -1,5 +1,6 @@
 #/usr/bin/env bash
 
+pip install -r hack/helmchart-import/requirements.txt
 
 # check whether a minor upgrade took place:
 git checkout renovate/main-gardener
