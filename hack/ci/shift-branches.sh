@@ -33,6 +33,15 @@ git add .github/renovate.json
 git commit -s -m "Update renovate.json to track Gardener 1.$LATEST_MINOR and its three predecessors"
 git push
 
+git checkout latest-3
+git pull
+git checkout latest-2
+git pull
+git checkout latest-1
+git pull
+git checkout main
+git pull
+
 ## Update branches:
 git checkout latest-3
 git pull
