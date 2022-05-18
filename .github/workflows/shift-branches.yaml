@@ -5,7 +5,6 @@ on:
 
 jobs:
   shiftbranches:
-    if: ${{ github.event.label.name == 'minor-update' }}
     runs-on: self-hosted
     steps:
       - name: Checkout
