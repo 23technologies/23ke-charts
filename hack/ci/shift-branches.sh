@@ -1,6 +1,9 @@
 #/usr/bin/env bash
 
+pip install -r hack/helmchart-import/requirements.txt
 
+git config --global user.email "renovate@23technologies.cloud"
+git config --global user.name "Renovate Bot"
 # check whether a minor upgrade took place:
 git checkout renovate/main-gardener
 NEW_MINOR=$(python hack/helmchart-import/import-gardener-charts.py show_gardener_version | cut -d '.' -f 2)
@@ -29,6 +32,15 @@ yq eval -o=json -i '.packageRules[5].allowedVersions = env(LATEST_3_REGEX)' .git
 git add .github/renovate.json
 git commit -s -m "Update renovate.json to track Gardener 1.$LATEST_MINOR and its three predecessors"
 git push
+
+git checkout latest-3
+git pull
+git checkout latest-2
+git pull
+git checkout latest-1
+git pull
+git checkout main
+git pull
 
 ## Update branches:
 git checkout latest-3
