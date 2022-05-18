@@ -2,6 +2,8 @@
 
 pip install -r hack/helmchart-import/requirements.txt
 
+git config --global user.email "renovate@23technologies.cloud"
+git config --global user.name "Renovate Bot"
 # check whether a minor upgrade took place:
 git checkout renovate/main-gardener
 NEW_MINOR=$(python hack/helmchart-import/import-gardener-charts.py show_gardener_version | cut -d '.' -f 2)
