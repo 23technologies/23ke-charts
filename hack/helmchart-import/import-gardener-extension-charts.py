@@ -26,6 +26,11 @@ except:
 # the corresponding version, and src and dst directories
 config = [
     {
+        "package": "gardener/gardener-extension-runtime-gvisor",
+        "version": "v0.5.1",
+        "name": "runtime-gvisor",
+    },
+    {
         "package": "gardener/external-dns-management",
         "version": "v0.12.2",
         "name": "external-dns-management",
