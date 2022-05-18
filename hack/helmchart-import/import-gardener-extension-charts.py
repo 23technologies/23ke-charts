@@ -52,7 +52,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-alicloud",
-        "version": "v1.36.0",
+        "version": "v1.36.1",
         "name": "provider-alicloud",
     },
     {
@@ -67,7 +67,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-gcp",
-        "version": "v1.22.0",
+        "version": "v1.22.1",
         "name": "provider-gcp",
     },
     {
@@ -87,7 +87,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-shoot-dns-service",
-        "version": "v1.19.0",
+        "version": "v1.19.1",
         "name": "shoot-dns-service",
     },
 ]
