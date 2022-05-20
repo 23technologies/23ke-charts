@@ -1,8 +1,8 @@
 | Extension      |  Version | 
 | ----------- | ----------- |
 |runtime-gvisor|```v0.5.1```|
-|external-dns-management|```v0.12.2```|
-|networking-calico|```v1.24.2 -> v1.24.3```|
+|external-dns-management|```v0.12.2 -> v0.12.3```|
+|networking-calico|```v1.24.3```|
 |networking-cilium|```v1.11.0```|
 |os-gardenlinux|```v0.12.0```|
 |os-ubuntu|```v1.15.0```|
