@@ -142,8 +142,9 @@ def import_charts(config, target_dir):
 
 
 # call the import function for all elements in the config list
-if sys.argv[1] == "show_gardener_version":
+if len(sys.argv) == 2:
+  if sys.argv[1] == "show_gardener_version":
     print(config[0]["version"])
 else:
-    for cfg in config:
+  for cfg in config:
         import_charts(cfg, target_dir)
