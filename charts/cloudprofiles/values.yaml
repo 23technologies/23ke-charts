@@ -23,8 +23,6 @@ aws:
   enabled: false
 azure:
   enabled: false
-azure:
-  enabled: false
 betacloud:
   enabled: false
 citycloud:
@@ -34,4 +32,8 @@ fugacloud:
 gcp:
   enabled: false
 hcloud:
+  enabled: false
+pluscloud-open:
+  enabled: false
+scs-community-platform:
   enabled: false
