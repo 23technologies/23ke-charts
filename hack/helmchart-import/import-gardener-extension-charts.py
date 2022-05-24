@@ -136,7 +136,7 @@ def import_charts(cfg, target_dir):
         else:
             break
 
-    # assume that we have to documents in our yaml, which is commonly the case for controller-registration.yamls
+    # assume that we have two documents in our yaml, which is commonly the case for controller-registration.yamls
     content = list(yaml.load_all(x))
 
     # setup the path for our target chart
@@ -155,6 +155,14 @@ def import_charts(cfg, target_dir):
     with outf.open("a") as ofp:
         ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").enabled }}\n")
         yaml.dump(content[0], ofp)
+        # runtime-gvisor requires an extra-image to be set
+        if cfg["name"] == "runtime-gvisor":
+            ofp.write("      imageVectorOverwrite: |\n")
+            ofp.write("        images:\n")
+            ofp.write("          - name: runtime-gvisor-installation\n")
+            ofp.write("          repository: eu.gcr.io/gardener-project/gardener/extensions/runtime-gvisor-installation\n")
+            ofp.write("          version: 1.17.x\n")
+            ofp.write("          tag: " + cfg["version"] + "\n")
         ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").values }}\n")
         ofp.write(
             "{{- toYaml (index .Values "
