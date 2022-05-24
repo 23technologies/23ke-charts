@@ -10,6 +10,12 @@ providerConfig:
   values:
     image:
       tag: v0.5.1
+      imageVectorOverwrite: |
+        images:
+          - name: runtime-gvisor-installation
+          repository: eu.gcr.io/gardener-project/gardener/extensions/runtime-gvisor-installation
+          version: 1.17.x
+          tag: v0.5.1
 {{- if (index .Values "runtime-gvisor").values }}
 {{- toYaml (index .Values "runtime-gvisor").values | nindent 4 }}
 {{- end }}

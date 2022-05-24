@@ -13,4 +13,4 @@
 |provider-hcloud|```v0.5.0```|
 |provider-openstack|```v1.25.1```|
 |shoot-cert-service|```v1.21.0```|
-|shoot-dns-service|```v1.19.1 -> v1.20.0```|
+|shoot-dns-service|```v1.20.0```|
