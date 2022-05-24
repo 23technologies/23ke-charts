@@ -23,4 +23,5 @@ The `name` should be changed like the step before.
 `regions` is a representation of regions and zones of the new cloud.
 `providerConfig` is a direct mapping of resources provided from the new cloud, e.g. Images, URL Endpoints, etc. It's a good idea to just look into other existing profiles and adopt entries from them while changing the values accordingly.
 Leave the rest of the files and folders untouched.
-Finally, head over to *charts/cloudprofiles/values.yaml* and add your profile at the end of the file in the given pattern.
+Next, head over to *charts/cloudprofiles/values.yaml* and add your profile at the end of the file in the given pattern.
+Finally increase the version number of the chart in *charts/cloudprofiles/Chart.yaml*
