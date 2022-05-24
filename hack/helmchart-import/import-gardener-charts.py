@@ -57,7 +57,7 @@ config = [
     },
     {
         "package": "gardener/dashboard",
-        "version": "1.57.0",
+        "version": "1.58.0",
         "dirs": [
             {
                 "src": "charts/gardener-dashboard",
