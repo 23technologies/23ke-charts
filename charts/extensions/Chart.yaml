@@ -3,4 +3,4 @@ name: extensions
 description: This helmchart bundles gardener extensions
 
 # This is the chart version.
-version: 1.0.46
+version: 1.0.47

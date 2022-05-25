@@ -27,7 +27,7 @@ except:
 config = [
     {
         "package": "gardener/gardener-extension-runtime-gvisor",
-        "version": "v0.5.0",
+        "version": "v0.5.1",
         "name": "runtime-gvisor",
     },
     {
