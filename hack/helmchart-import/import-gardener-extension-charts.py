@@ -160,9 +160,9 @@ def import_charts(cfg, target_dir):
             ofp.write("      imageVectorOverwrite: |\n")
             ofp.write("        images:\n")
             ofp.write("          - name: runtime-gvisor-installation\n")
-            ofp.write("          repository: eu.gcr.io/gardener-project/gardener/extensions/runtime-gvisor-installation\n")
-            ofp.write("          version: 1.17.x\n")
-            ofp.write("          tag: " + cfg["version"] + "\n")
+            ofp.write("            repository: eu.gcr.io/gardener-project/gardener/extensions/runtime-gvisor-installation\n")
+            ofp.write("            version: 1.17.x\n")
+            ofp.write("            tag: " + cfg["version"] + "\n")
         ofp.write("{{- if (index .Values " + '"' + cfg["name"] + '"' + ").values }}\n")
         ofp.write(
             "{{- toYaml (index .Values "
