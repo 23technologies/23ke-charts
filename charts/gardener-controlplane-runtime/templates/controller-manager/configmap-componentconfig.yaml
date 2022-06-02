@@ -116,12 +116,16 @@ data:
         syncPeriod: {{ required ".Values.global.controller.config.controllers.shootQuota.syncPeriod is required" .Values.global.controller.config.controllers.shootQuota.syncPeriod }}
       shootHibernation:
         concurrentSyncs: {{ required ".Values.global.controller.config.controllers.shootHibernation.concurrentSyncs is required" .Values.global.controller.config.controllers.shootHibernation.concurrentSyncs }}
+        triggerDeadlineDuration: {{ required ".Values.global.controller.config.controllers.shootHibernation.triggerDeadlineDuration is required" .Values.global.controller.config.controllers.shootHibernation.triggerDeadlineDuration }}
       shootReference:
         concurrentSyncs: {{ required ".Values.global.controller.config.controllers.shootReference.concurrentSyncs is required" .Values.global.controller.config.controllers.shootReference.concurrentSyncs }}
       shootRetry:
         concurrentSyncs: {{ required ".Values.global.controller.config.controllers.shootRetry.concurrentSyncs is required" .Values.global.controller.config.controllers.shootRetry.concurrentSyncs }}
         {{- if .Values.global.controller.config.controllers.shootRetry.retryPeriod }}
         retryPeriod: {{ .Values.global.controller.config.controllers.shootRetry.retryPeriod }}
+        {{- end }}
+        {{- if .Values.global.controller.config.controllers.shootRetry.retryJitterPeriod }}
+        retryJitterPeriod: {{ .Values.global.controller.config.controllers.shootRetry.retryJitterPeriod }}
         {{- end }}
       managedSeedSet:
         concurrentSyncs: {{ required ".Values.global.controller.config.controllers.managedSeedSet.concurrentSyncs is required" .Values.global.controller.config.controllers.managedSeedSet.concurrentSyncs }}
