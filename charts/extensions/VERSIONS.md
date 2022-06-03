@@ -1,7 +1,7 @@
 | Extension      |  Version | 
 | ----------- | ----------- |
 |runtime-gvisor|```v0.5.1```|
-|external-dns-management|```v0.12.3 -> v0.12.4```|
+|external-dns-management|```v0.12.4```|
 |networking-calico|```v1.24.3```|
 |networking-cilium|```v1.11.0```|
 |os-gardenlinux|```v0.12.0```|
@@ -12,5 +12,5 @@
 |provider-gcp|```v1.22.1```|
 |provider-hcloud|```v0.5.0```|
 |provider-openstack|```v1.25.1```|
-|shoot-cert-service|```v1.21.0```|
+|shoot-cert-service|```v1.21.0 -> v1.22.0```|
 |shoot-dns-service|```v1.20.0```|
