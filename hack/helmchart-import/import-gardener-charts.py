@@ -27,16 +27,6 @@ config = [
                 "chart_name": "gardenlet",
                 "update_tag": True 
             },
-            {
-                "src": "charts/gardener/controlplane/charts/runtime",
-                "chart_name": "gardener-controlplane-runtime",
-                "update_tag": True
-            },
-            {
-                "src": "charts/gardener/controlplane/charts/application",
-                "chart_name": "gardener-controlplane-application",
-                "update_tag": True
-            }
         ],
     },
     {
