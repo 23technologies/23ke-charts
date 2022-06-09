@@ -19,19 +19,19 @@ function helm_upgrade () {
     name=$1
     repo=$2
     namespace=$3
-    varargin=${@:4}
+		valuesdir=$4
+    varargin=${@:5}
     helm upgrade -i $name $repo/$name \
     --namespace $namespace \
     --create-namespace \
-    -f <(cat $name/base-values.yaml | envsubst) \
-    -f <(cat $name/values.yaml | envsubst) \
+    -f <(cat $valuesdir/base-values.yaml | envsubst) \
+    -f <(cat $valuesdir/values.yaml | envsubst) \
     $varargin
 }
 
 # add helm repositories and update
 helm repo add jetstack https://charts.jetstack.io
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm repo add 23ke-charts https://23technologies.github.io/23ke-charts
 helm repo update
 
 
@@ -107,8 +107,8 @@ done
 ###############################################################################
 
 # install garden-etc and identity
-helm_upgrade garden-etcd 23ke-charts garden --wait
-helm_upgrade identity 23ke-charts garden --wait
+helm_upgrade garden-etcd ../../charts/ garden garden-etcd --wait
+helm_upgrade identity ../../charts garden identity --wait
 
 # create a namespace called flux-system
 kubectl create ns flux-system
@@ -118,7 +118,7 @@ kubectl create ns flux-system
 ###############################################################################
 
 # now install the garden-kube-apiserver
-helm_upgrade garden-kube-apiserver 23ke-charts garden --wait
+helm_upgrade garden-kube-apiserver ../../charts/ garden garden-kube-apiserver --wait
 
 # fetch the apiserver kubeconfig
 kubectl get secret garden-kubeconfig-for-admin -n garden -o go-template='{{ .data.kubeconfig | base64decode }}' > apiserver-in-shoot-kubeconfig.yaml
@@ -132,15 +132,15 @@ export GARDENER_INTERNAL_KUBECONFIG=$(kubectl get secret gardener-internal-kubec
 GARDENER_INTERNAL_KUBECONFIG=\"${GARDENER_INTERNAL_KUBECONFIG//$'\n'/\\n}\"
 
 # install gardener-controlplane-{application,runtime} and gardener-dashboard
-helm_upgrade gardener-controlplane-application 23ke-charts garden --kubeconfig apiserver-in-shoot-kubeconfig.yaml
+helm_upgrade gardener-controlplane ../../charts/ garden gardener-controlplane-application --kubeconfig apiserver-in-shoot-kubeconfig.yaml
 
 ###############################################################################
 #                    install gardener-controlplane-runtime                    #
 ###############################################################################
 
-helm_upgrade gardener-controlplane-runtime 23ke-charts garden --wait
+helm_upgrade gardener-controlplane ../../charts garden gardener-controlplane-runtime --wait
 
 ###############################################################################
 #                          install gardener dashboard                         #
 ###############################################################################
-helm_upgrade gardener-dashboard 23ke-charts garden --wait
+helm_upgrade gardener-dashboard ../../charts garden gardener-dashboard --wait
