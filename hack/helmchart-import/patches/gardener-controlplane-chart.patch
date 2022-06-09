@@ -1,0 +1,13 @@
+diff --git a/charts/gardener-controlplane/Chart.yaml b/charts/gardener-controlplane/Chart.yaml
+index 0e4d430..696fc42 100644
+--- a/charts/gardener-controlplane/Chart.yaml
++++ b/charts/gardener-controlplane/Chart.yaml
+@@ -1,3 +1,8 @@
++dependencies:
++- name: runtime
++  condition: runtime.enabled
++- name: application
++  condition: application.enabled
+ apiVersion: v1
+ description: A Helm chart to deploy the Gardener controlplane (API server, controller-manager, scheduler, admission-controller)
+ name: gardener-controlplane

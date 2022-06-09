@@ -23,3 +23,8 @@ global:
     kubeconfig: ${GARDENER_INTERNAL_KUBECONFIG}
   scheduler:
     kubeconfig: ${GARDENER_INTERNAL_KUBECONFIG}
+
+application:
+  enabled: false
+runtime:
+  enabled: true
