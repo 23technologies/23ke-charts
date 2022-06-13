@@ -8,15 +8,12 @@ global:
     invalidateServiceAccountToken: true
     image:
       repository: eu.gcr.io/gardener-project/gardener/gardenlet
-      tag: v1.43.5
+      tag: v1.46.3
       pullPolicy: IfNotPresent
     resources:
       requests:
         cpu: 100m
         memory: 100Mi
-      limits:
-        cpu: 2000m
-        memory: 512Mi
   # podAnnotations: # YAML formated annotations used for pod template
   # podLabels: # YAML formated labels used for pod template
     additionalVolumes: []
@@ -191,6 +188,9 @@ global:
     #     enableBackupCompaction: false
     #     eventsThreshold: 1000000
     #     activeDeadlineDuration: "3h"
+    #   backupLeaderElection:
+    #     reelectionPeriod: 5s
+    #     etcdConnectionTimeout: 5s
     # seedConfig: {}
     # logging:
     #   enabled: false
