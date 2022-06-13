@@ -39,6 +39,10 @@ machineTypes:
   - cpu: "4"
     gpu: "0"
     memory: 8Gi
+    name: 4C-8GB-20GB
+  - cpu: "4"
+    gpu: "0"
+    memory: 8Gi
     name: 4C-8GB-40GB
   - cpu: "8"
     gpu: "0"
