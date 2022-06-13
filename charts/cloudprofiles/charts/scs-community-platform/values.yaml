@@ -45,7 +45,7 @@ providerConfig:
   useOctavia: true
   keystoneURLs:
   - region: RegionOne
-    url: https://api.gx-scs-sovereignit.cloud:5000
+    url: https://api.gx-scs.sovereignit.cloud:5000
   constraints:
     floatingPools:
     - name: ext01
