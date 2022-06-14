@@ -9,8 +9,8 @@
 |provider-alicloud|```v1.37.0```|
 |provider-aws|```v1.36.0```|
 |provider-azure|```v1.28.0```|
-|provider-gcp|```v1.23.0 -> v1.23.1```|
-|provider-hcloud|```v0.5.0```|
+|provider-gcp|```v1.23.1```|
+|provider-hcloud|```v0.5.0 -> v0.5.1```|
 |provider-openstack|```v1.26.0```|
 |shoot-cert-service|```v1.22.0```|
 |shoot-dns-service|```v1.20.0```|
