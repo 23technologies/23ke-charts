@@ -90,7 +90,7 @@
       "matchPackageNames": [
         "gardener/gardener"
       ],
-      "allowedVersions": "/^v1\\.47\\..*$/"
+      "allowedVersions": "/^v1\\.48\\..*$/"
     },
     {
       "matchBaseBranches": [
@@ -99,7 +99,7 @@
       "matchPackageNames": [
         "gardener/gardener"
       ],
-      "allowedVersions": "/^v1\\.46\\..*$/"
+      "allowedVersions": "/^v1\\.47\\..*$/"
     },
     {
       "matchBaseBranches": [
@@ -108,7 +108,7 @@
       "matchPackageNames": [
         "gardener/gardener"
       ],
-      "allowedVersions": "/^v1\\.45\\..*$/"
+      "allowedVersions": "/^v1\\.46\\..*$/"
     }
   ],
   "lockFileMaintenance": {
