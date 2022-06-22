@@ -7,7 +7,7 @@ global:
     serviceAccountName: gardener-apiserver
     image:
       repository: eu.gcr.io/gardener-project/gardener/apiserver
-      tag: v1.47.1
+      tag: v1.48.5
       pullPolicy: IfNotPresent
     livenessProbe:
       initialDelaySeconds: 15
@@ -265,7 +265,7 @@ global:
     serviceAccountName: gardener-admission-controller
     image:
       repository: eu.gcr.io/gardener-project/gardener/admission-controller
-      tag: v1.47.1
+      tag: v1.48.5
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -337,7 +337,7 @@ global:
     serviceAccountName: gardener-controller-manager
     image:
       repository: eu.gcr.io/gardener-project/gardener/controller-manager
-      tag: v1.47.1
+      tag: v1.48.5
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -398,12 +398,13 @@ global:
           syncPeriod: 60m
         shootHibernation:
           concurrentSyncs: 5
-          syncPeriod: 24h
+          triggerDeadlineDuration: 2h
         shootReference:
           concurrentSyncs: 5
         shootRetry:
           concurrentSyncs: 5
           retryPeriod: 10m
+          retryJitterPeriod: 5m
         managedSeedSet:
           concurrentSyncs: 5
           syncPeriod: 30m
@@ -447,7 +448,7 @@ global:
     serviceAccountName: gardener-scheduler
     image:
       repository: eu.gcr.io/gardener-project/gardener/scheduler
-      tag: v1.47.1
+      tag: v1.48.5
       pullPolicy: IfNotPresent
     resources:
       requests:
