@@ -37,3 +37,5 @@ pluscloud-open:
   enabled: false
 scs-community-platform:
   enabled: false
+wavestack:
+  enabled: false
