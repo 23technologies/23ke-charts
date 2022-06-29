@@ -52,7 +52,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-os-ubuntu",
-        "version": "v1.15.0",
+        "version": "v1.16.0",
         "name": "os-ubuntu",
     },
     {
