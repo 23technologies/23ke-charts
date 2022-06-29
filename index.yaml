@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   cloudprofiles:
   - apiVersion: v2
+    created: "2022-06-29T09:00:51.359017286Z"
+    description: A Helm chart for Kubernetes
+    digest: 613b027c4ac1b8543690940c526f6a08e968834a1ca2078e118d027b12c69222
+    name: cloudprofiles
+    type: application
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/cloudprofiles-0.2.0/cloudprofiles-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2022-06-13T14:44:39.084974688Z"
     description: A Helm chart for Kubernetes
     digest: 9f5f08a3a7fa8ac4973dbc1616958bb61db9e3e044de711f3505eda44bd7e8d8
@@ -2023,4 +2032,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-06-28T15:27:06.039243405Z"
+generated: "2022-06-29T09:00:51.361210631Z"
