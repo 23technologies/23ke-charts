@@ -32,7 +32,7 @@ config = [
     },
     {
         "package": "gardener/external-dns-management",
-        "version": "v0.12.6",
+        "version": "v0.12.7",
         "name": "external-dns-management",
     },
     {
