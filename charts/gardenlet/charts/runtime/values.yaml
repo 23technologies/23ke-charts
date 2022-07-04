@@ -8,7 +8,7 @@ global:
     invalidateServiceAccountToken: true
     image:
       repository: eu.gcr.io/gardener-project/gardener/gardenlet
-      tag: v1.48.6
+      tag: v1.49.3
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -79,9 +79,7 @@ global:
         # - production
         seed:
           concurrentSyncs: 5
-        # TODO (plkokanov): the sync period is currently set to 1m because of the way that SNI detection is done during seed reconciliations.
-        # ref: https://github.com/gardener/gardener/issues/6036
-          syncPeriod: 1m
+          syncPeriod: 1h
         # leaseResyncSeconds: 2
         # leaseResyncMissThreshold: 10
         shoot:
