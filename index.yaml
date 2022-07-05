@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-07-05T12:21:54.429711972Z"
+    description: This helmchart bundles gardener extensions
+    digest: 663e5afa7635d0fe0f1038ee953f2cb63e05b00f11c0330f9ab9a02ff4d78e38
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.67/extensions-1.0.67.tgz
+    version: 1.0.67
+  - apiVersion: v2
     created: "2022-07-04T13:31:53.730285099Z"
     description: This helmchart bundles gardener extensions
     digest: 643b36d13d245a3fa95c0d4082fd23aca35dfca6b8466f39c1d8836a7f18dd07
@@ -2264,4 +2272,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-07-05T11:59:32.145226976Z"
+generated: "2022-07-05T12:21:54.642461527Z"
