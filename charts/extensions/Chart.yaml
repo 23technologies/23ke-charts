@@ -1,6 +1,0 @@
-apiVersion: v2
-name: extensions
-description: This helmchart bundles gardener extensions
-
-# This is the chart version.
-version: 1.0.55

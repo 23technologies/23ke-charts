@@ -1,0 +1,4 @@
+apiVersion: v2
+description: A helm chart for the controllerRegistration of provider-openstack
+name: provider-openstack
+version: v1.26.0

@@ -22,7 +22,7 @@
 - name: "provider-aws"
   repo: "gardener/gardener-extension-provider-aws"
   version: "v1.36.0"
-- name: "gardener-extension-provider-azure"
+- name: "provider-azure"
   repo: "gardener/gardener-extension-provider-azure"
   version: "v1.28.0"
   additionalCharts:

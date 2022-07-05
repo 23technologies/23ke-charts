@@ -1,0 +1,4 @@
+apiVersion: v2
+description: A helm chart for the controllerRegistration of runtime-gvisor
+name: runtime-gvisor
+version: v0.5.1

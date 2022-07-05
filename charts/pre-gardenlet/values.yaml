@@ -1,4 +1,0 @@
-global:
-  token:
-    id: "123456"                # 6-digit
-    secret: "1234567890abcdef"  # 16-digit
