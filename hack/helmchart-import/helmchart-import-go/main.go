@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"strings"
 
 	"github.com/sirupsen/logrus"
+	flag "github.com/spf13/pflag"
 	"gopkg.in/yaml.v3"
 	"helm.sh/helm/v3/pkg/chart"
 	"helm.sh/helm/v3/pkg/chartutil"
@@ -90,9 +92,26 @@ func getChart(cfg configuration) chart.Chart {
 	return controller_chart
 
 }
-func main() {
 
+var (
+	configFile string
+	targetDir  string
+)
+
+func init() {
+	flag.StringVar(&configFile, "config", "conf.yml", "")
+	flag.StringVar(&targetDir, "target", "charts", "")
+}
+
+func main() {
 	logrus.Info("Helmchart importer started")
+
+	flag.Parse()
+	if _, err := os.Stat(configFile); err == os.ErrNotExist {
+		logrus.Fatal("Config file not found")
+		flag.PrintDefaults()
+		return
+	}
 	// parse the configuration
 	data, err := ioutil.ReadFile("config.yaml")
 	if err != nil {
@@ -103,6 +122,6 @@ func main() {
 
 	for _, cfg := range config {
 		chart := getChart(cfg)
-		chartutil.SaveDir(&chart, "charts")
+		chartutil.SaveDir(&chart, targetDir)
 	}
 }
