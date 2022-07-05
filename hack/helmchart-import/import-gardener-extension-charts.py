@@ -87,12 +87,12 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-shoot-cert-service",
-        "version": "v1.22.0",
+        "version": "v1.23.0",
         "name": "shoot-cert-service",
     },
     {
         "package": "gardener/gardener-extension-shoot-dns-service",
-        "version": "v1.20.0",
+        "version": "v1.21.0",
         "name": "shoot-dns-service",
     },
 ]
