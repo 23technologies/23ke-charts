@@ -597,6 +597,15 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.0/extensions-1.0.0.tgz
     version: 1.0.0
+  external-dns-management:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:29.439543306Z"
+    description: A helm chart for the controllerRegistration of external-dns-management
+    digest: e1d35176dc30d3039bf208b7311ecd9c041bb4e75fe8ef7e0f5db06db796e7c8
+    name: external-dns-management
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/external-dns-management-v0.12.5/external-dns-management-v0.12.5.tgz
+    version: v0.12.5
   garden-etcd:
   - apiVersion: v1
     created: "2022-06-22T13:37:26.680357009Z"
@@ -2129,6 +2138,42 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/identity-1.52.3/identity-1.52.3.tgz
     version: 1.52.3
+  networking-calico:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:29.629843576Z"
+    description: A helm chart for the controllerRegistration of networking-calico
+    digest: 4ea4a4c1b69834f6478d1d143e99359870b676685fb42fbae41e19488404dfc3
+    name: networking-calico
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/networking-calico-v1.24.3/networking-calico-v1.24.3.tgz
+    version: v1.24.3
+  networking-cilium:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:29.836254078Z"
+    description: A helm chart for the controllerRegistration of networking-cilium
+    digest: d2fdecac80e952f377ae67ee0737ec64fe61a6876cb9a6738850a9b93c4d1364
+    name: networking-cilium
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/networking-cilium-v1.11.0/networking-cilium-v1.11.0.tgz
+    version: v1.11.0
+  os-gardenlinux:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:30.031296554Z"
+    description: A helm chart for the controllerRegistration of os-gardenlinux
+    digest: cdda51db39c806ab5b3440a221aef6e98c3976baa666a6022fcf68d8bb19e9b7
+    name: os-gardenlinux
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/os-gardenlinux-v0.12.0/os-gardenlinux-v0.12.0.tgz
+    version: v0.12.0
+  os-ubuntu:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:30.219747386Z"
+    description: A helm chart for the controllerRegistration of os-ubuntu
+    digest: 5116dfc04d7cdbb2aa98d0c342c753c4348ba6b32a1f7ff0c21e21fcc5289053
+    name: os-ubuntu
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/os-ubuntu-v1.15.0/os-ubuntu-v1.15.0.tgz
+    version: v1.15.0
   pre-gardenlet:
   - apiVersion: v2
     created: "2022-02-28T11:05:29.599415309Z"
@@ -2138,4 +2183,85 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/pre-gardenlet-1.38.2/pre-gardenlet-1.38.2.tgz
     version: 1.38.2
-generated: "2022-07-05T09:56:53.110639692Z"
+  provider-alicloud:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:30.418925758Z"
+    description: A helm chart for the controllerRegistration of provider-alicloud
+    digest: f7945142c48cd84f702b384daac653fdc444b71dca090a63980ecfedbeeec6da
+    name: provider-alicloud
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-alicloud-v1.37.0/provider-alicloud-v1.37.0.tgz
+    version: v1.37.0
+  provider-aws:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:30.646049092Z"
+    description: A helm chart for the controllerRegistration of provider-aws
+    digest: c6d942317ecadf2b8c64ff30c2eb9c20833cacf6ba67c4a5ab4a58559954dce4
+    name: provider-aws
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-aws-v1.36.0/provider-aws-v1.36.0.tgz
+    version: v1.36.0
+  provider-azure:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:30.885964283Z"
+    description: A helm chart for the controllerRegistration of provider-azure
+    digest: bb701171b5de89701c1cec6b480b711c1c9b74d646eb93ff81fc4c581f83659b
+    name: provider-azure
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-azure-v1.28.0/provider-azure-v1.28.0.tgz
+    version: v1.28.0
+  provider-gcp:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:31.10525021Z"
+    description: A helm chart for the controllerRegistration of provider-gcp
+    digest: 450ccbd42eb1edfe90a16f4601728a94d1ce900619c10fdf20b87d135b6f691a
+    name: provider-gcp
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-gcp-v1.23.0/provider-gcp-v1.23.0.tgz
+    version: v1.23.0
+  provider-hcloud:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:31.303343868Z"
+    description: A helm chart for the controllerRegistration of provider-hcloud
+    digest: a6640e24443f266cca82a59410390698e52160a6551d9c1dfbecefd2370ea5f6
+    name: provider-hcloud
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-hcloud-v0.5.0/provider-hcloud-v0.5.0.tgz
+    version: v0.5.0
+  provider-openstack:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:31.521702064Z"
+    description: A helm chart for the controllerRegistration of provider-openstack
+    digest: 6b9e1c1fbc394fe215440798abbd791963d70955eb3c422142e0fbcdbb00235e
+    name: provider-openstack
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-openstack-v1.26.0/provider-openstack-v1.26.0.tgz
+    version: v1.26.0
+  runtime-gvisor:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:31.725208413Z"
+    description: A helm chart for the controllerRegistration of runtime-gvisor
+    digest: ee147c794f7e42f6bec2470b31c64b76fdfda650a39a0e3d646ce18b02d0102c
+    name: runtime-gvisor
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/runtime-gvisor-v0.5.1/runtime-gvisor-v0.5.1.tgz
+    version: v0.5.1
+  shoot-cert-service:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:31.935000807Z"
+    description: A helm chart for the controllerRegistration of shoot-cert-service
+    digest: f42f5c3145219c80f69a3baf766a5223cbca13ad243c52cf97de230398608fa8
+    name: shoot-cert-service
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/shoot-cert-service-v1.22.0/shoot-cert-service-v1.22.0.tgz
+    version: v1.22.0
+  shoot-dns-service:
+  - apiVersion: v2
+    created: "2022-07-05T11:59:32.138098519Z"
+    description: A helm chart for the controllerRegistration of shoot-dns-service
+    digest: 2b6af7b697ae02bbc371e279beab3258636f96f5e75e2aad244a10485ebfa647
+    name: shoot-dns-service
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
+    version: v1.20.0
+generated: "2022-07-05T11:59:32.145226976Z"
