@@ -1,4 +1,4 @@
 apiVersion: v2
-description: A helm chart for the controllerRegistration of networking-calico
+description: no release notes available
 name: networking-calico
 version: v1.24.3

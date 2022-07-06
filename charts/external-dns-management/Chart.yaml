@@ -1,4 +1,8 @@
 apiVersion: v2
-description: A helm chart for the controllerRegistration of external-dns-management
+description: "# [external-dns-management]\n## \U0001F3C3 Others\n* *[OPERATOR]* Restart
+  if watch fails because of disappeared resource ([gardener/external-dns-management#266](https://github.com/gardener/external-dns-management/pull/266),
+  [@MartinWeindel](https://github.com/MartinWeindel))\n* *[OPERATOR]* Using distroless
+  base image ([gardener/external-dns-management#267](https://github.com/gardener/external-dns-management/pull/267),
+  [@MartinWeindel](https://github.com/MartinWeindel))"
 name: external-dns-management
 version: v0.12.7
