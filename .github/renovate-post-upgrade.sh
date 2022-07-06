@@ -44,6 +44,7 @@ then
     echo 'cd /tmp/renovate/repos/github/23technologies/23ke-charts' > /tmp/tmpscript
     echo 'git status -s' >> /tmp/tmpscript
     echo 'cd hack/helmchart-import/helmchart-import-go/' >> /tmp/tmpscript
+    echo 'go get .' >> /tmp/tmpscript
     echo 'go run . --target ../../../distinct-charts' >> /tmp/tmpscript
     echo 'cd /tmp/renovate/repos/github/23technologies/23ke-charts' >> /tmp/tmpscript
     echo 'git apply hack/helmchart-import/patches/*.patch' >> /tmp/tmpscript
