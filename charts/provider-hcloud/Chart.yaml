@@ -1,6 +1,4 @@
 apiVersion: v2
-description: "# [gardener-extension-provider-hcloud] v0.5.3\r\n\r\n## What's Changed\r\n*
-  Configure Placementgroups in worker spec by @JensAc in https://github.com/23technologies/gardener-extension-provider-hcloud/pull/13\r\n\r\n\r\n**Full
-  Changelog**: https://github.com/23technologies/gardener-extension-provider-hcloud/compare/v0.5.2...v0.5.3"
+description: Helmchart for controllerregistration of provider-hcloud
 name: provider-hcloud
 version: v0.5.3

@@ -1,8 +1,4 @@
 apiVersion: v2
-description: "# [gardener-extension-provider-gcp]\r\n## \U0001F41B Bug Fixes\r\n*
-  *[OPERATOR]* Fixed an issue that caused the VPA object for `csi-driver-node` to
-  no longer match any Pods and effectively disabled vertical autoscaling for the DaemonSet.
-  ([gardener/gardener-extension-provider-gcp#453](https://github.com/gardener/gardener-extension-provider-gcp/pull/453),
-  [@ialidzhikov](https://github.com/ialidzhikov))"
+description: Helmchart for controllerregistration of provider-gcp
 name: provider-gcp
 version: v1.23.1
