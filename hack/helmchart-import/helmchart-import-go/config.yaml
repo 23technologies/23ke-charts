@@ -32,7 +32,7 @@
   version: "v1.23.1"
 - name: "provider-hcloud"
   repo: "23technologies/gardener-extension-provider-hcloud"
-  version: "v0.5.2"
+  version: "v0.5.3"
 - name: "provider-openstack"
   repo: "gardener/gardener-extension-provider-openstack"
   version: "v1.26.1"
