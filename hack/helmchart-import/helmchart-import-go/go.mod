@@ -6,6 +6,7 @@ go 1.17
 replace helm.sh/helm/v3 v3.9.0 => ./helm.sh/helm/v3
 
 require (
+	github.com/google/go-github/v45 v45.2.0
 	github.com/google/martian v2.1.0+incompatible
 	github.com/hashicorp/go-getter v1.6.2
 	github.com/sirupsen/logrus v1.8.1
@@ -32,6 +33,7 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/googleapis/gax-go/v2 v2.1.1 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect

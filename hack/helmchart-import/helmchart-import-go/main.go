@@ -1,13 +1,16 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"strings"
+	"sync"
 
+	"github.com/google/go-github/v45/github"
 	"github.com/sirupsen/logrus"
 	flag "github.com/spf13/pflag"
 	"gopkg.in/yaml.v3"
@@ -71,11 +74,14 @@ func getChart(cfg configuration) chart.Chart {
 	values["values"] = map[string]interface{}{}
 	values_serialized, _ := yaml.Marshal(values)
 
+	client := github.NewClient(nil)
+	rr, _, _ := client.Repositories.GetReleaseByTag(context.Background(), strings.Split(cfg.Repo, "/")[0], strings.Split(cfg.Repo, "/")[1], cfg.Version)
+
 	controller_chart := chart.Chart{
 		Metadata: &chart.Metadata{
 			Name:        cfg.Name,
 			Version:     cfg.Version,
-			Description: "A helm chart for the controllerRegistration of " + cfg.Name,
+			Description: *rr.Body,
 			APIVersion:  "v2",
 		},
 		Values: values,
@@ -96,11 +102,18 @@ func getChart(cfg configuration) chart.Chart {
 var (
 	configFile string
 	targetDir  string
+	wg         sync.WaitGroup
 )
 
 func init() {
 	flag.StringVar(&configFile, "config", "conf.yml", "")
 	flag.StringVar(&targetDir, "target", "charts", "")
+}
+
+func getAndSave(cfg configuration) {
+	defer wg.Done()
+	chart := getChart(cfg)
+	chartutil.SaveDir(&chart, targetDir)
 }
 
 func main() {
@@ -119,9 +132,14 @@ func main() {
 	}
 	var config []configuration
 	err = yaml.Unmarshal(data, &config)
+	if err != nil {
+		panic(err)
+	}
+	wg.Add(len(config))
+	fmt.Println("wg length: ", len(config))
 
 	for _, cfg := range config {
-		chart := getChart(cfg)
-		chartutil.SaveDir(&chart, targetDir)
+		go getAndSave(cfg)
 	}
+	wg.Wait()
 }
