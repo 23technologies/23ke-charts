@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+    "sync"
 
 	"github.com/sirupsen/logrus"
 	flag "github.com/spf13/pflag"
@@ -96,11 +97,18 @@ func getChart(cfg configuration) chart.Chart {
 var (
 	configFile string
 	targetDir  string
+    wg sync.WaitGroup
 )
 
 func init() {
 	flag.StringVar(&configFile, "config", "conf.yml", "")
 	flag.StringVar(&targetDir, "target", "charts", "")
+}
+
+func getAndSave(cfg configuration) {
+  	    defer wg.Done()
+		chart := getChart(cfg)
+		chartutil.SaveDir(&chart, targetDir)
 }
 
 func main() {
@@ -119,9 +127,11 @@ func main() {
 	}
 	var config []configuration
 	err = yaml.Unmarshal(data, &config)
+    wg.Add(len(config))
+    fmt.Println("wg length: ",  len(config))
 
 	for _, cfg := range config {
-		chart := getChart(cfg)
-		chartutil.SaveDir(&chart, targetDir)
+        go getAndSave(cfg)
 	}
+    wg.Wait()
 }
