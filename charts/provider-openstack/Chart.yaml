@@ -1,9 +1,4 @@
 apiVersion: v2
-description: "# [gardener-extension-provider-openstack]\r\n## \U0001F41B Bug Fixes\r\n*
-  *[USER]* An issue preventing ControlPlane resource to be successfully reconciled
-  for K8s 1.24 Shoots is now fixed. ([gardener/gardener-extension-provider-openstack#460](https://github.com/gardener/gardener-extension-provider-openstack/pull/460),
-  [@ialidzhikov](https://github.com/ialidzhikov))\r\n## Docker Images\r\ngardener-extension-provider-openstack:
-  `eu.gcr.io/gardener-project/gardener/extensions/provider-openstack:v1.26.1`\r\ngardener-extension-admission-openstack:
-  `eu.gcr.io/gardener-project/gardener/extensions/admission-openstack:v1.26.1`"
+description: Helmchart for controllerregistration of provider-openstack
 name: provider-openstack
 version: v1.26.1
