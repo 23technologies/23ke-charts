@@ -37,6 +37,16 @@
       "matchStrings": [
         "\"package\".* \"(?<depName>.*?)\".*\\s*\"version\".*\"(?<currentValue>.*?)\""
       ]
+    },
+    {
+      "fileMatch": [
+        "^hack/helmchart-import/helmchart-import-go/config.yaml$"
+      ],
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver-coerced",
+      "matchStrings": [
+        "repo.* \"(?<depName>.*?)\".*\\s*version.*\"(?<currentValue>.*?)\""
+      ]
     }
   ],
   "packageRules": [

@@ -5,7 +5,7 @@ on:
 
 jobs:
   shiftbranches:
-    runs-on: 23ke-runner
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v2
