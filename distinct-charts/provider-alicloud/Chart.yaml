@@ -1,0 +1,4 @@
+apiVersion: v2
+description: A helm chart for the controllerRegistration of provider-alicloud
+name: provider-alicloud
+version: v1.37.0
