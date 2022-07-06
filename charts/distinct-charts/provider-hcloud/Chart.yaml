@@ -1,4 +1,0 @@
-apiVersion: v2
-description: A helm chart for the controllerRegistration of provider-hcloud
-name: provider-hcloud
-version: v0.5.2

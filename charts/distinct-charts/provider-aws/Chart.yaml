@@ -1,4 +1,0 @@
-apiVersion: v2
-description: A helm chart for the controllerRegistration of provider-aws
-name: provider-aws
-version: v1.36.0

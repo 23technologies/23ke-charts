@@ -1,4 +1,0 @@
-apiVersion: v2
-description: A helm chart for the controllerRegistration of os-gardenlinux
-name: os-gardenlinux
-version: v0.12.0

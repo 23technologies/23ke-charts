@@ -1,4 +1,0 @@
-apiVersion: v2
-description: A helm chart for the controllerRegistration of provider-gcp
-name: provider-gcp
-version: v1.23.1
