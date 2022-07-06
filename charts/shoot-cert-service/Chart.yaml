@@ -1,4 +1,0 @@
-apiVersion: v2
-description: A helm chart for the controllerRegistration of shoot-cert-service
-name: shoot-cert-service
-version: v1.22.0
