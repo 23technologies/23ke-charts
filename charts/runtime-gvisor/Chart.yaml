@@ -1,4 +1,9 @@
 apiVersion: v2
-description: A helm chart for the controllerRegistration of runtime-gvisor
+description: "# [gardener-extension-runtime-gvisor]\r\n## \U0001F41B Bug Fixes\r\n*
+  *[DEVELOPER]* An issue causing the integration test execution to fail due to outdated
+  golang version is now fixed. ([gardener/gardener-extension-runtime-gvisor#46](https://github.com/gardener/gardener-extension-runtime-gvisor/pull/46),
+  [@ialidzhikov](https://github.com/ialidzhikov))\r\n## Docker Images\r\ngardener-extension-runtime-gvisor:
+  `eu.gcr.io/gardener-project/gardener/extensions/runtime-gvisor:v0.5.1`\r\ngardener-extension-runtime-gvisor-installation:
+  `eu.gcr.io/gardener-project/gardener/extensions/runtime-gvisor-installation:v0.5.1`"
 name: runtime-gvisor
 version: v0.5.1

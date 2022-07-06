@@ -1,4 +1,6 @@
 apiVersion: v2
-description: A helm chart for the controllerRegistration of os-ubuntu
+description: "# [gardener-extension-os-ubuntu]\n## \U0001F3C3 Others\n* *[OPERATOR]*
+  Switch to autoscaling.k8s.io/v1 for VPA object ([gardener/gardener-extension-os-ubuntu#65](https://github.com/gardener/gardener-extension-os-ubuntu/pull/65),
+  [@voelzmo](https://github.com/voelzmo))"
 name: os-ubuntu
 version: v1.16.0
