@@ -1,0 +1,4 @@
+apiVersion: v2
+description: A helm chart for the controllerRegistration of provider-azure
+name: provider-azure
+version: v1.28.1

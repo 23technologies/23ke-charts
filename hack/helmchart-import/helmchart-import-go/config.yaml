@@ -3,7 +3,7 @@
   version: "v0.5.1"
 - name: "external-dns-management"
   repo: "gardener/external-dns-management"
-  version: "v0.12.6"
+  version: "v0.12.7"
 - name: "networking-calico"
   repo: "gardener/gardener-extension-networking-calico"
   version: "v1.24.3"
