@@ -13,8 +13,7 @@
     ],
     "executionMode": "branch",
     "fileFilters": [
-      "charts/**",
-      "distinct-charts/**"
+      "charts/**"
     ]
   },
   "prHourlyLimit": 0,
