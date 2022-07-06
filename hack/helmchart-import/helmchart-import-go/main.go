@@ -50,6 +50,18 @@ func fetchChart(cfg configuration) ([]byte, error) {
 	return nil, errors.New("Was not able to fetch chart for " + cfg.Name)
 }
 
+func writeReleaseNotes(cfg configuration, targetDir string) {
+	client := github.NewClient(nil)
+	rr, _, _ := client.Repositories.GetReleaseByTag(context.Background(), strings.Split(cfg.Repo, "/")[0], strings.Split(cfg.Repo, "/")[1], cfg.Version)
+
+	file, err := os.Create(targetDir + "/" + cfg.Name + "/RELEASE.md")
+	if err != nil {
+		logrus.Error("Error while writing Release notes to" + file.Name())
+	}
+	file.WriteString(*rr.Body)
+
+}
+
 func getChart(cfg configuration) chart.Chart {
 	controller_registration, err := fetchChart(cfg)
 	if err != nil {
@@ -74,14 +86,11 @@ func getChart(cfg configuration) chart.Chart {
 	values["values"] = map[string]interface{}{}
 	values_serialized, _ := yaml.Marshal(values)
 
-	client := github.NewClient(nil)
-	rr, _, _ := client.Repositories.GetReleaseByTag(context.Background(), strings.Split(cfg.Repo, "/")[0], strings.Split(cfg.Repo, "/")[1], cfg.Version)
-
 	controller_chart := chart.Chart{
 		Metadata: &chart.Metadata{
 			Name:        cfg.Name,
 			Version:     cfg.Version,
-			Description: *rr.Body,
+			Description: "Helmchart for controllerregistration of " + cfg.Name,
 			APIVersion:  "v2",
 		},
 		Values: values,
@@ -114,6 +123,7 @@ func getAndSave(cfg configuration) {
 	defer wg.Done()
 	chart := getChart(cfg)
 	chartutil.SaveDir(&chart, targetDir)
+	writeReleaseNotes(cfg, targetDir)
 }
 
 func main() {
@@ -136,7 +146,6 @@ func main() {
 		panic(err)
 	}
 	wg.Add(len(config))
-	fmt.Println("wg length: ", len(config))
 
 	for _, cfg := range config {
 		go getAndSave(cfg)
