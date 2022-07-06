@@ -225,7 +225,7 @@ current_version.patch += 1
 chart["version"] = str(current_version)
 yaml.dump(chart, chartf)
 
-versionsf = Path(target_dir + "VERSIONS.md")
+versionsf = Path(target_dir + "RELEASE.md")
 text_file = open(versionsf, "w")
 text_file.write(extensions_versions)
 text_file.close()
