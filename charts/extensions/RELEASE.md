@@ -3,7 +3,7 @@
 |runtime-gvisor|```v0.5.1```|
 |external-dns-management|```v0.12.7```|
 |networking-calico|```v1.24.3```|
-|networking-cilium|```v1.13.0 -> v1.13.1```|
+|networking-cilium|```v1.13.1 -> v1.13.2```|
 |os-gardenlinux|```v0.12.0```|
 |os-ubuntu|```v1.16.0```|
 |provider-alicloud|```v1.37.0```|
