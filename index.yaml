@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-07-08T13:31:57.97746606Z"
+    description: This helmchart bundles gardener extensions
+    digest: dcf2b8081b7b78bbfc2a5885fe8f69c57811c34af4b09ac4c6a6263a1a243fa3
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.72/extensions-1.0.72.tgz
+    version: 1.0.72
+  - apiVersion: v2
     created: "2022-07-08T11:11:48.813530494Z"
     description: This helmchart bundles gardener extensions
     digest: 181d27fc32afa14fb9651727f4c270e7bc6bb0aa741e57c57609d8a46a23197b
@@ -2350,6 +2358,14 @@ entries:
     version: v0.5.0
   provider-openstack:
   - apiVersion: v2
+    created: "2022-07-08T13:31:58.39401174Z"
+    description: Helmchart for controllerregistration of provider-openstack
+    digest: 50b0c99df1bb88f35e541a5f7106727643ee62eb5745a7161efb508f66ee7cfc
+    name: provider-openstack
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-openstack-v1.26.2/provider-openstack-v1.26.2.tgz
+    version: v1.26.2
+  - apiVersion: v2
     created: "2022-07-06T12:37:05.122022543Z"
     description: A helm chart for the controllerRegistration of provider-openstack
     digest: d03caeb22b14c561f1c8dfb93dca8e2fc8129239c6299ce6a009534caa46d93e
@@ -2408,4 +2424,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-07-08T11:11:49.434230717Z"
+generated: "2022-07-08T13:31:58.397423312Z"
