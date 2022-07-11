@@ -11,6 +11,6 @@
 |provider-azure|```v1.28.1```|
 |provider-gcp|```v1.23.1```|
 |provider-hcloud|```v0.5.4```|
-|provider-openstack|```v1.26.1 -> v1.26.2```|
+|provider-openstack|```v1.26.2 -> v1.26.3```|
 |shoot-cert-service|```v1.23.0```|
 |shoot-dns-service|```v1.21.0```|

@@ -1,3 +1,5 @@
 # [gardener-extension-provider-openstack]
-## 🐛 Bug Fixes
-* *[OPERATOR]* Use openstack cloud-controller-manager `v1.22.0` for Shoots with target k8s version `v1.23.x`. [ref](https://github.com/kubernetes/cloud-provider-openstack/issues/1795) ([gardener/gardener-extension-provider-openstack#470](https://github.com/gardener/gardener-extension-provider-openstack/pull/470), [@dkistner](https://github.com/dkistner))
+## 🏃 Others
+* *[OPERATOR]* The following images are updated: ([gardener/gardener-extension-provider-openstack#472](https://github.com/gardener/gardener-extension-provider-openstack/pull/472), [@ialidzhikov](https://github.com/ialidzhikov))
+  * k8scloudprovider/openstack-cloud-controller-manager: v1.22.0 -> v1.23.3 (for Kubernetes 1.23 Shoots)
+  * k8scloudprovider/openstack-cloud-controller-manager: v1.24.1 -> v1.24.2 (for Kubernetes 1.24 Shoots)
