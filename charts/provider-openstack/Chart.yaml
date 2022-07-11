@@ -1,4 +1,4 @@
 apiVersion: v2
 description: Helmchart for controllerregistration of provider-openstack
 name: provider-openstack
-version: v1.26.2
+version: v1.26.3
