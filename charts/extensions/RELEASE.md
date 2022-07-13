@@ -10,7 +10,7 @@
 |provider-aws|```v1.36.0```|
 |provider-azure|```v1.28.1```|
 |provider-gcp|```v1.23.1```|
-|provider-hcloud|```v0.5.4```|
-|provider-openstack|```v1.26.2 -> v1.26.3```|
+|provider-hcloud|```v0.5.4 -> v0.5.5```|
+|provider-openstack|```v1.26.3```|
 |shoot-cert-service|```v1.23.0```|
 |shoot-dns-service|```v1.21.0```|
