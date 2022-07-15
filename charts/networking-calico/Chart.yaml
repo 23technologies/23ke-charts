@@ -1,4 +1,4 @@
 apiVersion: v2
 description: Helmchart for controllerregistration of networking-calico
 name: networking-calico
-version: v1.24.3
+version: v1.25.0
