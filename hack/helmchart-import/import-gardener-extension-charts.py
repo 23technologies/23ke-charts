@@ -37,12 +37,12 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-networking-calico",
-        "version": "v1.24.3",
+        "version": "v1.25.0",
         "name": "networking-calico",
     },
     {
         "package": "gardener/gardener-extension-networking-cilium",
-        "version": "v1.13.2",
+        "version": "v1.14.0",
         "name": "networking-cilium",
     },
     {
