@@ -96,7 +96,6 @@ spec:
 {{ if .Values.etcd.events.endpoints }}
 {{ end }}
         - --kubelet-preferred-address-types=InternalIP,Hostname,ExternalIP
-        - --insecure-port=0
 {{ if .Values.apiServer.oidcIssuerURL }}
         - --oidc-issuer-url={{ .Values.apiServer.oidcIssuerURL }}
         - --oidc-client-id=kube-kubectl
@@ -115,11 +114,13 @@ spec:
         - --requestheader-username-headers=X-Remote-User
         - --secure-port=443
         - --service-cluster-ip-range=100.64.0.0/13
-        - --service-account-key-file=/srv/kubernetes/service-account-key/service_account.key
         - --tls-cert-file=/srv/kubernetes/apiserver/tls.crt
         - --tls-private-key-file=/srv/kubernetes/apiserver/tls.key
         - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
         - --v=2
+        - --service-account-issuer=https://kubernetes.default.svc
+        - --service-account-signing-key-file=/srv/kubernetes/service-account-key/service_account.key
+        - --service-account-key-file=/srv/kubernetes/service-account-key/service_account.key
         livenessProbe:
           httpGet:
             scheme: HTTPS
@@ -199,8 +200,8 @@ spec:
           failureThreshold: 2
           httpGet:
             path: /healthz
-            port: 10252
-            scheme: HTTP
+            port: 10257
+            scheme: HTTPS
           initialDelaySeconds: 15
           periodSeconds: 10
           successThreshold: 1
