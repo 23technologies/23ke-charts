@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-07-25T09:32:10.33493776Z"
+    description: This helmchart bundles gardener extensions
+    digest: c6d743dc4a974857afe710405625c90daab736fef4d8e07fd60f8f1f2da90c82
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.78/extensions-1.0.78.tgz
+    version: 1.0.78
+  - apiVersion: v2
     created: "2022-07-25T02:11:59.347862535Z"
     description: This helmchart bundles gardener extensions
     digest: c13f274f26318f82c0677ab7b3d63a11d0493fdcab09362b5781e968bf9b7dbe
@@ -2454,6 +2462,14 @@ entries:
     version: v1.36.0
   provider-azure:
   - apiVersion: v2
+    created: "2022-07-25T09:32:11.006651323Z"
+    description: Helmchart for controllerregistration of provider-azure
+    digest: f7b4987b496b82d839f7242808108ef136fbd0ba796424945c72eaa6107ba57a
+    name: provider-azure
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-azure-v1.28.3/provider-azure-v1.28.3.tgz
+    version: v1.28.3
+  - apiVersion: v2
     created: "2022-07-21T14:17:10.31474259Z"
     description: Helmchart for controllerregistration of provider-azure
     digest: aa15126f1b2654577c84417d7b1d420ad05d9964cd623f6252a53a353f85224a
@@ -2611,4 +2627,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-07-25T02:11:59.806204966Z"
+generated: "2022-07-25T09:32:11.013955443Z"
