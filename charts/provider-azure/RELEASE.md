@@ -1,3 +1,3 @@
 # [gardener-extension-provider-azure]
-## 🏃 Others
-* *[OPERATOR]* Disable cloud-controller-manager node CIDR allocation. ([gardener/gardener-extension-provider-azure#543](https://github.com/gardener/gardener-extension-provider-azure/pull/543), [@kon-angelo](https://github.com/kon-angelo))
+## 🐛 Bug Fixes
+* *[USER]* An issue preventing azure CCM to create routes for K8s < 1.21 Shoot clusters is now fixed. ([gardener/gardener-extension-provider-azure#545](https://github.com/gardener/gardener-extension-provider-azure/pull/545), [@kon-angelo](https://github.com/kon-angelo))
