@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-07-26T09:17:17.808545772Z"
+    description: This helmchart bundles gardener extensions
+    digest: c053e0ed728509306cf98e676ca8376e01c2891ddf9b4bd08cf091913e1cc40f
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.79/extensions-1.0.79.tgz
+    version: 1.0.79
+  - apiVersion: v2
     created: "2022-07-25T09:32:10.33493776Z"
     description: This helmchart bundles gardener extensions
     digest: c6d743dc4a974857afe710405625c90daab736fef4d8e07fd60f8f1f2da90c82
@@ -2417,6 +2425,14 @@ entries:
     version: v1.11.0
   os-gardenlinux:
   - apiVersion: v2
+    created: "2022-07-26T09:17:18.258944532Z"
+    description: Helmchart for controllerregistration of os-gardenlinux
+    digest: 5b56e815c57e39c3a693f63b6a451bbb5d350b2df378afc87555d1c42c3e7a39
+    name: os-gardenlinux
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/os-gardenlinux-v0.13.0/os-gardenlinux-v0.13.0.tgz
+    version: v0.13.0
+  - apiVersion: v2
     created: "2022-07-05T11:59:30.031296554Z"
     description: A helm chart for the controllerRegistration of os-gardenlinux
     digest: cdda51db39c806ab5b3440a221aef6e98c3976baa666a6022fcf68d8bb19e9b7
@@ -2425,6 +2441,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/os-gardenlinux-v0.12.0/os-gardenlinux-v0.12.0.tgz
     version: v0.12.0
   os-ubuntu:
+  - apiVersion: v2
+    created: "2022-07-26T09:17:18.489288253Z"
+    description: Helmchart for controllerregistration of os-ubuntu
+    digest: fc6f4df88a2b9eaee2e0c26125d8ea9628acee70128daa21197562f015d2e677
+    name: os-ubuntu
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/os-ubuntu-v1.17.0/os-ubuntu-v1.17.0.tgz
+    version: v1.17.0
   - apiVersion: v2
     created: "2022-07-06T12:37:03.677812063Z"
     description: A helm chart for the controllerRegistration of os-ubuntu
@@ -2643,4 +2667,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-07-26T08:43:25.862667488Z"
+generated: "2022-07-26T09:17:18.493666614Z"
