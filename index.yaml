@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-08-01T12:17:13.41421672Z"
+    description: This helmchart bundles gardener extensions
+    digest: 429c2370e1abba924310dd6f2b1f78dac812b09a63491956deb3d7670c9e447b
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.82/extensions-1.0.82.tgz
+    version: 1.0.82
+  - apiVersion: v2
     created: "2022-07-29T07:47:18.679184761Z"
     description: This helmchart bundles gardener extensions
     digest: 7480b2bfd6be7e358f2b916a28e0cb73b2031f298758df7f2ea46a77abb471d3
@@ -2625,6 +2633,14 @@ entries:
     version: v1.23.0
   provider-hcloud:
   - apiVersion: v2
+    created: "2022-08-01T12:17:13.838919638Z"
+    description: Helmchart for controllerregistration of provider-hcloud
+    digest: b73ecba2ef5f99e0f14e65a4958ccc8bba1d0ad3b5c06e21ef2268c3712f430d
+    name: provider-hcloud
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-hcloud-v0.5.6/provider-hcloud-v0.5.6.tgz
+    version: v0.5.6
+  - apiVersion: v2
     created: "2022-07-13T12:56:59.861693754Z"
     description: Helmchart for controllerregistration of provider-hcloud
     digest: b03ff954db066fcf8333f18a9a906277be1527aa80a60bbf92b6c6cb2de71703
@@ -2740,4 +2756,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-08-01T11:40:23.302047452Z"
+generated: "2022-08-01T12:17:13.843647618Z"
