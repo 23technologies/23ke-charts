@@ -912,6 +912,15 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/garden-kube-apiserver-v1.24.3/garden-kube-apiserver-v1.24.3.tgz
     version: v1.24.3
+  - apiVersion: v1
+    created: "2022-08-01T12:36:37.334655045Z"
+    description: This repo packages the kube-apiserver for the usage in the gardener
+      context. This is the foundation that gets extended by the gardener-apiserver
+    digest: c6e3acc7311160db448f6ae35ccb2c31797c8ec177b80d1c2537516a8e178c17
+    name: garden-kube-apiserver
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/garden-kube-apiserver-v1.24.2/garden-kube-apiserver-v1.24.2.tgz
+    version: v1.24.2
   gardener-controlplane:
   - apiVersion: v1
     created: "2022-08-01T07:21:22.688868949Z"
@@ -2756,4 +2765,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-08-01T12:17:13.843647618Z"
+generated: "2022-08-01T12:36:37.337414345Z"
