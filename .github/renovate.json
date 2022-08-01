@@ -20,6 +20,17 @@
   "regexManagers": [
     {
       "fileMatch": [
+        "^charts/garden-kube-apiserver/Chart.yaml$"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "kubernetes/kubernetes",
+      "versioningTemplate": "semver-coerced",
+      "matchStrings": [
+        "version: (?<currentValue>.*?)"
+      ]
+    },
+    {
+      "fileMatch": [
         "^hack/helmchart-import/import-gardener-charts.py$"
       ],
       "datasourceTemplate": "github-releases",

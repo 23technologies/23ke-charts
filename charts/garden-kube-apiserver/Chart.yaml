@@ -13,6 +13,6 @@
 # limitations under the License.
 
 apiVersion: v1
-description: Helm chart for garden
+description: This repo packages the kube-apiserver for the usage in the gardener context. This is the foundation that gets extended by the gardener-apiserver
 name: garden-kube-apiserver
-version: v1.24.3
+version: v1.24.2

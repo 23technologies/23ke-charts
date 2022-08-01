@@ -76,7 +76,7 @@ spec:
         operator: Exists
       containers:
       - name: kube-apiserver
-        image: {{ index .Values.images "apiserver" }}
+        image: k8s.gcr.io/kube-apiserver:{{ .Chart.Version }}
         imagePullPolicy: IfNotPresent
         command:
         - /usr/local/bin/kube-apiserver
@@ -182,7 +182,7 @@ spec:
           mountPath: /srv/kubernetes/identity-ca
         {{- end }}
       - name: kube-controller-manager
-        image: {{ index .Values.images "controllermanager" }}
+        image: k8s.gcr.io/kube-controller-manager:{{ .Chart.Version }}
         imagePullPolicy: IfNotPresent
         command:
         - /usr/local/bin/kube-controller-manager
