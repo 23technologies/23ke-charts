@@ -48,11 +48,6 @@ config = [
                 "chart_name": "garden-etcd",
                 "update_tag": False
             },
-            {
-                "src": "components/kube-apiserver/chart",
-                "chart_name": "garden-kube-apiserver",
-                "update_tag": False
-            },
         ],
     },
     {
