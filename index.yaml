@@ -760,9 +760,9 @@ entries:
     version: v0.12.5
   garden-etcd:
   - apiVersion: v1
-    created: "2022-08-02T13:48:31.642403675Z"
+    created: "2022-08-02T13:48:45.742034227Z"
     description: Helm chart for etcd
-    digest: 1aebebbfb84588e45e57911ade1027f4c5ca022d83fda9a23a7a84fc70215ada
+    digest: 394f07270c4a6e318cfff515501b64c678034e926bbeb92becdf3fa20bb12d5e
     name: garden-etcd
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/garden-etcd-3.29.0/garden-etcd-3.29.0.tgz
@@ -856,6 +856,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/garden-etcd-3.19.0/garden-etcd-3.19.0.tgz
     version: 3.19.0
   garden-kube-apiserver:
+  - apiVersion: v1
+    created: "2022-08-02T13:48:45.943557893Z"
+    description: Helm chart for garden
+    digest: 3a790eacdcc1d3e37c9b87c763cdd1e88978bfb7e06e9b68d08557b628237a51
+    name: garden-kube-apiserver
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/garden-kube-apiserver-3.29.0/garden-kube-apiserver-3.29.0.tgz
+    version: 3.29.0
   - apiVersion: v1
     created: "2022-08-02T08:58:40.923470663Z"
     description: Helm chart for garden
@@ -2870,4 +2878,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-08-02T13:48:31.867898456Z"
+generated: "2022-08-02T13:48:45.950412973Z"
