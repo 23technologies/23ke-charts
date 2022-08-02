@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-08-02T12:22:13.805538658Z"
+    description: This helmchart bundles gardener extensions
+    digest: db22d8a9b5bf7fce9254b6c892f7adfebcd4db1165ba1bbd0843cf08c698e216
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.83/extensions-1.0.83.tgz
+    version: 1.0.83
+  - apiVersion: v2
     created: "2022-08-01T12:17:13.41421672Z"
     description: This helmchart bundles gardener extensions
     digest: 429c2370e1abba924310dd6f2b1f78dac812b09a63491956deb3d7670c9e447b
@@ -2632,6 +2640,14 @@ entries:
     version: v1.37.0
   provider-aws:
   - apiVersion: v2
+    created: "2022-08-02T12:22:14.256138913Z"
+    description: Helmchart for controllerregistration of provider-aws
+    digest: b4ce7b395897cb28a9828a40b5ac60a341c46fecf1d52888b1a5130ca2e8e565
+    name: provider-aws
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-aws-v1.37.0/provider-aws-v1.37.0.tgz
+    version: v1.37.0
+  - apiVersion: v2
     created: "2022-07-05T11:59:30.646049092Z"
     description: A helm chart for the controllerRegistration of provider-aws
     digest: c6d942317ecadf2b8c64ff30c2eb9c20833cacf6ba67c4a5ab4a58559954dce4
@@ -2673,6 +2689,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/provider-azure-v1.28.0/provider-azure-v1.28.0.tgz
     version: v1.28.0
   provider-gcp:
+  - apiVersion: v2
+    created: "2022-08-02T12:22:14.462357395Z"
+    description: Helmchart for controllerregistration of provider-gcp
+    digest: 8f5e2080d4c6dc1aca77c57e69f1073239728e7f99b1791243a675d9ec4b510a
+    name: provider-gcp
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-gcp-v1.24.0/provider-gcp-v1.24.0.tgz
+    version: v1.24.0
   - apiVersion: v2
     created: "2022-07-06T12:37:04.655051599Z"
     description: A helm chart for the controllerRegistration of provider-gcp
@@ -2739,6 +2763,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/provider-hcloud-v0.5.0/provider-hcloud-v0.5.0.tgz
     version: v0.5.0
   provider-openstack:
+  - apiVersion: v2
+    created: "2022-08-02T12:22:14.664603313Z"
+    description: Helmchart for controllerregistration of provider-openstack
+    digest: a88803644ba66589ff4ecbd06cb94fc41484f41b1294005444371795caa33801
+    name: provider-openstack
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-openstack-v1.27.0/provider-openstack-v1.27.0.tgz
+    version: v1.27.0
   - apiVersion: v2
     created: "2022-07-11T07:41:52.314424947Z"
     description: Helmchart for controllerregistration of provider-openstack
@@ -2814,4 +2846,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-08-02T11:47:10.922302323Z"
+generated: "2022-08-02T12:22:14.670125399Z"
