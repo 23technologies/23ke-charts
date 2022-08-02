@@ -24,10 +24,9 @@
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "kubernetes/kubernetes",
-      "packageNameTemplate": "kubernetes/kubernetes",
       "versioningTemplate": "semver-coerced",
       "matchStrings": [
-        "version: \"(?<currentValue>.*?)\""
+        "version.* \"(?<currentValue>.*?)\""
       ]
     },
     {
