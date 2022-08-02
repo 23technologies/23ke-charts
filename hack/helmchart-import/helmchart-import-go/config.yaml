@@ -24,7 +24,7 @@
   version: "v1.37.0"
 - name: "provider-azure"
   repo: "gardener/gardener-extension-provider-azure"
-  version: "v1.28.3"
+  version: "v1.29.0"
   additionalCharts:
     - "charts/gardener-extension-admission-azure"
 - name: "provider-gcp"
