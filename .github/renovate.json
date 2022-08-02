@@ -22,11 +22,11 @@
       "fileMatch": [
         "^charts/garden-kube-apiserver/Chart.yaml$"
       ],
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "github-releases",
       "depNameTemplate": "kubernetes/kubernetes",
       "versioningTemplate": "semver-coerced",
       "matchStrings": [
-        "version.* (?<currentValue>.*?)"
+        "version: (?<currentValue>.*)"
       ]
     },
     {
