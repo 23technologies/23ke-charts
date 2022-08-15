@@ -1,13 +1,10 @@
 # [gardener-extension-shoot-dns-service]
-## ⚠️ Breaking Changes
-* *[OPERATOR]* This version of gardener-extension-shoot-dns-service requires Gardener v1.52+. ([gardener/gardener-extension-shoot-dns-service#146](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/146), [@gardener-robot-ci-1](https://github.com/gardener-robot-ci-1))
-* *[OPERATOR]* This version of gardener-extension-shoot-dns-service requires Gardener v1.50+. ([gardener/gardener-extension-shoot-dns-service#143](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/143), [@kris94](https://github.com/kris94))
-## 🏃 Others
-* *[OPERATOR]* doc user ([gardener/gardener-extension-shoot-dns-service#144](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/144), [@etiennnr](https://github.com/etiennnr))
-* *[OPERATOR]* Add optional deployment for dns-controller-manager ([gardener/gardener-extension-shoot-dns-service#145](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/145), [@MartinWeindel](https://github.com/MartinWeindel))
-# [external-dns-management]
-## ✨ New Features
-* *[USER]* Weighted routing policy is now supported for AWS Route53 and Google CloudDNS. ([gardener/external-dns-management#270](https://github.com/gardener/external-dns-management/pull/270), [@MartinWeindel](https://github.com/MartinWeindel))
-  * There can now be multiple `DNSEntries` for the same domain name (distinguished by the `setIdentifier` in the `spec.routingPolicy` section). For details see https://github.com/gardener/external-dns-management/tree/master/docs/aws-route53#weighted-routing-policy
 ## 🐛 Bug Fixes
-* *[OPERATOR]* [openstack-designate] Select correct recordset on updating wildcard domain names ([gardener/external-dns-management#268](https://github.com/gardener/external-dns-management/pull/268), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Fix name of podsecuritypolicy in cluster role for dns-controller-manager. ([gardener/gardener-extension-shoot-dns-service#150](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/150), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[DEVELOPER]* An issue causing the Shoot DNS integration test to fail is now fixed. ([gardener/gardener-extension-shoot-dns-service#152](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/152), [@ialidzhikov](https://github.com/ialidzhikov))
+## 🏃 Others
+* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-shoot-dns-service#149](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/149), [@shafeeqes](https://github.com/shafeeqes))
+  * github.com/gardener/gardener: v1.49.3 -> v1.52.2
+  * k8s.io/* : v0.23.3 -> v0.24.3
+  * sigs.k8s.io/controller-runtime v0.11.1 -> v0.12.1
+  * sigs.k8s.io/controller-tools: 0.8.0 -> 0.9.0
