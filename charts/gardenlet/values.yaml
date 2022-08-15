@@ -8,7 +8,7 @@ global:
     invalidateServiceAccountToken: true
     image:
       repository: eu.gcr.io/gardener-project/gardener/gardenlet
-      tag: v1.52.2
+      tag: v1.53.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -203,9 +203,6 @@ global:
     #     output: |-
     #       [Output]
     #           ...
-    #   loki:
-    #     garden:
-    #       priority: 100
     # monitoring:
     #   shoot:
     #     remoteWrite:
