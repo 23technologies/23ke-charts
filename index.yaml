@@ -1091,6 +1091,15 @@ entries:
     version: v1.24.2
   gardener-controlplane:
   - apiVersion: v1
+    created: "2022-08-17T09:37:16.549799699Z"
+    description: A Helm chart to deploy the Gardener controlplane (API server, controller-manager,
+      scheduler, admission-controller)
+    digest: fa47a691a8a8722455452144bb1793937e59dc0ff9ef9ec0aa13bc1317ef65ed
+    name: gardener-controlplane
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardener-controlplane-1.53.2/gardener-controlplane-1.53.2.tgz
+    version: 1.53.2
+  - apiVersion: v1
     created: "2022-08-16T06:47:03.27835662Z"
     description: A Helm chart to deploy the Gardener controlplane (API server, controller-manager,
       scheduler, admission-controller)
@@ -1488,6 +1497,14 @@ entries:
     version: 1.38.2
   gardener-controlplane-application:
   - apiVersion: v1
+    created: "2022-08-17T09:37:16.804088735Z"
+    description: A Helm chart to deploy the Gardener application related resources
+    digest: 26735b8564cb6ae17a3b17df356a1817e932457295a5f91e76158261088ba0c5
+    name: gardener-controlplane-application
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardener-controlplane-application-1.53.2/gardener-controlplane-application-1.53.2.tgz
+    version: 1.53.2
+  - apiVersion: v1
     created: "2022-08-16T06:47:03.521991577Z"
     description: A Helm chart to deploy the Gardener application related resources
     digest: a8e45e6a2f1c3d718ed34259d0d414c0c93f87f6d5d8a309e9dde0975f748df5
@@ -1840,6 +1857,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/gardener-controlplane-application-1.38.2/gardener-controlplane-application-1.38.2.tgz
     version: 1.38.2
   gardener-controlplane-runtime:
+  - apiVersion: v1
+    created: "2022-08-17T09:37:17.049636852Z"
+    description: A Helm chart to deploy the Gardener runtime related resources
+    digest: a6cf69b1c61e409f949497fa5aa0fd43fbd74309b1cefa28350ba11008cd22c1
+    name: gardener-controlplane-runtime
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardener-controlplane-runtime-1.53.2/gardener-controlplane-runtime-1.53.2.tgz
+    version: 1.53.2
   - apiVersion: v1
     created: "2022-08-16T06:47:03.801567175Z"
     description: A Helm chart to deploy the Gardener runtime related resources
@@ -2266,6 +2291,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/gardener-dashboard-1.52.3/gardener-dashboard-1.52.3.tgz
     version: 1.52.3
   gardenlet:
+  - apiVersion: v1
+    created: "2022-08-17T09:37:17.302115115Z"
+    description: A Helm chart to deploy the Gardenlet (primary "seed" agent)
+    digest: e92ff277ac6d79063462a6fd96b70ebd541b5ef3916924207443714fd49febfe
+    name: gardenlet
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardenlet-1.53.2/gardenlet-1.53.2.tgz
+    version: 1.53.2
   - apiVersion: v1
     created: "2022-08-16T06:47:04.051231787Z"
     description: A Helm chart to deploy the Gardenlet (primary "seed" agent)
@@ -3161,4 +3194,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-08-16T06:47:04.055550058Z"
+generated: "2022-08-17T09:37:17.310519937Z"
