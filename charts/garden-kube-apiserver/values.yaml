@@ -14,9 +14,6 @@
 
 namespace: xxx
 serviceName: garden-kube-apiserver
-images:
-  apiserver: k8s.gcr.io/kube-apiserver:v1.24.3
-  controllermanager: k8s.gcr.io/kube-controller-manager:v1.24.3
 
 replicas: 3
 apiServer:
@@ -41,3 +38,23 @@ tls:
     crt: client-certificate
     key: client-key
   serviceAccountKey: key
+  kubeAggregator:
+    ca:
+      crt: aggregator-ca-crt
+      key: aggregator-ca-key
+    client:
+      crt: aggregator-crt
+      key: aggregator-key
+  identity:
+    ca: identity-ca
+
+etcd:
+  main:
+    endpoints: etcd-main
+  events:
+    endpoints: etcd-events
+  secretNames:
+    ca: etcd-ca
+
+ingress:
+  annotations: []
