@@ -9,7 +9,7 @@
   version: "v1.26.0"
 - name: "networking-cilium"
   repo: "gardener/gardener-extension-networking-cilium"
-  version: "v1.16.2"
+  version: "v1.16.3"
 - name: "os-gardenlinux"
   repo: "gardener/gardener-extension-os-gardenlinux"
   version: "v0.14.0"
