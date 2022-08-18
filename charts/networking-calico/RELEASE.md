@@ -1,17 +1,16 @@
 # [gardener-extension-networking-calico]
 ## ⚠️ Breaking Changes
-* *[OPERATOR]* This version of gardener-extension-networking-calico requires Gardener v1.50+. ([gardener/gardener-extension-networking-calico#192](https://github.com/gardener/gardener-extension-networking-calico/pull/192), [@kris94](https://github.com/kris94))
+* *[OPERATOR]* Please make sure you're running gardener@v1.52 or above before upgrading to this version. ([gardener/gardener-extension-networking-calico#203](https://github.com/gardener/gardener-extension-networking-calico/pull/203), [@shafeeqes](https://github.com/shafeeqes))
 ## 🐛 Bug Fixes
-* *[USER]* An issue causing Pod creation to fail for calico-node, calico-typha and calico-kube-controllers components when privileged containers are not allowed is now fixed. ([gardener/gardener-extension-networking-calico#181](https://github.com/gardener/gardener-extension-networking-calico/pull/181), [@ialidzhikov](https://github.com/ialidzhikov))
+* *[OPERATOR]* The `PodDisruptionBudget` for `calico-kube-controllers` is removed, as it is a singleton and can prevent VPA from scaling it up. ([gardener/gardener-extension-networking-calico#183](https://github.com/gardener/gardener-extension-networking-calico/pull/183), [@timebertt](https://github.com/timebertt))
 ## 🏃 Others
-* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-networking-calico#197](https://github.com/gardener/gardener-extension-networking-calico/pull/197), [@DockToFuture](https://github.com/DockToFuture))
-  * github.com/gardener/gardener: v1.47.0 -> v1.50.1
-  * sigs.k8s.io/controller-runtime v0.11.1 -> v0.12.1
-* *[OPERATOR]* Add liveness and readiness probe to admission webhook. ([gardener/gardener-extension-networking-calico#180](https://github.com/gardener/gardener-extension-networking-calico/pull/180), [@DockToFuture](https://github.com/DockToFuture))
-* *[OPERATOR]* Increased memory limit of calico kube-controllers to 2Gi. ([gardener/gardener-extension-networking-calico#184](https://github.com/gardener/gardener-extension-networking-calico/pull/184), [@ScheererJ](https://github.com/ScheererJ))
-* *[OPERATOR]* Update calico to v3.23.1 and update dependencies on gardener (v1.47.0) and golang (v1.18). ([gardener/gardener-extension-networking-calico#185](https://github.com/gardener/gardener-extension-networking-calico/pull/185), [@DockToFuture](https://github.com/DockToFuture))
-* *[OPERATOR]* The extension now uses `distroless` instead of `alpine` as a base image. ([gardener/gardener-extension-networking-calico#187](https://github.com/gardener/gardener-extension-networking-calico/pull/187), [@dimityrmirchev](https://github.com/dimityrmirchev))
-* *[OPERATOR]* Update `cpvpa` to `k8s.gcr.io/cpa/cpvpa:v0.8.4` since it's a multi-arch image. ([gardener/gardener-extension-networking-calico#189](https://github.com/gardener/gardener-extension-networking-calico/pull/189), [@rfranzke](https://github.com/rfranzke))
-* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-networking-calico#190](https://github.com/gardener/gardener-extension-networking-calico/pull/190), [@acumino](https://github.com/acumino))
-  * k8s.gcr.io/cpa/cluster-proportional-autoscaler: 1.8.3 -> 1.8.5
-* *[OPERATOR]* Update calico to v3.23.2. ([gardener/gardener-extension-networking-calico#191](https://github.com/gardener/gardener-extension-networking-calico/pull/191), [@DockToFuture](https://github.com/DockToFuture))
+* *[OPERATOR]* The calico-kube-controllers/calico-kube-controllers container no longer runs in privileged mode. ([gardener/gardener-extension-networking-calico#196](https://github.com/gardener/gardener-extension-networking-calico/pull/196), [@ialidzhikov](https://github.com/ialidzhikov))
+* *[OPERATOR]* Published docker images for Calico extension come now with multi-arch support including `linux/amd64` and `linux/arm64`. ([gardener/gardener-extension-networking-calico#198](https://github.com/gardener/gardener-extension-networking-calico/pull/198), [@timuthy](https://github.com/timuthy))
+* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-networking-calico#201](https://github.com/gardener/gardener-extension-networking-calico/pull/201), [@shafeeqes](https://github.com/shafeeqes))
+  * github.com/gardener/gardener: v1.50.1 -> v1.52.0
+* *[OPERATOR]* Update calico to v3.23.3. ([gardener/gardener-extension-networking-calico#202](https://github.com/gardener/gardener-extension-networking-calico/pull/202), [@DockToFuture](https://github.com/DockToFuture))
+* *[OPERATOR]* Pods for `calico-kube-controllers`, `calico-node`, `calico-node-vertical-autoscaler`, `calico-typha`, `calico-typha-horizontal-autoscaler` and `calico-typha-vertical-autoscaler` components now have their seccomp profile set to "RuntimeDefault". ([gardener/gardener-extension-networking-calico#204](https://github.com/gardener/gardener-extension-networking-calico/pull/204), [@dimityrmirchev](https://github.com/dimityrmirchev))
+* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-networking-calico#205](https://github.com/gardener/gardener-extension-networking-calico/pull/205), [@shafeeqes](https://github.com/shafeeqes))
+  * k8s.io/* : v0.24.2 -> v0.24.3
+* *[OPERATOR]* The following image is updated: ([gardener/gardener-extension-networking-calico#206](https://github.com/gardener/gardener-extension-networking-calico/pull/206), [@ialidzhikov](https://github.com/ialidzhikov))
+  * k8s.gcr.io/cpa/cluster-proportional-autoscaler: v1.8.5 -> v1.8.6
