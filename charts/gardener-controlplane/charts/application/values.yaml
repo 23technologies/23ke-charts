@@ -8,7 +8,7 @@ global:
     serviceAccountName: gardener-apiserver
     image:
       repository: eu.gcr.io/gardener-project/gardener/apiserver
-      tag: v1.53.2
+      tag: v1.54.0
       pullPolicy: IfNotPresent
     livenessProbe:
       initialDelaySeconds: 15
@@ -201,7 +201,7 @@ global:
         maxBackup: 5
         maxSize: 100
  #      mode: blocking
-        path: /tmp/audit.log
+        path: /tmp/audit/audit.log
  #      truncateEnabled: true
  #      truncateMaxBatchSize: 10485760
  #      truncateMaxEventSize: 102400
@@ -268,7 +268,7 @@ global:
     serviceAccountName: gardener-admission-controller
     image:
       repository: eu.gcr.io/gardener-project/gardener/admission-controller
-      tag: v1.53.2
+      tag: v1.54.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -315,7 +315,7 @@ global:
       #   limits:
       #   - apiGroups: ["core.gardener.cloud"]
       #     apiVersions: ["*"]
-      #     resources: ["shoots", "plants"]
+      #     resources: ["shoots"]
       #     size: 100Ki
       #   unrestrictedSubjects:
       #   - kind: Group
@@ -340,7 +340,7 @@ global:
     serviceAccountName: gardener-controller-manager
     image:
       repository: eu.gcr.io/gardener-project/gardener/controller-manager
-      tag: v1.53.2
+      tag: v1.54.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -368,9 +368,6 @@ global:
 #       event:
 #         concurrentSyncs: 5
 #         ttlNonShootEvents: 1h
-        plant:
-          concurrentSyncs: 20
-          syncPeriod: 30s
   #     project:
   #       concurrentSyncs: 5
   #       minimumLifetimeDays: 30
@@ -441,7 +438,7 @@ global:
     serviceAccountName: gardener-scheduler
     image:
       repository: eu.gcr.io/gardener-project/gardener/scheduler
-      tag: v1.53.2
+      tag: v1.54.0
       pullPolicy: IfNotPresent
     resources:
       requests:

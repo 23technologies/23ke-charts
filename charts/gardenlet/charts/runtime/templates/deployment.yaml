@@ -63,7 +63,7 @@ spec:
 {{ toYaml .Values.global.gardenlet.podLabels | indent 8 }}
         {{- end }}
     spec:
-      priorityClassName: gardenlet
+      priorityClassName: gardener-system-critical-migration
       {{- if not .Values.global.gardenlet.config.seedClientConnection.kubeconfig }}
       serviceAccountName: {{ required ".Values.global.gardenlet.serviceAccountName is required" .Values.global.gardenlet.serviceAccountName }}
       {{- else }}
@@ -89,8 +89,7 @@ spec:
       - name: gardenlet
         image: {{ include "utils-templates.image" .Values.global.gardenlet.image }}
         imagePullPolicy: {{ .Values.global.gardenlet.image.pullPolicy }}
-        command:
-        - /gardenlet
+        args:
         - --config=/etc/gardenlet/config/config.yaml
         {{- if or .Values.global.gardenlet.env .Values.global.gardenlet.imageVectorOverwrite .Values.global.gardenlet.componentImageVectorOverwrites }}
         env:
