@@ -1,6 +1,6 @@
 # [external-dns-management]
-## ✨ New Features
-* *[USER]* Weighted routing policy is now supported for AWS Route53 and Google CloudDNS. ([gardener/external-dns-management#270](https://github.com/gardener/external-dns-management/pull/270), [@MartinWeindel](https://github.com/MartinWeindel))
-  * There can now be multiple `DNSEntries` for the same domain name (distinguished by the `setIdentifier` in the `spec.routingPolicy` section). For details see https://github.com/gardener/external-dns-management/tree/master/docs/aws-route53#weighted-routing-policy
-## 🐛 Bug Fixes
-* *[OPERATOR]* [openstack-designate] Select correct recordset on updating wildcard domain names ([gardener/external-dns-management#268](https://github.com/gardener/external-dns-management/pull/268), [@MartinWeindel](https://github.com/MartinWeindel))
+## 🏃 Others
+* *[OPERATOR]* The `PodSecurityPolicy` `dns-controller-manager` is not deployed for seeds with k8s `>=1.24` ([gardener/external-dns-management#273](https://github.com/gardener/external-dns-management/pull/273), [@shafeeqes](https://github.com/shafeeqes))
+* *[OPERATOR]* Reconcile deleting entries after its provider has been repaired ([gardener/external-dns-management#275](https://github.com/gardener/external-dns-management/pull/275), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Updated build image golang:v1.18.3 -> v1.18.5 ([gardener/external-dns-management#275](https://github.com/gardener/external-dns-management/pull/275), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Add flag --disable-dnsname-validation to optionally disable the validation of DNS names according to RFC 1123. ([gardener/external-dns-management#276](https://github.com/gardener/external-dns-management/pull/276), [@MartinWeindel](https://github.com/MartinWeindel))
