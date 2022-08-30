@@ -8,7 +8,7 @@ global:
     serviceAccountName: gardener-apiserver
     image:
       repository: eu.gcr.io/gardener-project/gardener/apiserver
-      tag: v1.51.1
+      tag: v1.52.3
       pullPolicy: IfNotPresent
     livenessProbe:
       initialDelaySeconds: 15
@@ -268,7 +268,7 @@ global:
     serviceAccountName: gardener-admission-controller
     image:
       repository: eu.gcr.io/gardener-project/gardener/admission-controller
-      tag: v1.51.1
+      tag: v1.52.3
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -340,7 +340,7 @@ global:
     serviceAccountName: gardener-controller-manager
     image:
       repository: eu.gcr.io/gardener-project/gardener/controller-manager
-      tag: v1.51.1
+      tag: v1.52.3
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -422,23 +422,13 @@ global:
     #   resourceName: gardener-controller-manager-leader-election
     #   resourceNamespace: garden
       logLevel: info
-      kubernetesLogLevel: 0
       server:
-        http:
+        healthProbes:
           bindAddress: 0.0.0.0
           port: 2718
-        https:
+        metrics:
           bindAddress: 0.0.0.0
           port: 2719
-          tls:
-            crt: |
-              -----BEGIN CERTIFICATE-----
-              ...
-              -----END CERTIFICATE-----
-            key: |
-              -----BEGIN RSA PRIVATE KEY-----
-              ...
-              -----END RSA PRIVATE KEY-----
       debugging:
         enableProfiling: false
         enableContentionProfiling: false
@@ -451,7 +441,7 @@ global:
     serviceAccountName: gardener-scheduler
     image:
       repository: eu.gcr.io/gardener-project/gardener/scheduler
-      tag: v1.51.1
+      tag: v1.52.3
       pullPolicy: IfNotPresent
     resources:
       requests:
