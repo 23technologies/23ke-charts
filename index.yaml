@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-08-31T12:57:30.950775674Z"
+    description: This helmchart bundles gardener extensions
+    digest: 9491c30d22efc9507f17a685f769cfc990fba7e843f4948e74d9e661b0e4fc97
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.97/extensions-1.0.97.tgz
+    version: 1.0.97
+  - apiVersion: v2
     created: "2022-08-30T07:42:21.764442281Z"
     description: This helmchart bundles gardener extensions
     digest: 5ed1d797d371569421eb31cbd1987f6cee766b0ccb29a9b787e7fead3921b530
@@ -3369,6 +3377,14 @@ entries:
     version: v1.22.0
   shoot-dns-service:
   - apiVersion: v2
+    created: "2022-08-31T12:57:31.199103134Z"
+    description: Helmchart for controllerregistration of shoot-dns-service
+    digest: 0a379497084d381f51ee0ea334679923915c853e312035689e268b37c7f68071
+    name: shoot-dns-service
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.24.0/shoot-dns-service-v1.24.0.tgz
+    version: v1.24.0
+  - apiVersion: v2
     created: "2022-08-15T15:07:30.720886051Z"
     description: Helmchart for controllerregistration of shoot-dns-service
     digest: f2d9e31dd98749a8a313cb8ab57f5a105810858534cec3f40e1b7fc71b6b242b
@@ -3400,4 +3416,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-08-30T08:48:04.006294559Z"
+generated: "2022-08-31T12:57:31.202508768Z"
