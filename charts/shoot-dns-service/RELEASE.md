@@ -1,10 +1,10 @@
 # [gardener-extension-shoot-dns-service]
-## 🐛 Bug Fixes
-* *[OPERATOR]* Fix name of podsecuritypolicy in cluster role for dns-controller-manager. ([gardener/gardener-extension-shoot-dns-service#150](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/150), [@MartinWeindel](https://github.com/MartinWeindel))
-* *[DEVELOPER]* An issue causing the Shoot DNS integration test to fail is now fixed. ([gardener/gardener-extension-shoot-dns-service#152](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/152), [@ialidzhikov](https://github.com/ialidzhikov))
 ## 🏃 Others
-* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-shoot-dns-service#149](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/149), [@shafeeqes](https://github.com/shafeeqes))
-  * github.com/gardener/gardener: v1.49.3 -> v1.52.2
-  * k8s.io/* : v0.23.3 -> v0.24.3
-  * sigs.k8s.io/controller-runtime v0.11.1 -> v0.12.1
-  * sigs.k8s.io/controller-tools: 0.8.0 -> 0.9.0
+* *[USER]* Improve error message for DNS entry failed deletion ([gardener/gardener-extension-shoot-dns-service#155](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/155), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* The `PodSecurityPolicy` `extensions.gardener.cloud.shoot-dns-service.dns-controller-manager` is not deployed for seeds with k8s `version >=1.24` ([gardener/gardener-extension-shoot-dns-service#153](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/153), [@shafeeqes](https://github.com/shafeeqes))
+# [external-dns-management]
+## 🏃 Others
+* *[OPERATOR]* The `PodSecurityPolicy` `dns-controller-manager` is not deployed for seeds with k8s `>=1.24` ([gardener/external-dns-management#273](https://github.com/gardener/external-dns-management/pull/273), [@shafeeqes](https://github.com/shafeeqes))
+* *[OPERATOR]* Reconcile deleting entries after its provider has been repaired ([gardener/external-dns-management#275](https://github.com/gardener/external-dns-management/pull/275), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Updated build image golang:v1.18.3 -> v1.18.5 ([gardener/external-dns-management#275](https://github.com/gardener/external-dns-management/pull/275), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Add flag --disable-dnsname-validation to optionally disable the validation of DNS names according to RFC 1123. ([gardener/external-dns-management#276](https://github.com/gardener/external-dns-management/pull/276), [@MartinWeindel](https://github.com/MartinWeindel))
