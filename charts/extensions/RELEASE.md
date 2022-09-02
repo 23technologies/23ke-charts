@@ -1,6 +1,6 @@
 | Extension      |  Version | 
 | ----------- | ----------- |
-|runtime-gvisor|```v0.5.1```|
+|runtime-gvisor|```v0.5.1 -> v0.6.0```|
 |external-dns-management|```v0.13.1```|
 |networking-calico|```v1.26.0```|
 |networking-cilium|```v1.16.3```|
@@ -10,7 +10,7 @@
 |provider-aws|```v1.37.0```|
 |provider-azure|```v1.29.0```|
 |provider-gcp|```v1.24.0```|
-|provider-hcloud|```v0.5.6 -> v0.5.7```|
+|provider-hcloud|```v0.5.7```|
 |provider-openstack|```v1.28.0```|
 |shoot-cert-service|```v1.24.0```|
 |shoot-dns-service|```v1.24.0```|
