@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-09-02T13:32:13.51162859Z"
+    description: This helmchart bundles gardener extensions
+    digest: 12bff7df4aa174950f8e0ac66456581d5fde1a30695d9d2a9659c4d3ded76162
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.99/extensions-1.0.99.tgz
+    version: 1.0.99
+  - apiVersion: v2
     created: "2022-09-01T08:17:13.399789723Z"
     description: This helmchart bundles gardener extensions
     digest: 6cf2345260420aedba4ef1bad8e640e2be76fd6a4a054609127f8304791600ad
@@ -3441,6 +3449,14 @@ entries:
     version: v1.26.0
   runtime-gvisor:
   - apiVersion: v2
+    created: "2022-09-02T13:32:13.752066385Z"
+    description: Helmchart for controllerregistration of runtime-gvisor
+    digest: a3c7fd90bc1601af0ba104bcc51f3d12d7dab74ce5064b1a9faa4b2e928efb92
+    name: runtime-gvisor
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/runtime-gvisor-v0.6.0/runtime-gvisor-v0.6.0.tgz
+    version: v0.6.0
+  - apiVersion: v2
     created: "2022-07-05T11:59:31.725208413Z"
     description: A helm chart for the controllerRegistration of runtime-gvisor
     digest: ee147c794f7e42f6bec2470b31c64b76fdfda650a39a0e3d646ce18b02d0102c
@@ -3514,4 +3530,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-09-02T07:58:54.869669683Z"
+generated: "2022-09-02T13:32:13.758741368Z"
