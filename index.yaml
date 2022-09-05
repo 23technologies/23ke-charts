@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-09-05T08:12:21.147280904Z"
+    description: This helmchart bundles gardener extensions
+    digest: 2041f29c34bbf386292cc41c4482e26f75a4975fd2a648b564c800d885349ce3
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.100/extensions-1.0.100.tgz
+    version: 1.0.100
+  - apiVersion: v2
     created: "2022-09-02T13:32:13.51162859Z"
     description: This helmchart bundles gardener extensions
     digest: 12bff7df4aa174950f8e0ac66456581d5fde1a30695d9d2a9659c4d3ded76162
@@ -3087,6 +3095,14 @@ entries:
     version: v1.24.3
   networking-cilium:
   - apiVersion: v2
+    created: "2022-09-05T08:12:21.405886477Z"
+    description: Helmchart for controllerregistration of networking-cilium
+    digest: aedaa87e924d1bc77ab76a306d02d0b745740805c079f336c77b45a9f4dd6539
+    name: networking-cilium
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/networking-cilium-v1.17.0/networking-cilium-v1.17.0.tgz
+    version: v1.17.0
+  - apiVersion: v2
     created: "2022-08-18T13:27:08.540584448Z"
     description: Helmchart for controllerregistration of networking-cilium
     digest: a5e8aa58c063a7a22e4790c6f6fb42203a9a19111737ce5ae655c695103e6a86
@@ -3530,4 +3546,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-09-02T13:32:13.758741368Z"
+generated: "2022-09-05T08:12:21.432865879Z"
