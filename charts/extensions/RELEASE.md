@@ -1,9 +1,9 @@
 | Extension      |  Version | 
 | ----------- | ----------- |
 |runtime-gvisor|```v0.6.0```|
-|external-dns-management|```v0.13.1```|
+|external-dns-management|```v0.13.1 -> v0.13.2```|
 |networking-calico|```v1.26.0```|
-|networking-cilium|```v1.16.3 -> v1.17.0```|
+|networking-cilium|```v1.17.0```|
 |os-gardenlinux|```v0.14.0```|
 |os-ubuntu|```v1.18.0```|
 |provider-alicloud|```v1.39.0```|

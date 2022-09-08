@@ -14,3 +14,5 @@
 ## 📰 Noteworthy
 * *[OPERATOR]* This version of gardener-extension-runtime-gvisor requires Gardener v1.50+. ([gardener/gardener-extension-runtime-gvisor#48](https://github.com/gardener/gardener-extension-runtime-gvisor/pull/48), [@kris94](https://github.com/kris94))
 * *[OPERATOR]* The extension container now uses `distroless` as a base image. ([gardener/gardener-extension-runtime-gvisor#49](https://github.com/gardener/gardener-extension-runtime-gvisor/pull/49), [@dimityrmirchev](https://github.com/dimityrmirchev))
+## Docker Images
+extension-runtime-gvisor: `eu.gcr.io/gardener-project/gardener/extensions/runtime-gvisor:v0.6.0`

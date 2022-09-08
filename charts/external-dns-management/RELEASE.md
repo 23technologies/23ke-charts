@@ -1,6 +1,4 @@
 # [external-dns-management]
 ## 🏃 Others
-* *[OPERATOR]* The `PodSecurityPolicy` `dns-controller-manager` is not deployed for seeds with k8s `>=1.24` ([gardener/external-dns-management#273](https://github.com/gardener/external-dns-management/pull/273), [@shafeeqes](https://github.com/shafeeqes))
-* *[OPERATOR]* Reconcile deleting entries after its provider has been repaired ([gardener/external-dns-management#275](https://github.com/gardener/external-dns-management/pull/275), [@MartinWeindel](https://github.com/MartinWeindel))
-* *[OPERATOR]* Updated build image golang:v1.18.3 -> v1.18.5 ([gardener/external-dns-management#275](https://github.com/gardener/external-dns-management/pull/275), [@MartinWeindel](https://github.com/MartinWeindel))
-* *[OPERATOR]* Add flag --disable-dnsname-validation to optionally disable the validation of DNS names according to RFC 1123. ([gardener/external-dns-management#276](https://github.com/gardener/external-dns-management/pull/276), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[USER]* Tolerate apex label `@` for Azure DNS on domain name validation ([gardener/external-dns-management#277](https://github.com/gardener/external-dns-management/pull/277), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Update builder image from golang `1.18.5` ->  `1.19.1` ([gardener/external-dns-management#278](https://github.com/gardener/external-dns-management/pull/278), [@MartinWeindel](https://github.com/MartinWeindel))
