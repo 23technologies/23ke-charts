@@ -1,47 +1,46 @@
 # [gardener-extension-provider-azure]
 ## ⚠️ Breaking Changes
-* *[OPERATOR]* This version of provider-azure requires Gardener v1.50.0. ([gardener/gardener-extension-provider-azure#523](https://github.com/gardener/gardener-extension-provider-azure/pull/523), [@ialidzhikov](https://github.com/ialidzhikov))
-* *[OPERATOR]* This version of provider-azure requires Gardener v1.50+. ([gardener/gardener-extension-provider-azure#533](https://github.com/gardener/gardener-extension-provider-azure/pull/533), [@kris94](https://github.com/kris94))
+* *[OPERATOR]* This version of provider-azure requires Gardener v1.51+. ([gardener/gardener-extension-provider-azure#529](https://github.com/gardener/gardener-extension-provider-azure/pull/529), [@istvanballok](https://github.com/istvanballok))
+* *[OPERATOR]* Please make sure you're running gardener@v1.52 or above before upgrading to this version. ([gardener/gardener-extension-provider-azure#558](https://github.com/gardener/gardener-extension-provider-azure/pull/558), [@shafeeqes](https://github.com/shafeeqes))
 ## ✨ New Features
-* *[USER]* Add bastion support for multi-subnet deployments ([gardener/gardener-extension-provider-azure#518](https://github.com/gardener/gardener-extension-provider-azure/pull/518), [@kon-angelo](https://github.com/kon-angelo))
-## 🐛 Bug Fixes
-* *[USER]* An issue causing Shoot creation to fail for K8s >= 1.23 clusters with `spec.kubenetes.allowPrivilegedContainers=false` is now fixed. ([gardener/gardener-extension-provider-azure#521](https://github.com/gardener/gardener-extension-provider-azure/pull/521), [@ialidzhikov](https://github.com/ialidzhikov))
-* *[USER]* The following images are updated: ([gardener/gardener-extension-provider-azure#522](https://github.com/gardener/gardener-extension-provider-azure/pull/522), [@ialidzhikov](https://github.com/ialidzhikov))
-  * mcr.microsoft.com/oss/kubernetes/azure-cloud-controller-manager: v1.23.2 -> v1.23.13
-  * mcr.microsoft.com/oss/kubernetes/azure-cloud-node-manager: v1.23.2 -> v1.23.13
-* *[USER]* An issue preventing azure CCM to create routes for K8s < 1.21 Shoot clusters is now fixed. ([gardener/gardener-extension-provider-azure#544](https://github.com/gardener/gardener-extension-provider-azure/pull/544), [@kon-angelo](https://github.com/kon-angelo))
-* *[OPERATOR]* provider-azure now mutates the `cluster-autoscaler` Deployment by implementing the `EnsureClusterAutoscalerDeployment` function. This is required in the context of https://github.com/kubernetes/autoscaler/issues/4517 - cluster-autoscaler supports `--feature-gates` flag and provider extensions have to mutate the cluster-autoscaler Deployment to add the CSI related feature gates to it. ([gardener/gardener-extension-provider-azure#523](https://github.com/gardener/gardener-extension-provider-azure/pull/523), [@ialidzhikov](https://github.com/ialidzhikov))
-## 📖 Documentation
-* *[USER]* A detailed list of Azure provider/service permissions/actions that are required to manage Azure Shoot clusters is now available [here](https://github.com/gardener/gardener-extension-provider-azure/blob/master/docs/azure-permissions.md). ([gardener/gardener-extension-provider-azure#536](https://github.com/gardener/gardener-extension-provider-azure/pull/536), [@dkistner](https://github.com/dkistner))
+* *[OPERATOR]* `CloudProfileConfig` now supports a new field `.machineImages[].machineImageVersion[].architecture`. It specifies the supported CPU architecture of the given machine image. ([gardener/gardener-extension-provider-azure#562](https://github.com/gardener/gardener-extension-provider-azure/pull/562), [@acumino](https://github.com/acumino))
+* *[OPERATOR]* `WorkerStatus` now supports a new field `.machineImage[].architecture`. It specifies the supported CPU architecture of the given worker pool. ([gardener/gardener-extension-provider-azure#562](https://github.com/gardener/gardener-extension-provider-azure/pull/562), [@acumino](https://github.com/acumino))
+* *[OPERATOR]* support for Azure shared gallery images for workers is added ([gardener/gardener-extension-provider-azure#567](https://github.com/gardener/gardener-extension-provider-azure/pull/567), [@rishabh-11](https://github.com/rishabh-11))
 ## 🏃 Others
-* *[USER]* Changing the default StorageClass for Azure shoots from Standard_LRS(HDD) to StandardSSD_LRS(SSD) ([gardener/gardener-extension-provider-azure#535](https://github.com/gardener/gardener-extension-provider-azure/pull/535), [@StenlyTU](https://github.com/StenlyTU))
-* *[OPERATOR]* Updated azurefile-csi to `v1.19.0` ([gardener/gardener-extension-provider-azure#520](https://github.com/gardener/gardener-extension-provider-azure/pull/520), [@kon-angelo](https://github.com/kon-angelo))
-* *[OPERATOR]* The extension now uses `distroless` instead of `alpine` as a base image. ([gardener/gardener-extension-provider-azure#526](https://github.com/gardener/gardener-extension-provider-azure/pull/526), [@dimityrmirchev](https://github.com/dimityrmirchev))
-* *[OPERATOR]* add support for Azure community gallery images for workers ([gardener/gardener-extension-provider-azure#527](https://github.com/gardener/gardener-extension-provider-azure/pull/527), [@MrBatschner](https://github.com/MrBatschner))
-* *[OPERATOR]* The following images are updated: ([gardener/gardener-extension-provider-azure#531](https://github.com/gardener/gardener-extension-provider-azure/pull/531), [@kon-angelo](https://github.com/kon-angelo))
-  * mcr.microsoft.com/oss/kubernetes/azure-cloud-controller-manager: v1.23.13 -> v1.23.14 (for kubernetes 1.23)
-  * mcr.microsoft.com/oss/kubernetes/azure-cloud-node-manager: v1.23.13 -> v1.23.14 (for kubernetes 1.23)
-  * mcr.microsoft.com/oss/kubernetes/azure-cloud-controller-manager: v1.24.0 -> v1.24.2 (for kubernetes 1.24)
-  * mcr.microsoft.com/oss/kubernetes/azure-cloud-node-manager: v1.24.0 -> v1.24.2 (for kubernetes 1.24)
-* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-provider-azure#537](https://github.com/gardener/gardener-extension-provider-azure/pull/537), [@acumino](https://github.com/acumino))
-  * github.com/gardener/gardener: v1.48.0 -> v1.50.1
-* *[OPERATOR]* Update Go version to `v1.18` ([gardener/gardener-extension-provider-azure#538](https://github.com/gardener/gardener-extension-provider-azure/pull/538), [@kon-angelo](https://github.com/kon-angelo))
-* *[OPERATOR]* Disable cloud-controller-manager node CIDR allocation. ([gardener/gardener-extension-provider-azure#539](https://github.com/gardener/gardener-extension-provider-azure/pull/539), [@kon-angelo](https://github.com/kon-angelo))
+* *[OPERATOR]* Adjust metric name due to upgrading the kube-state-metrics component ([gardener/gardener-extension-provider-azure#529](https://github.com/gardener/gardener-extension-provider-azure/pull/529), [@istvanballok](https://github.com/istvanballok))
+* *[OPERATOR]* The following images are updated: ([gardener/gardener-extension-provider-azure#550](https://github.com/gardener/gardener-extension-provider-azure/pull/550), [@kon-angelo](https://github.com/kon-angelo))
+  * k8s.gcr.io/sig-storage/csi-provisioner: v2.1.1 -> v3.2.0
+  * k8s.gcr.io/sig-storage/csi-attacher: v3.3.0 -> v3.4.0
+  * k8s.gcr.io/sig-storage/csi-resizer: v1.1.0 -> v1.5.0
+  * k8s.gcr.io/sig-storage/csi-snapshotter: v3.0.3 -> v4.2.1
+  * k8s.gcr.io/sig-storage/snapshot-validation-webhook: v3.0.3 -> v4.2.1
+  * k8s.gcr.io/sig-storage/snapshot-controller: v3.0.3 -> v4.2.1
+  * k8s.gcr.io/sig-storage/csi-node-driver-registrar: v2.1.0 -> v2.5.1
+  * k8s.gcr.io/sig-storage/livenessprobe: v2.3.0 -> v2.7.0
+* *[OPERATOR]* The `csi-driver-node` and `cloud-node-manager` pods now have their seccomp profile set to "RuntimeDefault". ([gardener/gardener-extension-provider-azure#559](https://github.com/gardener/gardener-extension-provider-azure/pull/559), [@dimityrmirchev](https://github.com/dimityrmirchev))
+* *[OPERATOR]* fix own vNet resource group name fetch in bastion creation ([gardener/gardener-extension-provider-azure#560](https://github.com/gardener/gardener-extension-provider-azure/pull/560), [@tedteng](https://github.com/tedteng))
+* *[OPERATOR]* The following image is updated: ([gardener/gardener-extension-provider-azure#563](https://github.com/gardener/gardener-extension-provider-azure/pull/563), [@kon-angelo](https://github.com/kon-angelo))
+  * mcr.microsoft.com/k8s/csi/azurefile-csi: v1.19.0 -> v1.20.0
+* *[OPERATOR]* The following image is updated: ([gardener/gardener-extension-provider-azure#564](https://github.com/gardener/gardener-extension-provider-azure/pull/564), [@kon-angelo](https://github.com/kon-angelo))
+  * mcr.microsoft.com/k8s/csi/azuredisk-csi: v1.16.0 -> v1.22.0
+* *[OPERATOR]* The `gardener.cloud-fast` storage class is now deployed with `volumeBindingMode: WaitForFirstConsumer`. This change is required if stateful pods with volumes have a topology related `podAffinity` or `podAntiAffinity` defined, e.g. when Gardener creates control-planes for HA shoot clusters. ([gardener/gardener-extension-provider-azure#565](https://github.com/gardener/gardener-extension-provider-azure/pull/565), [@timuthy](https://github.com/timuthy))
+* *[OPERATOR]* switch ginkgo v1 to ginkgo v2 in bastion test ([gardener/gardener-extension-provider-azure#566](https://github.com/gardener/gardener-extension-provider-azure/pull/566), [@tedteng](https://github.com/tedteng))
+* *[DEPENDENCY]* The following dependency is updated: ([gardener/gardener-extension-provider-azure#554](https://github.com/gardener/gardener-extension-provider-azure/pull/554), [@shafeeqes](https://github.com/shafeeqes))
+  * github.com/gardener/gardener: v1.50.1 -> v1.53.0
+  * k8s.io/* : v0.24.2 -> v0.24.3
 # [machine-controller-manager]
-## ⚠️ Breaking Changes
-* *[OPERATOR]* The default leader election resource lock of `machine-controller-manager` has been changed from `endpointsleases` to `leases`. ([gardener/machine-controller-manager#711](https://github.com/gardener/machine-controller-manager/pull/711), [@acumino](https://github.com/acumino))
-  * Please make sure, that you had at least `machine-controller-manager@v0.43.0` running before upgrading to `v0.46.0`, so that it has successfully acquired leadership with the hybrid resource lock (`endpointsleases`) at least once.
+## ✨ New Features
+* *[USER]* Bootstrap token replacement by MCM is now supported for Ignition userData format ([gardener/machine-controller-manager#743](https://github.com/gardener/machine-controller-manager/pull/743), [@Gerrit91](https://github.com/Gerrit91))
 ## 🐛 Bug Fixes
-* *[USER]* Rollout freeze won't happen due to `Unknown` machines now. ([gardener/machine-controller-manager#733](https://github.com/gardener/machine-controller-manager/pull/733), [@himanshu-kun](https://github.com/himanshu-kun))
+* *[OPERATOR]* resourceName `machine-controller` added for leases in clusterrole. Updated version of Clusterroles and Clusterrolebindings to v1. ([gardener/machine-controller-manager#739](https://github.com/gardener/machine-controller-manager/pull/739), [@rishabh-11](https://github.com/rishabh-11))
+* *[OPERATOR]* resourceName `machine-controller` added for leases in clusterrole. Updated version of Clusterroles and Clusterrolebindings to v1. ([gardener/machine-controller-manager#738](https://github.com/gardener/machine-controller-manager/pull/738), [@rishabh-11](https://github.com/rishabh-11))
 ## 🏃 Others
-* *[OPERATOR]* Published docker images for Machine-Controller-Manager are now multi-arch ready. They support `linux/amd64` and `linux/arm64`. ([gardener/machine-controller-manager#732](https://github.com/gardener/machine-controller-manager/pull/732), [@timuthy](https://github.com/timuthy))
-* *[OPERATOR]* The `machine-controller-manager` container now uses `distroless` instead of `alpine` as a base image. ([gardener/machine-controller-manager#734](https://github.com/gardener/machine-controller-manager/pull/734), [@dimityrmirchev](https://github.com/dimityrmirchev))
+* *[OPERATOR]* Migrated clients to use `policy/v1` `PodDisruptionBudget` for kubernetes versions >= 1.21. `policy/v1beta1` PDB is also supported but for k8s < 1.21 ([gardener/machine-controller-manager#744](https://github.com/gardener/machine-controller-manager/pull/744), [@shafeeqes](https://github.com/shafeeqes))
 # [machine-controller-manager-provider-azure]
 ## 🏃 Others
-* *[OPERATOR]* machine-controller-manager-provider-azure now uses `distroless` instead of `alpine` as a base image. ([gardener/machine-controller-manager-provider-azure#67](https://github.com/gardener/machine-controller-manager-provider-azure/pull/67), [@ialidzhikov](https://github.com/ialidzhikov))
-* *[DEVELOPER]* probeResources() now doesn't try to delete orphan resources but only lists them. ([gardener/machine-controller-manager-provider-azure#65](https://github.com/gardener/machine-controller-manager-provider-azure/pull/65), [@Mkmittal](https://github.com/Mkmittal))
-  * The beforeSuite for IT test now calls for cleanup of orphan resources separately.
-  * The Integration Test, which looks for orphan resources, now doesn't try to delete the orphan resources and just waits for them to be done automatically.
+* *[USER]* Updates deployment YAML used in IT when controllers are run as containers in the cluster. ([gardener/machine-controller-manager-provider-azure#70](https://github.com/gardener/machine-controller-manager-provider-azure/pull/70), [@rishabh-11](https://github.com/rishabh-11))
+* *[USER]* Machine-Controller-Manager Provider-Azure now supports managing virtual machines based on shared image gallery images. ([gardener/machine-controller-manager-provider-azure#73](https://github.com/gardener/machine-controller-manager-provider-azure/pull/73), [@rishabh-11](https://github.com/rishabh-11))
+* *[OPERATOR]* An issue that let the safety controller block the machine deletion if the Azure resource group is not available has been fixed. ([gardener/machine-controller-manager-provider-azure#72](https://github.com/gardener/machine-controller-manager-provider-azure/pull/72), [@dkistner](https://github.com/dkistner))
 # [terraformer]
 ## 🏃 Others
-* *[OPERATOR]* Terraform google provider is updated to v4.19.0 ([gardener/terraformer#119](https://github.com/gardener/terraformer/pull/119), [@bd3lage](https://github.com/bd3lage))
+* *[OPERATOR]* The golang base image is now updated to 1.16.15. The alpine base image is updated to 3.16.2. ([gardener/terraformer#125](https://github.com/gardener/terraformer/pull/125), [@kon-angelo](https://github.com/kon-angelo))

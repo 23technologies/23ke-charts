@@ -8,8 +8,8 @@
 |os-ubuntu|```v1.18.0```|
 |provider-alicloud|```v1.39.0```|
 |provider-aws|```v1.37.0```|
-|provider-azure|```v1.29.0```|
-|provider-gcp|```v1.24.0 -> v1.25.0```|
+|provider-azure|```v1.29.0 -> v1.30.0```|
+|provider-gcp|```v1.25.0```|
 |provider-hcloud|```v0.5.7```|
 |provider-openstack|```v1.28.0```|
 |shoot-cert-service|```v1.24.0```|
