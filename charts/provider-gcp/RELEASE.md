@@ -1,38 +1,37 @@
 # [gardener-extension-provider-gcp]
 ## ⚠️ Breaking Changes
-* *[OPERATOR]* This version of provider-gcp requires Gardener v1.50.0. ([gardener/gardener-extension-provider-gcp#454](https://github.com/gardener/gardener-extension-provider-gcp/pull/454), [@ialidzhikov](https://github.com/ialidzhikov))
-* *[OPERATOR]* This version of provider-gcp requires Gardener v1.50+. ([gardener/gardener-extension-provider-gcp#462](https://github.com/gardener/gardener-extension-provider-gcp/pull/462), [@kris94](https://github.com/kris94))
+* *[OPERATOR]* Please make sure you're running gardener@v1.52 or above before upgrading to this version. ([gardener/gardener-extension-provider-gcp#482](https://github.com/gardener/gardener-extension-provider-gcp/pull/482), [@shafeeqes](https://github.com/shafeeqes))
+* *[OPERATOR]* This version of provider-gcp requires Gardener v1.51+. ([gardener/gardener-extension-provider-gcp#457](https://github.com/gardener/gardener-extension-provider-gcp/pull/457), [@istvanballok](https://github.com/istvanballok))
 ## ✨ New Features
-* *[USER]* Users could now attach GPU to their machines in a worker pool. ([gardener/gardener-extension-provider-gcp#438](https://github.com/gardener/gardener-extension-provider-gcp/pull/438), [@himanshu-kun](https://github.com/himanshu-kun))
-## 🐛 Bug Fixes
-* *[OPERATOR]* Fixed an issue that caused the VPA object for `csi-driver-node` to no longer match any Pods and effectively disabled vertical autoscaling for the DaemonSet. ([gardener/gardener-extension-provider-gcp#452](https://github.com/gardener/gardener-extension-provider-gcp/pull/452), [@voelzmo](https://github.com/voelzmo))
-* *[OPERATOR]* provider-gcp now mutates the `cluster-autoscaler` Deployment by implementing the `EnsureClusterAutoscalerDeployment` function. This is required in the context of https://github.com/kubernetes/autoscaler/issues/4517 - cluster-autoscaler supports `--feature-gates` flag and provider extensions have to mutate the cluster-autoscaler Deployment to add the CSI related feature gates to it. ([gardener/gardener-extension-provider-gcp#454](https://github.com/gardener/gardener-extension-provider-gcp/pull/454), [@ialidzhikov](https://github.com/ialidzhikov))
+* *[OPERATOR]* `CloudProfileConfig` now supports a new field `.machineImages[].machineImageVersion[].architecture`. It specifies the supported CPU architecture of the given machine image. ([gardener/gardener-extension-provider-gcp#477](https://github.com/gardener/gardener-extension-provider-gcp/pull/477), [@acumino](https://github.com/acumino))
+* *[OPERATOR]* `WorkerStatus` now supports a new field `.machineImage[].architecture`. It specifies the supported CPU architecture of the given worker pool. ([gardener/gardener-extension-provider-gcp#477](https://github.com/gardener/gardener-extension-provider-gcp/pull/477), [@acumino](https://github.com/acumino))
 ## 🏃 Others
-* *[USER]* Changing the default StorageClass for GCP shoots from pd-standard(HDD) to pd-balanced(SSD). ([gardener/gardener-extension-provider-gcp#463](https://github.com/gardener/gardener-extension-provider-gcp/pull/463), [@StenlyTU](https://github.com/StenlyTU))
-* *[OPERATOR]* The extension now uses `distroless` instead of `alpine` as a base image. ([gardener/gardener-extension-provider-gcp#456](https://github.com/gardener/gardener-extension-provider-gcp/pull/456), [@dimityrmirchev](https://github.com/dimityrmirchev))
-* *[OPERATOR]* CSI Driver version has been updated to `1.7.2-gke.2` ([gardener/gardener-extension-provider-gcp#458](https://github.com/gardener/gardener-extension-provider-gcp/pull/458), [@kon-angelo](https://github.com/kon-angelo))
-* *[OPERATOR]* Update go version to `v1.18` ([gardener/gardener-extension-provider-gcp#459](https://github.com/gardener/gardener-extension-provider-gcp/pull/459), [@kon-angelo](https://github.com/kon-angelo))
-* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-provider-gcp#461](https://github.com/gardener/gardener-extension-provider-gcp/pull/461), [@bd3lage](https://github.com/bd3lage))
-  * github.com/gardener/gardener: v1.48.0 -> v1.50.1
-* *[OPERATOR]* port 80 in external firewall rule is dropped. ([gardener/gardener-extension-provider-gcp#468](https://github.com/gardener/gardener-extension-provider-gcp/pull/468), [@DockToFuture](https://github.com/DockToFuture))
+* *[OPERATOR]* The `csi-driver-node` pods now have their seccomp profile set to "RuntimeDefault". ([gardener/gardener-extension-provider-gcp#481](https://github.com/gardener/gardener-extension-provider-gcp/pull/481), [@dimityrmirchev](https://github.com/dimityrmirchev))
+* *[OPERATOR]* The following image is updated: ([gardener/gardener-extension-provider-gcp#483](https://github.com/gardener/gardener-extension-provider-gcp/pull/483), [@dimitar-kostadinov](https://github.com/dimitar-kostadinov))
+  * k8s.gcr.io/cloud-provider-gcp/gcp-compute-persistent-disk-csi-driver: v1.7.2-gke.2 -> v1.7.3
+* *[OPERATOR]* The `gardener.cloud-fast` storage class is now deployed with `volumeBindingMode: WaitForFirstConsumer`. This change is required if stateful pods with volumes have a topology related `podAffinity` or `podAntiAffinity` defined, e.g. when Gardener creates control-planes for HA shoot clusters. ([gardener/gardener-extension-provider-gcp#486](https://github.com/gardener/gardener-extension-provider-gcp/pull/486), [@timuthy](https://github.com/timuthy))
+* *[OPERATOR]* Adjust metric name due to upgrading the kube-state-metrics component ([gardener/gardener-extension-provider-gcp#457](https://github.com/gardener/gardener-extension-provider-gcp/pull/457), [@istvanballok](https://github.com/istvanballok))
+* *[OPERATOR]* The following images are updated: ([gardener/gardener-extension-provider-gcp#460](https://github.com/gardener/gardener-extension-provider-gcp/pull/460), [@acumino](https://github.com/acumino))
+  * k8s.gcr.io/sig-storage/csi-provisioner: v2.1.2 -> v3.2.0 (for kubernetes >= 1.20)
+  * k8s.gcr.io/sig-storage/csi-attacher: v3.3.0 -> v3.4.0
+  * k8s.gcr.io/sig-storage/csi-resizer: v0.5.0 -> v1.5.0
+  * k8s.gcr.io/sig-storage/csi-snapshotter: v3.0.3 -> v4.2.1 (for kubernetes >= 1.20)
+  * k8s.gcr.io/sig-storage/snapshot-validation-webhook: v3.0.3 -> v4.2.1 (for kubernetes >= 1.20)
+  * k8s.gcr.io/sig-storage/snapshot-controller: v3.0.3 -> v4.2.1 (for kubernetes >= 1.20)
+  * k8s.gcr.io/sig-storage/csi-node-driver-registrar: v1.3.0 -> v2.5.1
+  * k8s.gcr.io/sig-storage/livenessprobe: v2.3.0 -> v2.7.0
+* *[OPERATOR]* All new calico gcp shoot clusters will be created without an overlay if not explicitly specified in the shoot spec. ([gardener/gardener-extension-provider-gcp#474](https://github.com/gardener/gardener-extension-provider-gcp/pull/474), [@DockToFuture](https://github.com/DockToFuture))
+* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-provider-gcp#479](https://github.com/gardener/gardener-extension-provider-gcp/pull/479), [@shafeeqes](https://github.com/shafeeqes))
+  * github.com/gardener/gardener: v1.50.1 -> v1.53.0
+  * k8s.io/* : v0.24.2 -> v0.24.3
 # [machine-controller-manager]
-## ⚠️ Breaking Changes
-* *[OPERATOR]* The default leader election resource lock of `machine-controller-manager` has been changed from `endpointsleases` to `leases`. ([gardener/machine-controller-manager#711](https://github.com/gardener/machine-controller-manager/pull/711), [@acumino](https://github.com/acumino))
-  * Please make sure, that you had at least `machine-controller-manager@v0.43.0` running before upgrading to `v0.46.0`, so that it has successfully acquired leadership with the hybrid resource lock (`endpointsleases`) at least once.
+## ✨ New Features
+* *[USER]* Bootstrap token replacement by MCM is now supported for Ignition userData format ([gardener/machine-controller-manager#743](https://github.com/gardener/machine-controller-manager/pull/743), [@Gerrit91](https://github.com/Gerrit91))
 ## 🐛 Bug Fixes
-* *[USER]* Rollout freeze won't happen due to `Unknown` machines now. ([gardener/machine-controller-manager#733](https://github.com/gardener/machine-controller-manager/pull/733), [@himanshu-kun](https://github.com/himanshu-kun))
+* *[OPERATOR]* resourceName `machine-controller` added for leases in clusterrole. Updated version of Clusterroles and Clusterrolebindings to v1. ([gardener/machine-controller-manager#738](https://github.com/gardener/machine-controller-manager/pull/738), [@rishabh-11](https://github.com/rishabh-11))
+* *[OPERATOR]* resourceName `machine-controller` added for leases in clusterrole. Updated version of Clusterroles and Clusterrolebindings to v1. ([gardener/machine-controller-manager#739](https://github.com/gardener/machine-controller-manager/pull/739), [@rishabh-11](https://github.com/rishabh-11))
 ## 🏃 Others
-* *[OPERATOR]* Published docker images for Machine-Controller-Manager are now multi-arch ready. They support `linux/amd64` and `linux/arm64`. ([gardener/machine-controller-manager#732](https://github.com/gardener/machine-controller-manager/pull/732), [@timuthy](https://github.com/timuthy))
-* *[OPERATOR]* The `machine-controller-manager` container now uses `distroless` instead of `alpine` as a base image. ([gardener/machine-controller-manager#734](https://github.com/gardener/machine-controller-manager/pull/734), [@dimityrmirchev](https://github.com/dimityrmirchev))
-# [machine-controller-manager-provider-gcp]
-## 🏃 Others
-* *[USER]* A bug causing machine spec validation to fail has been fixed. ([gardener/machine-controller-manager-provider-gcp#53](https://github.com/gardener/machine-controller-manager-provider-gcp/pull/53), [@himanshu-kun](https://github.com/himanshu-kun))
-* *[OPERATOR]* machine-controller-manager-provider-gcp now uses `distroless` instead of `alpine` as a base image. ([gardener/machine-controller-manager-provider-gcp#50](https://github.com/gardener/machine-controller-manager-provider-gcp/pull/50), [@ialidzhikov](https://github.com/ialidzhikov))
-## 📰 Noteworthy
-* *[USER]* VM with GPU attached can now be created on GCP. Note for a2 series machine , no need to specify `acceleratorType` and `count` as it already comes with inbuilt GPU. ([gardener/machine-controller-manager-provider-gcp#41](https://github.com/gardener/machine-controller-manager-provider-gcp/pull/41), [@himanshu-kun](https://github.com/himanshu-kun))
-* *[DEVELOPER]* probeResources() now doesn't try to delete orphan resources but only lists them. ([gardener/machine-controller-manager-provider-gcp#47](https://github.com/gardener/machine-controller-manager-provider-gcp/pull/47), [@Mkmittal](https://github.com/Mkmittal))
-  * The beforeSuite for IT test now calls for cleanup of orphan resources separately.
-  * The Integration Test, which looks for orphan resources, now doesn't try to delete the orphan resources and just waits for them to be done automatically.
+* *[OPERATOR]* Migrated clients to use `policy/v1` `PodDisruptionBudget` for kubernetes versions >= 1.21. `policy/v1beta1` PDB is also supported but for k8s < 1.21 ([gardener/machine-controller-manager#744](https://github.com/gardener/machine-controller-manager/pull/744), [@shafeeqes](https://github.com/shafeeqes))
 # [terraformer]
 ## 🏃 Others
-* *[OPERATOR]* Terraform google provider is updated to v4.19.0 ([gardener/terraformer#119](https://github.com/gardener/terraformer/pull/119), [@bd3lage](https://github.com/bd3lage))
+* *[OPERATOR]* The golang base image is now updated to 1.16.15. The alpine base image is updated to 3.16.2. ([gardener/terraformer#125](https://github.com/gardener/terraformer/pull/125), [@kon-angelo](https://github.com/kon-angelo))
