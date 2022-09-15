@@ -62,7 +62,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-aws",
-        "version": "v1.37.0",
+        "version": "v1.38.0",
         "name": "provider-aws",
     },
     {
