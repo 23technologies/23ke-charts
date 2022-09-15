@@ -1,21 +1,28 @@
-# [machine-controller-manager]
+# [gardener-extension-provider-alicloud]
 ## ⚠️ Breaking Changes
-* *[OPERATOR]* The default leader election resource lock of `machine-controller-manager` has been changed from `endpointsleases` to `leases`. ([gardener/machine-controller-manager#711](https://github.com/gardener/machine-controller-manager/pull/711), [@acumino](https://github.com/acumino))
-  * Please make sure, that you had at least `machine-controller-manager@v0.43.0` running before upgrading to `v0.46.0`, so that it has successfully acquired leadership with the hybrid resource lock (`endpointsleases`) at least once.
-## 🐛 Bug Fixes
-* *[USER]* Rollout freeze won't happen due to `Unknown` machines now. ([gardener/machine-controller-manager#733](https://github.com/gardener/machine-controller-manager/pull/733), [@himanshu-kun](https://github.com/himanshu-kun))
+* *[OPERATOR]* Please make sure you're running gardener@v1.52 or above before upgrading to this version. ([gardener/gardener-extension-provider-alicloud#523](https://github.com/gardener/gardener-extension-provider-alicloud/pull/523), [@shafeeqes](https://github.com/shafeeqes))
+* *[OPERATOR]* This version of provider-alicloud requires Gardener v1.50+. ([gardener/gardener-extension-provider-alicloud#507](https://github.com/gardener/gardener-extension-provider-alicloud/pull/507), [@kris94](https://github.com/kris94))
+## ✨ New Features
+* *[OPERATOR]* validate bastion config values fetch from InfrastructureStatus ([gardener/gardener-extension-provider-alicloud#527](https://github.com/gardener/gardener-extension-provider-alicloud/pull/527), [@tedteng](https://github.com/tedteng))
 ## 🏃 Others
-* *[OPERATOR]* Published docker images for Machine-Controller-Manager are now multi-arch ready. They support `linux/amd64` and `linux/arm64`. ([gardener/machine-controller-manager#732](https://github.com/gardener/machine-controller-manager/pull/732), [@timuthy](https://github.com/timuthy))
-* *[OPERATOR]* The `machine-controller-manager` container now uses `distroless` instead of `alpine` as a base image. ([gardener/machine-controller-manager#734](https://github.com/gardener/machine-controller-manager/pull/734), [@dimityrmirchev](https://github.com/dimityrmirchev))
+* *[OPERATOR]* All new calico alicloud shoot clusters will be created without an overlay if not explicitly specified in the shoot spec. ([gardener/gardener-extension-provider-alicloud#518](https://github.com/gardener/gardener-extension-provider-alicloud/pull/518), [@DockToFuture](https://github.com/DockToFuture))
+* *[OPERATOR]* The following dependency is updated: ([gardener/gardener-extension-provider-alicloud#521](https://github.com/gardener/gardener-extension-provider-alicloud/pull/521), [@tedteng](https://github.com/tedteng))
+  * github.com/gardener/gardener: v1.50.1 -> v1.53.0
+* *[OPERATOR]* The `csi-driver-node` daemonset now have its seccomp profile set to "RuntimeDefault". ([gardener/gardener-extension-provider-alicloud#524](https://github.com/gardener/gardener-extension-provider-alicloud/pull/524), [@dimityrmirchev](https://github.com/dimityrmirchev))
+* *[OPERATOR]* The `gardener.cloud-fast` storage class is now deployed with `volumeBindingMode: WaitForFirstConsumer`. This change is required if stateful pods with volumes have a topology related `podAffinity` or `podAntiAffinity` defined, e.g. when Gardener creates control-planes for HA shoot clusters. ([gardener/gardener-extension-provider-alicloud#528](https://github.com/gardener/gardener-extension-provider-alicloud/pull/528), [@timuthy](https://github.com/timuthy))
+# [machine-controller-manager]
+## ✨ New Features
+* *[USER]* Bootstrap token replacement by MCM is now supported for Ignition userData format ([gardener/machine-controller-manager#743](https://github.com/gardener/machine-controller-manager/pull/743), [@Gerrit91](https://github.com/Gerrit91))
+## 🐛 Bug Fixes
+* *[OPERATOR]* resourceName `machine-controller` added for leases in clusterrole. Updated version of Clusterroles and Clusterrolebindings to v1. ([gardener/machine-controller-manager#739](https://github.com/gardener/machine-controller-manager/pull/739), [@rishabh-11](https://github.com/rishabh-11))
+* *[OPERATOR]* resourceName `machine-controller` added for leases in clusterrole. Updated version of Clusterroles and Clusterrolebindings to v1. ([gardener/machine-controller-manager#738](https://github.com/gardener/machine-controller-manager/pull/738), [@rishabh-11](https://github.com/rishabh-11))
+## 🏃 Others
+* *[OPERATOR]* Migrated clients to use `policy/v1` `PodDisruptionBudget` for kubernetes versions >= 1.21. `policy/v1beta1` PDB is also supported but for k8s < 1.21 ([gardener/machine-controller-manager#744](https://github.com/gardener/machine-controller-manager/pull/744), [@shafeeqes](https://github.com/shafeeqes))
 # [machine-controller-manager-provider-alicloud]
 ## 🏃 Others
-* *[OPERATOR]* upgraded to mcm version 0.46.0 ([gardener/machine-controller-manager-provider-alicloud#32](https://github.com/gardener/machine-controller-manager-provider-alicloud/pull/32), [@shaoyongfeng](https://github.com/shaoyongfeng))
-* *[OPERATOR]* machine-controller-manager-provider-alicloud now uses `distroless` instead of `alpine` as a base image. ([gardener/machine-controller-manager-provider-alicloud#31](https://github.com/gardener/machine-controller-manager-provider-alicloud/pull/31), [@ialidzhikov](https://github.com/ialidzhikov))
-* *[DEVELOPER]* Local IT for provider alicloud have been added ([gardener/machine-controller-manager-provider-alicloud#29](https://github.com/gardener/machine-controller-manager-provider-alicloud/pull/29), [@Mkmittal](https://github.com/Mkmittal))
+* *[USER]* Upgraded to mcm version 0.46.1 ([gardener/machine-controller-manager-provider-alicloud#33](https://github.com/gardener/machine-controller-manager-provider-alicloud/pull/33), [@rishabh-11](https://github.com/rishabh-11))
+* *[USER]* Updated mcm dependency to v0.47.0 ([gardener/machine-controller-manager-provider-alicloud#36](https://github.com/gardener/machine-controller-manager-provider-alicloud/pull/36), [@himanshu-kun](https://github.com/himanshu-kun))
+* *[DEVELOPER]* Addition of the existing integration tests in the pipeline. IT will now be run on pipeline for every PR ([gardener/machine-controller-manager-provider-alicloud#34](https://github.com/gardener/machine-controller-manager-provider-alicloud/pull/34), [@rishabh-11](https://github.com/rishabh-11))
 # [terraformer]
 ## 🏃 Others
-* *[OPERATOR]* Terraform google provider is updated to v4.19.0 ([gardener/terraformer#119](https://github.com/gardener/terraformer/pull/119), [@bd3lage](https://github.com/bd3lage))
-
-## Docker Images
-gardener-extension-provider-alicloud: `eu.gcr.io/gardener-project/gardener/extensions/provider-alicloud:v1.39.0`
-gardener-extension-admission-alicloud: `eu.gcr.io/gardener-project/gardener/extensions/admission-alicloud:v1.39.0`
+* *[OPERATOR]* The golang base image is now updated to 1.16.15. The alpine base image is updated to 3.16.2. ([gardener/terraformer#125](https://github.com/gardener/terraformer/pull/125), [@kon-angelo](https://github.com/kon-angelo))

@@ -18,7 +18,7 @@
   version: "v1.18.0"
 - name: "provider-alicloud"
   repo: "gardener/gardener-extension-provider-alicloud"
-  version: "v1.39.0"
+  version: "v1.40.0"
 - name: "provider-aws"
   repo: "gardener/gardener-extension-provider-aws"
   version: "v1.37.0"
