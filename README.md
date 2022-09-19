@@ -1,27 +1,20 @@
 # 23ke-charts
 
-In this repository helm charts for the deployment of 23ke are stored.
-Moreover, it serves as a helm repository managed by [helm/chart-releaser-action](https://github.com/helm/chart-releaser-action).
-Thus, you can
+## :warning: **This repository is not further maintained** :warning:
 
+### However,
+we will continue to maintain and release Gardener charts in the following Git repositories:
+* [Gardener chart releaser](https://github.com/gardener-community/gardener-chart-releaser)
+* [Gardener charts](https://github.com/gardener-community/gardener-charts)
+* [Cloudprofiles](https://github.com/gardener-community/cloudprofiles)
+* [Etcd](https://github.com/gardener-community/etcd)
+* [Garden-Kube-Apiserver](https://github.com/gardener-community/garden-kube-apiserver)
+
+The corresponding helm repository can be found at gardener-community.github.io/gardener-charts and added to the helm repo list by: 
 ``` shell
-helm repo add 23ke-charts https://23technologies.github.io/23ke-charts
+helm repo add gardener-community-charts https://gardener-community.github.io/gardener-charts
 helm repo update
 ```
 
-Then, you should be all set to install the helm charts via `helm install`.
-
-## How to add your own cloudprofile
-
-If you want to add your own cloudprofile, head over to *charts/cloudprofiles/chart*.
-Copy one of the existing folders and name the copy as desired. If you want to add an OpenStack based cloud, make sure to copy from another OpenStack based one to make things easier.
-In *Chart.yaml* change the `name` parameter to the same name of the folder itself.
-In *values.yaml* a lot more needs to be changed.
-The `name` should be changed like the step before.
-`machineImages` is mapped to the `providerConfig` further down below. Entries defined here become available in the Web-Dashboard as an operating system for your Shoots.
-`machineTypes` define the available flavors for your nodes, the `name` attribute here is a mapping to the accoring flavor inside the cloud.
-`regions` is a representation of regions and zones of the new cloud.
-`providerConfig` is a direct mapping of resources provided from the new cloud, e.g. Images, URL Endpoints, etc. It's a good idea to just look into other existing profiles and adopt entries from them while changing the values accordingly.
-Leave the rest of the files and folders untouched.
-Next, head over to *charts/cloudprofiles/values.yaml* and add your profile at the end of the file in the given pattern.
-Finally increase the version number of the chart in *charts/cloudprofiles/Chart.yaml*
+### Depreciation plan for this repo
+We will keep the automatic release process running for another few months. Consequently, new releases of the charts are expected to appear here for a while. We plan to switch off all bots supporting the release cycle by the end of November 2022. Therefore, we encourage every user of this repo to switch to the [Gardener Communitiy](https://github.com/gardener-community/) repositories.
