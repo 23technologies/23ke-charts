@@ -29,7 +29,7 @@
     - "charts/gardener-extension-admission-azure"
 - name: "provider-gcp"
   repo: "gardener/gardener-extension-provider-gcp"
-  version: "v1.25.0"
+  version: "v1.25.1"
 - name: "provider-hcloud"
   repo: "23technologies/gardener-extension-provider-hcloud"
   version: "v0.5.7"
