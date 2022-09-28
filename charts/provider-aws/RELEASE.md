@@ -1,3 +1,3 @@
 # [gardener-extension-provider-aws]
-## 🏃 Others
-* *[OPERATOR]* Correctly enable aws custom route controller if required to ensure overlay free cluster operation. ([gardener/gardener-extension-provider-aws#613](https://github.com/gardener/gardener-extension-provider-aws/pull/613), [@kon-angelo](https://github.com/kon-angelo))
+## 🐛 Bug Fixes
+* *[USER]* Disable automatic enablement of no-overlay network configuration for cluster >=1.22 ([gardener/gardener-extension-provider-aws#623](https://github.com/gardener/gardener-extension-provider-aws/pull/623), [@kon-angelo](https://github.com/kon-angelo))

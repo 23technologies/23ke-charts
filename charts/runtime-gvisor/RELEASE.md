@@ -16,3 +16,4 @@
 * *[OPERATOR]* The extension container now uses `distroless` as a base image. ([gardener/gardener-extension-runtime-gvisor#49](https://github.com/gardener/gardener-extension-runtime-gvisor/pull/49), [@dimityrmirchev](https://github.com/dimityrmirchev))
 ## Docker Images
 extension-runtime-gvisor: `eu.gcr.io/gardener-project/gardener/extensions/runtime-gvisor:v0.6.0`
+gardener-extension-runtime-gvisor-installation: `eu.gcr.io/gardener-project/gardener/extensions/runtime-gvisor-installation:v0.6.0`
