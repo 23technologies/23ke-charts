@@ -1,3 +1,3 @@
 # [gardener-extension-provider-gcp]
 ## 🐛 Bug Fixes
-* *[USER]* The automatic enablement of no-overlay network configuration for Shoots with K8s >= 1.22 is now reverted. For more details about the motivation, see https://github.com/gardener/gardener-extension-provider-aws/issues/621. ([gardener/gardener-extension-provider-gcp#500](https://github.com/gardener/gardener-extension-provider-gcp/pull/500), [@ialidzhikov](https://github.com/ialidzhikov))
+* *[USER]* The automatic enablement of no-overlay network configuration for new Shoots is now reverted. For more details about the motivation, see https://github.com/gardener/gardener-extension-provider-aws/issues/621. ([gardener/gardener-extension-provider-gcp#500](https://github.com/gardener/gardener-extension-provider-gcp/pull/500), [@ialidzhikov](https://github.com/ialidzhikov))

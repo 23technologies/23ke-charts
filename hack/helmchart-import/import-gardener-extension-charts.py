@@ -77,7 +77,7 @@ config = [
     },
     {
         "package": "23technologies/gardener-extension-provider-hcloud",
-        "version": "v0.5.7",
+        "version": "v0.6.0",
         "name": "provider-hcloud",
     },
     {
