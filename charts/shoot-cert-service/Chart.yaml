@@ -1,4 +1,4 @@
 apiVersion: v2
 description: Helmchart for controllerregistration of shoot-cert-service
 name: shoot-cert-service
-version: v1.24.0
+version: v1.25.0
