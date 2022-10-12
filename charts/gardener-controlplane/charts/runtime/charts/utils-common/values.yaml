@@ -8,7 +8,7 @@ global:
     serviceAccountName: gardener-apiserver
     image:
       repository: eu.gcr.io/gardener-project/gardener/apiserver
-      tag: v1.56.1
+      tag: v1.57.1
       pullPolicy: IfNotPresent
     livenessProbe:
       initialDelaySeconds: 15
@@ -172,9 +172,9 @@ global:
           value: "1G"
           percentage: 70
 
+    shutdownDelayDuration: 15s
  #  goAwayChance: 0.1
  #  http2MaxStreamsPerConnection: 1000
- #  shutdownDelayDuration: 20s
  #  requests:
  #    maxNonMutatingInflight: 400
  #    maxMutatingInflight: 200
@@ -268,7 +268,7 @@ global:
     serviceAccountName: gardener-admission-controller
     image:
       repository: eu.gcr.io/gardener-project/gardener/admission-controller
-      tag: v1.56.1
+      tag: v1.57.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -290,7 +290,7 @@ global:
       logLevel: info
       logFormat: json
       server:
-        https:
+        webhooks:
           bindAddress: 0.0.0.0
           port: 2719
           tlsSecretName:
@@ -342,7 +342,7 @@ global:
     serviceAccountName: gardener-controller-manager
     image:
       repository: eu.gcr.io/gardener-project/gardener/controller-manager
-      tag: v1.56.1
+      tag: v1.57.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -454,7 +454,7 @@ global:
     serviceAccountName: gardener-scheduler
     image:
       repository: eu.gcr.io/gardener-project/gardener/scheduler
-      tag: v1.56.1
+      tag: v1.57.1
       pullPolicy: IfNotPresent
     resources:
       requests:
