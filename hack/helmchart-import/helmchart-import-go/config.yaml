@@ -35,7 +35,7 @@
   version: "v0.6.0"
 - name: "provider-openstack"
   repo: "gardener/gardener-extension-provider-openstack"
-  version: "v1.28.0"
+  version: "v1.29.0"
 - name: "shoot-cert-service"
   repo: "gardener/gardener-extension-shoot-cert-service"
   version: "v1.25.0"
