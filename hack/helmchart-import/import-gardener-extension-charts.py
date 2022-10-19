@@ -82,7 +82,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-provider-openstack",
-        "version": "v1.28.0",
+        "version": "v1.29.0",
         "name": "provider-openstack",
     },
     {
