@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-10-20T08:52:33.756011832Z"
+    description: This helmchart bundles gardener extensions
+    digest: 1b84077b571c65f0c844f1e41774605ee6f5a20b2ea54b71216820bb0eb24fca
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.116/extensions-1.0.116.tgz
+    version: 1.0.116
+  - apiVersion: v2
     created: "2022-10-19T07:16:23.870033026Z"
     description: This helmchart bundles gardener extensions
     digest: b7584e488c608a9a338166b043587a9c6ce300838b3503818393ae9f29ab4dd9
@@ -990,6 +998,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.0/extensions-1.0.0.tgz
     version: 1.0.0
   external-dns-management:
+  - apiVersion: v2
+    created: "2022-10-20T08:52:33.998155765Z"
+    description: Helmchart for controllerregistration of external-dns-management
+    digest: 778bb66fc87f133de5fff1025cc537dd81343249b70cd03c600b1854cc7309f4
+    name: external-dns-management
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/external-dns-management-v0.13.3/external-dns-management-v0.13.3.tgz
+    version: v0.13.3
   - apiVersion: v2
     created: "2022-09-08T06:53:41.021394373Z"
     description: Helmchart for controllerregistration of external-dns-management
@@ -3680,6 +3696,14 @@ entries:
     version: v1.36.0
   provider-azure:
   - apiVersion: v2
+    created: "2022-10-20T08:52:34.24572887Z"
+    description: Helmchart for controllerregistration of provider-azure
+    digest: b7631c09cecbc7f5f64387e614d5bee4dc3bbcaeb503484380a991239ddc19e0
+    name: provider-azure
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-azure-v1.31.0/provider-azure-v1.31.0.tgz
+    version: v1.31.0
+  - apiVersion: v2
     created: "2022-09-14T10:53:28.092698989Z"
     description: Helmchart for controllerregistration of provider-azure
     digest: 7dd7bbfa8ca999e43ccaf74cbf694c29a0a8570233b74620ee49c9609711b409
@@ -3989,4 +4013,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-10-19T07:16:24.1108523Z"
+generated: "2022-10-20T08:52:34.255835638Z"
