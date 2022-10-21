@@ -1,9 +1,9 @@
 # [gardener-extension-shoot-dns-service]
-## 🐛 Bug Fixes
-* *[OPERATOR]* Fixed deployment of CRDs for dns-controller-manager if value `dnsControllerManager.createCRDs` is set to  `true` ([gardener/gardener-extension-shoot-dns-service#159](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/159), [@MartinWeindel](https://github.com/MartinWeindel))
 ## 🏃 Others
-* *[OPERATOR]* Upgraded builder from golang version `1.18.5` -> `1.19.1` ([gardener/gardener-extension-shoot-dns-service#159](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/159), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* `shoot-dns-server` Pod now runs with the appropriate priority set according to the following [document](https://github.com/gardener/gardener/blob/v1.57.1/docs/development/priority-classes.md). ([gardener/gardener-extension-shoot-dns-service#163](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/163), [@ialidzhikov](https://github.com/ialidzhikov))
+* *[OPERATOR]* Update builder image from `golang:1.19.1` to `golang:1.19.2` ([gardener/gardener-extension-shoot-dns-service#165](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/165), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Update dependency gardener/gardener `v1.52.2` to `v1.56.0` ([gardener/gardener-extension-shoot-dns-service#165](https://github.com/gardener/gardener-extension-shoot-dns-service/pull/165), [@MartinWeindel](https://github.com/MartinWeindel))
 # [external-dns-management]
 ## 🏃 Others
-* *[USER]* Tolerate apex label `@` for Azure DNS on domain name validation ([gardener/external-dns-management#277](https://github.com/gardener/external-dns-management/pull/277), [@MartinWeindel](https://github.com/MartinWeindel))
-* *[OPERATOR]* Update builder image from golang `1.18.5` ->  `1.19.1` ([gardener/external-dns-management#278](https://github.com/gardener/external-dns-management/pull/278), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Updated controller-manager-library dependency including K8s dependencies `v1.24.1` to `v1.25.0`. ([gardener/external-dns-management#281](https://github.com/gardener/external-dns-management/pull/281), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Ignore slave objects of non-responsible DNS classes. ([gardener/external-dns-management#279](https://github.com/gardener/external-dns-management/pull/279), [@MartinWeindel](https://github.com/MartinWeindel))

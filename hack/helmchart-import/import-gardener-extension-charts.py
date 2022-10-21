@@ -92,7 +92,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-shoot-dns-service",
-        "version": "v1.25.0",
+        "version": "v1.26.0",
         "name": "shoot-dns-service",
     },
 ]
