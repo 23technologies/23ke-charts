@@ -21,7 +21,7 @@
   version: "v1.40.1"
 - name: "provider-aws"
   repo: "gardener/gardener-extension-provider-aws"
-  version: "v1.39.0"
+  version: "v1.39.1"
 - name: "provider-azure"
   repo: "gardener/gardener-extension-provider-azure"
   version: "v1.31.0"
