@@ -1,4 +1,4 @@
 apiVersion: v2
 description: Helmchart for controllerregistration of provider-hcloud
 name: provider-hcloud
-version: v0.6.1
+version: v0.6.2
