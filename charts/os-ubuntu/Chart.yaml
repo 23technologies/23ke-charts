@@ -1,4 +1,4 @@
 apiVersion: v2
 description: Helmchart for controllerregistration of os-ubuntu
 name: os-ubuntu
-version: v1.18.0
+version: v1.19.0

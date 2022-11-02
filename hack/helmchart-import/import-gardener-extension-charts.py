@@ -47,12 +47,12 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-os-gardenlinux",
-        "version": "v0.14.0",
+        "version": "v0.15.0",
         "name": "os-gardenlinux",
     },
     {
         "package": "gardener/gardener-extension-os-ubuntu",
-        "version": "v1.18.0",
+        "version": "v1.19.0",
         "name": "os-ubuntu",
     },
     {
