@@ -2806,6 +2806,14 @@ entries:
     version: 1.38.2
   gardener-dashboard:
   - apiVersion: v1
+    created: "2022-11-04T15:02:48.29236701Z"
+    description: A Helm chart for Gardener dashboard
+    digest: ff89babae394ca5099264985045271205067f7f9cfc42a20970d3891dd2f6d43
+    name: gardener-dashboard
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/gardener-dashboard-1.61.3/gardener-dashboard-1.61.3.tgz
+    version: 1.61.3
+  - apiVersion: v1
     created: "2022-10-18T18:35:51.725722033Z"
     description: A Helm chart for Gardener dashboard
     digest: 3fbd24818cc97373c1ba99d60e2813b01a295f3be80d670a5ffb143a5041e421
@@ -3383,6 +3391,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/gardenlet-1.38.2/gardenlet-1.38.2.tgz
     version: 1.38.2
   identity:
+  - apiVersion: v1
+    created: "2022-11-04T15:02:48.554270992Z"
+    description: A Helm chart for kubernetes identity server
+    digest: cb83c1fac2f2e1d267e568ff6aa4840b90893590d6495442e74cfeccfdd1ca12
+    name: identity
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/identity-1.61.3/identity-1.61.3.tgz
+    version: 1.61.3
   - apiVersion: v1
     created: "2022-10-18T18:35:51.951259128Z"
     description: A Helm chart for kubernetes identity server
@@ -4117,4 +4133,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-11-02T15:17:41.920680062Z"
+generated: "2022-11-04T15:02:48.559047093Z"
