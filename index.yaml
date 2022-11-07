@@ -1275,6 +1275,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/garden-kube-apiserver-4.0.0/garden-kube-apiserver-4.0.0.tgz
     version: 4.0.0
   - apiVersion: v1
+    created: "2022-11-07T11:07:12.118048116Z"
+    description: Helm chart for garden
+    digest: 5c115a71066baecc20e912232cccc5969f5cfb8a82bc5989531a8612fbaa7408
+    name: garden-kube-apiserver
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/garden-kube-apiserver-3.39.0/garden-kube-apiserver-3.39.0.tgz
+    version: 3.39.0
+  - apiVersion: v1
     created: "2022-11-02T14:06:24.420896755Z"
     description: Helm chart for garden
     digest: c446a9932521a03d57a6e847ea44c3255d5f41eaebd2442971ebdc515999e4b8
@@ -4141,4 +4149,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-11-07T11:04:35.285919265Z"
+generated: "2022-11-07T11:07:12.583793229Z"
