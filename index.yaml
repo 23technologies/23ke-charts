@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-11-08T14:03:11.981660575Z"
+    description: This helmchart bundles gardener extensions
+    digest: 9f2c2c0f07bddbdb7798e127352f2c8849dd3bdbef6d774d4ffef2538bddcd26
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.122/extensions-1.0.122.tgz
+    version: 1.0.122
+  - apiVersion: v2
     created: "2022-11-02T15:17:41.444769121Z"
     description: This helmchart bundles gardener extensions
     digest: 3459eea7d9b65b74024a71272be8d0f2186fc1b3368c3b1dee0f5244e5fca015
@@ -3513,6 +3521,14 @@ entries:
     version: 1.52.3
   networking-calico:
   - apiVersion: v2
+    created: "2022-11-08T14:03:12.221079772Z"
+    description: Helmchart for controllerregistration of networking-calico
+    digest: def4619ad744c70e896c71d3621522a0acf142f9e50a547d7ca8ab3ee5d751c9
+    name: networking-calico
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/networking-calico-v1.27.0/networking-calico-v1.27.0.tgz
+    version: v1.27.0
+  - apiVersion: v2
     created: "2022-08-18T08:07:10.569879203Z"
     description: Helmchart for controllerregistration of networking-calico
     digest: 510ff9d552bb7e10325e9a9d9ab732062d1f414ad99d159aa16f809a45d6e476
@@ -4149,4 +4165,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-11-07T11:07:12.583793229Z"
+generated: "2022-11-08T14:03:12.228814063Z"
