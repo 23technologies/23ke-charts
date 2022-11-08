@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-11-08T16:03:01.045905041Z"
+    description: This helmchart bundles gardener extensions
+    digest: 0458da1fd35c7638a87b7f4051a9c0de38b9d4bd01632aac7f5c82df122b56d9
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.123/extensions-1.0.123.tgz
+    version: 1.0.123
+  - apiVersion: v2
     created: "2022-11-08T14:03:11.981660575Z"
     description: This helmchart bundles gardener extensions
     digest: 9f2c2c0f07bddbdb7798e127352f2c8849dd3bdbef6d774d4ffef2538bddcd26
@@ -3726,6 +3734,14 @@ entries:
     version: 1.38.2
   provider-alicloud:
   - apiVersion: v2
+    created: "2022-11-08T16:03:01.31553961Z"
+    description: Helmchart for controllerregistration of provider-alicloud
+    digest: d3eaabb7c8614bce25ab8b8633e76cd6662660f6fc8055343400418254caa951
+    name: provider-alicloud
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/provider-alicloud-v1.41.0/provider-alicloud-v1.41.0.tgz
+    version: v1.41.0
+  - apiVersion: v2
     created: "2022-10-10T07:08:54.947800139Z"
     description: Helmchart for controllerregistration of provider-alicloud
     digest: f4f22a8b6610d622c9f38dd29113851501b05ae8bc2d8c904be2c86b0f407d38
@@ -4165,4 +4181,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-11-08T14:03:12.228814063Z"
+generated: "2022-11-08T16:03:01.322620068Z"
