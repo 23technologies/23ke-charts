@@ -57,6 +57,14 @@ entries:
     version: 0.1.0
   extensions:
   - apiVersion: v2
+    created: "2022-11-08T18:02:46.890456467Z"
+    description: This helmchart bundles gardener extensions
+    digest: e19ff1383364889e13d5d7fc4036980a89bc496c10ab34e3faa5e6ed5f7df945
+    name: extensions
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.124/extensions-1.0.124.tgz
+    version: 1.0.124
+  - apiVersion: v2
     created: "2022-11-08T16:03:01.045905041Z"
     description: This helmchart bundles gardener extensions
     digest: 0458da1fd35c7638a87b7f4051a9c0de38b9d4bd01632aac7f5c82df122b56d9
@@ -1054,6 +1062,14 @@ entries:
     - https://github.com/23technologies/23ke-charts/releases/download/extensions-1.0.0/extensions-1.0.0.tgz
     version: 1.0.0
   external-dns-management:
+  - apiVersion: v2
+    created: "2022-11-08T18:02:47.139417868Z"
+    description: Helmchart for controllerregistration of external-dns-management
+    digest: ac546920d68ae6dba6c8dd679bff314066d43d0b0bf55e903bb054bedb37ff9a
+    name: external-dns-management
+    urls:
+    - https://github.com/23technologies/23ke-charts/releases/download/external-dns-management-v0.14.0/external-dns-management-v0.14.0.tgz
+    version: v0.14.0
   - apiVersion: v2
     created: "2022-10-20T08:52:33.998155765Z"
     description: Helmchart for controllerregistration of external-dns-management
@@ -4181,4 +4197,4 @@ entries:
     urls:
     - https://github.com/23technologies/23ke-charts/releases/download/shoot-dns-service-v1.20.0/shoot-dns-service-v1.20.0.tgz
     version: v1.20.0
-generated: "2022-11-08T16:03:01.322620068Z"
+generated: "2022-11-08T18:02:47.407764062Z"
