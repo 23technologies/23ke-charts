@@ -37,7 +37,7 @@ config = [
     },
     {
         "package": "gardener/gardener-extension-networking-calico",
-        "version": "v1.26.0",
+        "version": "v1.27.0",
         "name": "networking-calico",
     },
     {

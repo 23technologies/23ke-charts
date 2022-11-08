@@ -2,10 +2,10 @@
 | ----------- | ----------- |
 |runtime-gvisor|```v0.6.0```|
 |external-dns-management|```v0.13.3```|
-|networking-calico|```v1.26.0```|
+|networking-calico|```v1.26.0 -> v1.27.0```|
 |networking-cilium|```v1.17.0```|
-|os-gardenlinux|```v0.14.0 -> v0.15.0```|
-|os-ubuntu|```v1.18.0 -> v1.19.0```|
+|os-gardenlinux|```v0.15.0```|
+|os-ubuntu|```v1.19.0```|
 |provider-alicloud|```v1.40.1```|
 |provider-aws|```v1.39.1```|
 |provider-azure|```v1.31.0```|
