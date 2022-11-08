@@ -6,7 +6,7 @@
   version: "v0.13.3"
 - name: "networking-calico"
   repo: "gardener/gardener-extension-networking-calico"
-  version: "v1.26.0"
+  version: "v1.27.0"
 - name: "networking-cilium"
   repo: "gardener/gardener-extension-networking-cilium"
   version: "v1.17.0"
