@@ -1,4 +1,4 @@
 # [external-dns-management]
 ## 🏃 Others
-* *[OPERATOR]* Updated controller-manager-library dependency including K8s dependencies `v1.24.1` to `v1.25.0`. ([gardener/external-dns-management#281](https://github.com/gardener/external-dns-management/pull/281), [@MartinWeindel](https://github.com/MartinWeindel))
-* *[OPERATOR]* Ignore slave objects of non-responsible DNS classes. ([gardener/external-dns-management#279](https://github.com/gardener/external-dns-management/pull/279), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[USER]* Allow more CNAME targets ([gardener/external-dns-management#285](https://github.com/gardener/external-dns-management/pull/285), [@MartinWeindel](https://github.com/MartinWeindel))
+* *[OPERATOR]* Updated builder image golang: `v1.19.2` => `v1.19.3` ([gardener/external-dns-management#286](https://github.com/gardener/external-dns-management/pull/286), [@MartinWeindel](https://github.com/MartinWeindel))
