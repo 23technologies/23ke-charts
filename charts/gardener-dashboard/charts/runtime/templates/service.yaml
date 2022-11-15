@@ -2,21 +2,24 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-{{- if .Values.gitHub }}
 apiVersion: v1
-kind: Secret
+kind: Service
 metadata:
-  name: gardener-dashboard-github
+  name: gardener-dashboard-service
   namespace: {{ .Release.Namespace }}
   labels:
     app: gardener-dashboard
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
-type: Opaque
-data:
-  authentication.token: {{ required ".Values.gitHub.authentication.token is required" (b64enc .Values.gitHub.authentication.token) }}
-  {{- if .Values.gitHub.webhookSecret }}
-  webhookSecret: {{ b64enc .Values.gitHub.webhookSecret }}
-  {{- end }}
-{{- end }}
+spec:
+  ports:
+  - port: {{ .Values.global.servicePort }}
+    targetPort: {{ .Values.global.containerPort }}
+    protocol: TCP
+    name: http
+  selector:
+    app: gardener-dashboard
+    release: {{ .Release.Name }}
+  type: ClusterIP
+  sessionAffinity: ClientIP
